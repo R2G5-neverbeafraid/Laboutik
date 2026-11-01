@@ -638,7 +638,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-030-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -717,7 +719,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-035-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -755,7 +759,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-038-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -796,7 +802,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-040-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -815,7 +823,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-041-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -836,7 +846,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-042-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -857,7 +869,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-043-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -898,7 +912,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-045-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -920,7 +936,10 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-046-1.webp",
+        "assets/img/produits/vet-046-2.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -960,7 +979,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-049-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -979,7 +1000,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-050-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -998,7 +1021,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-051-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -1055,7 +1080,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-054-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -1076,7 +1103,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-055-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -1120,7 +1149,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-057-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -1195,7 +1226,9 @@
       "tailles": [
         "Taille unique"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/acc-005-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -1242,7 +1275,9 @@
       "tailles": [
         "Taille unique"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/cou-003-1.webp"
+      ],
       "statut": "precommande"
     }
   ]
