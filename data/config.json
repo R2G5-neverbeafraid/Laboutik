@@ -1,0 +1,25 @@
+{
+  "nom": "LA BOUTIQUE",
+  "slogan": "Des vêtements sans logo, choisis pour Kinshasa.",
+  "logo": "",
+  "whatsapp": "243000000000",
+  "instagram": "",
+  "tiktok": "",
+  "ville": "Kinshasa, RDC",
+  "drop": {
+    "actif": true,
+    "titre": "Drop en cours",
+    "description": "Arrivage groupé depuis la Chine. Réserve ta pièce en pré-commande avant la clôture.",
+    "cloture": "À confirmer",
+    "arrivee": "À confirmer"
+  },
+  "pre_commande": {
+    "delai": "À confirmer",
+    "paiement": "À confirmer"
+  },
+  "livraison": {
+    "zones": "À confirmer",
+    "frais": "À confirmer"
+  },
+  "avis": []
+}
