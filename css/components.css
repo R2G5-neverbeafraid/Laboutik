@@ -201,3 +201,6 @@
 .band { background: var(--c-accent); color: var(--c-accent-text); border-radius: var(--radius); padding: var(--sp-6) var(--sp-5); }
 .band .eyebrow { color: var(--c-olive-light); }
 .band .btn { background: var(--c-accent-text); color: var(--c-accent); border-color: var(--c-accent-text); }
+
+/* Boutons de contact (WhatsApp, Instagram, TikTok) */
+.contact-links { display: flex; flex-wrap: wrap; gap: var(--sp-3); }

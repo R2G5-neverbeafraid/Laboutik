@@ -4,6 +4,32 @@ import { lienContact } from './whatsapp.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
 
+/** N'accepte que les liens http(s) (config.json est une donnée, pas du code de confiance). */
+function urlSure(u) {
+  try {
+    const x = new URL(u);
+    return x.protocol === 'https:' || x.protocol === 'http:' ? x.href : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Boutons de contact : WhatsApp toujours, Instagram / TikTok seulement s'ils ont un lien dans config.json. */
+export function creerLiensContact(config) {
+  const liens = [
+    ['WhatsApp', lienContact(config), 'btn btn--wa'],
+    ['Instagram', urlSure(config.instagram), 'btn btn--ghost'],
+    ['TikTok', urlSure(config.tiktok), 'btn btn--ghost'],
+  ].filter(([, href]) => href);
+  return el(
+    'div',
+    { class: 'contact-links' },
+    liens.map(([nom, href, classe]) =>
+      el('a', { class: classe, href, target: '_blank', rel: 'noopener' }, nom)
+    )
+  );
+}
+
 /** Crée un élément DOM (textContent uniquement : pas d'injection HTML). */
 export function el(tag, attrs = {}, ...enfants) {
   const n = document.createElement(tag);
@@ -104,7 +130,7 @@ function creerFooter(config) {
   const reseaux = [
     ['Instagram', config.instagram],
     ['TikTok', config.tiktok],
-  ].filter(([, url]) => url);
+  ].map(([nom, url]) => [nom, urlSure(url)]).filter(([, url]) => url);
   return el(
     'footer',
     { class: 'site-footer' },
@@ -146,6 +172,7 @@ function remplirDepuisConfig(config) {
     const valeur = n.dataset.config.split('.').reduce((o, k) => (o ? o[k] : undefined), config);
     if (valeur != null) n.textContent = valeur;
   });
+  document.querySelectorAll('[data-contact]').forEach((n) => n.replaceChildren(creerLiensContact(config)));
   document.querySelectorAll('[data-wa]').forEach((a) => {
     a.href = lienContact(config);
     a.target = '_blank';
