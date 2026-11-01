@@ -75,6 +75,8 @@ Ajouts prévus dans la version à 20 articles : zip hoodie épais, coupe-vent co
 Catégorie Accessoires : articles et prix à venir, fournis par RG.
 Photos : RG fournit ses propres photos (pas d'images reprises aux concurrents). En attendant, utiliser des placeholders neutres.
 
+**Articles de marque (à venir, décision RG)** : ils seront mélangés aux autres dans la catégorie Vêtements (ou la catégorie qui convient), sans section séparée ; seuls les prix diffèrent. Ils ne seront ajoutés qu'une fois leur authenticité établie (source d'achat officielle ou revendeur agréé). Les articles sans logo « inspirés de marque » gardent un nom neutre (ex. « Jogging molleton technique fuselé », pas « tech fleece »).
+
 **Règles du catalogue** : uniquement des articles **sans marque** pour l'instant. Les « copies de marques » de la liste de RG (section B) ne sont pas ajoutées au site (voir §2). Articles sans prix défini (VET-010, VET-014, VET-016) : non publiés tant que le prix n'est pas fixé. Couleurs « à confirmer » : champ `couleurs` vide (la fiche ne demande pas de couleur).
 
 ## 5. Structure du code (règle impérative de RG)
