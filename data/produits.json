@@ -1101,7 +1101,9 @@
       "marque": "Mercedes / sponsors F1",
       "prix": null,
       "description": "",
-      "couleurs": [],
+      "couleurs": [
+        "Blanc"
+      ],
       "tailles": [
         "S",
         "M",
@@ -1109,7 +1111,12 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-053-1.webp",
+          "couleur": "Blanc"
+        }
+      ],
       "statut": "precommande"
     },
     {
@@ -1535,6 +1542,119 @@
         {
           "src": "assets/img/produits/vet-070-2.webp",
           "couleur": "Kaki"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-071",
+      "nom": "Ensemble hoodie + pantalon large noir",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-071-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-072",
+      "nom": "Ensemble hoodie + jogging Club noir",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-072-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-073",
+      "nom": "Ensemble Torom Signature",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Torom",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Beige sable",
+        "Bleu nuit",
+        "Chocolat"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-073-1.webp",
+          "couleur": "Beige sable"
+        },
+        {
+          "src": "assets/img/produits/vet-073-2.webp",
+          "couleur": "Bleu nuit"
+        },
+        {
+          "src": "assets/img/produits/vet-073-3.webp",
+          "couleur": "Chocolat"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-074",
+      "nom": "Ensemble zip hoodie + pantalon trèfle brodé",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Y.R.",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Beige"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-074-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-074-2.webp",
+          "couleur": "Beige"
         }
       ],
       "statut": "precommande"
