@@ -16,14 +16,18 @@
         "hoodie",
         "veste",
         "haut",
-        "ensemble"
+        "ensemble",
+        "maillot"
       ]
     },
     {
       "id": "accessoires",
       "nom": "Accessoires",
       "toujours_visible": true,
-      "types": []
+      "types": [
+        "chaussures",
+        "divers"
+      ]
     },
     {
       "id": "couvre-chef",
@@ -91,6 +95,18 @@
     {
       "id": "casquette",
       "nom": "Casquette"
+    },
+    {
+      "id": "maillot",
+      "nom": "Maillot"
+    },
+    {
+      "id": "chaussures",
+      "nom": "Chaussures"
+    },
+    {
+      "id": "divers",
+      "nom": "Autres"
     }
   ]
 }

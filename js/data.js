@@ -31,5 +31,5 @@ export const STATUTS = {
 };
 
 export function formaterPrix(prix) {
-  return `${prix} $`;
+  return prix == null ? 'Prix à confirmer' : `${prix} $`;
 }

@@ -25,7 +25,12 @@ if (donnees) {
   if (categoriesVisibles.some((c) => c.id === params.get('cat'))) etat.categorie = params.get('cat');
   if (typesDe(etat.categorie).some((t) => t.id === params.get('type'))) etat.type = params.get('type');
 
-  const TRIS = { 'prix-asc': (a, b) => a.prix - b.prix, 'prix-desc': (a, b) => b.prix - a.prix };
+  // Les articles sans prix passent toujours en dernier
+  const cmp = (sens) => (a, b) => {
+    if (a.prix == null || b.prix == null) return (a.prix == null) - (b.prix == null);
+    return sens * (a.prix - b.prix);
+  };
+  const TRIS = { 'prix-asc': cmp(1), 'prix-desc': cmp(-1) };
   let tri = TRIS[params.get('tri')] ? params.get('tri') : '';
   selectTri.value = tri;
   selectTri.addEventListener('change', () => {

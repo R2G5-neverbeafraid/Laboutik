@@ -239,3 +239,6 @@
 
 /* Étapes : titres plus discrets */
 .step h2 { font-size: var(--fs-lg); }
+
+/* Marque sur les cartes */
+.card__brand { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-muted); margin: 0 0 var(--sp-1); }

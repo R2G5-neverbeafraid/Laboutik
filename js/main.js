@@ -68,6 +68,7 @@ export function creerCarte(produit) {
         el(
           'div',
           { class: 'card__body' },
+          produit.marque ? el('p', { class: 'card__brand' }, produit.marque) : null,
           el('h3', { class: 'card__title' }, produit.nom),
           el('p', { class: 'card__price' }, formaterPrix(produit.prix))
         )

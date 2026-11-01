@@ -130,15 +130,18 @@ if (donnees) {
       'div',
       { class: 'product__info' },
       el('span', { class: `badge badge--${p.statut}` }, STATUTS[p.statut] || p.statut),
+      p.marque ? el('p', { class: 'eyebrow' }, p.marque) : null,
       el('h1', {}, p.nom),
       el('p', { class: 'product__price' }, formaterPrix(p.prix)),
-      el('p', {}, p.description),
+      p.description ? el('p', {}, p.description) : null,
       form,
       el(
         'p',
         { class: 'note' },
         p.statut === 'precommande'
-          ? 'Article en pré-commande : il arrive avec le prochain drop. '
+          ? p.marque
+            ? "Article de marque en précommande : acheté auprès d'un revendeur officiel après ta commande, puis livré. "
+            : 'Article en pré-commande : il arrive avec le prochain drop. '
           : '',
         el('a', { href: 'a-propos.html' }, 'Comment ça marche ?')
       )

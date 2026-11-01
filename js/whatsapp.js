@@ -15,7 +15,7 @@ export function messageCommande(config, produit, taille, couleur) {
     `- Article : ${produit.nom}`,
     taille ? `- Taille : ${taille}` : null,
     couleur ? `- Couleur : ${couleur}` : null,
-    `- Prix : ${formaterPrix(produit.prix)}`,
+    `- Prix : ${produit.prix == null ? 'à confirmer' : formaterPrix(produit.prix)}`,
     `- Statut : ${STATUTS[produit.statut] || produit.statut}`,
   ]
     .filter(Boolean)
