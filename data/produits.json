@@ -2287,6 +2287,322 @@
       "statut": "precommande"
     },
     {
+      "id": "vet-099",
+      "nom": "Ensemble track Syna World noir et gris néon",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir / gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-099-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-100",
+      "nom": "Ensemble track Syna World noir liseré gris",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-100-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-101",
+      "nom": "Ensemble hoodie + jogging Syna World marron et crème",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Marron / crème"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-101-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-102",
+      "nom": "Ensemble track Syna World (4 coloris)",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris",
+        "Noir",
+        "Beige",
+        "Marron"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-102-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-103",
+      "nom": "Veste track Syna World marron et beige",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Marron / beige"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-103-1.webp",
+        "assets/img/produits/vet-103-2.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-104",
+      "nom": "Ensemble track Syna World marron et beige",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Marron / beige"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-104-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-105",
+      "nom": "T-shirt maillot Syna World noir",
+      "categorie": "vetements",
+      "type": "haut",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-105-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-106",
+      "nom": "Ensemble hoodie + jogging Syna World beige",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Beige"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-106-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-107",
+      "nom": "Hoodie Syna World noir graffiti turquoise",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-107-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-108",
+      "nom": "Tech Fleece hoodie zippé Nike × Syna World",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Nike × Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir / gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-108-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-109",
+      "nom": "Zip hoodie Nike × Syna World gris et noir",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Nike × Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris / noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-109-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-110",
+      "nom": "Tech Fleece Windrunner hoodie zippé",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Marine",
+        "Gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-110-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-110-2.webp",
+          "couleur": "Marine"
+        },
+        {
+          "src": "assets/img/produits/vet-110-3.webp",
+          "couleur": "Gris"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-111",
+      "nom": "Ensemble Tech Fleece Angleterre bleu",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-111-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
       "id": "acc-001",
       "nom": "Chaussettes (lot de 6 paires)",
       "categorie": "accessoires",
@@ -2610,6 +2926,26 @@
       ],
       "photos": [
         "assets/img/produits/cou-012-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-013",
+      "nom": "Bonnet Syna World",
+      "categorie": "couvre-chef",
+      "type": "bonnet",
+      "marque": "Syna World",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris",
+        "Noir"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-013-1.webp"
       ],
       "statut": "precommande"
     }
