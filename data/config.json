@@ -26,6 +26,10 @@
       "nom": "Accessoires"
     },
     {
+      "id": "couvre-chef",
+      "nom": "Couvre-chef"
+    },
+    {
       "id": "parfums",
       "nom": "Parfums"
     }

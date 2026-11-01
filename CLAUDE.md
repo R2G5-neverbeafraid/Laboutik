@@ -27,7 +27,7 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 - Deux gammes visibles sur le site :
   - **Essentiels** : pièces de qualité (joggings, hoodies, vestes, t-shirts, skull caps…).
   - **Marques** : section dédiée (Nike, Adidas, Corteiz, Louis Vuitton…). Produits, photos et prix fournis par RG.
-- Catégories : **Vêtements**, **Accessoires**, puis **Parfums** et d'autres plus tard → le site doit permettre d'ajouter une catégorie ou une gamme sans toucher au code (listes dans `data/config.json`).
+- Catégories : **Vêtements**, **Accessoires**, **Couvre-chef** (casquettes, skull caps, bonnets…), puis **Parfums** et d'autres plus tard (les skull caps sont en Couvre-chef, pas en Accessoires) → le site doit permettre d'ajouter une catégorie ou une gamme sans toucher au code (listes dans `data/config.json`).
 - Langue du site : français.
 - **Bandeau noir du haut** : texte dans `annonce` (`data/config.json`), à actualiser à chaque drop/nouveauté. Pour l'instant : « Pré-commandes ouvertes sur WhatsApp » (les pré-commandes sur le site viendront plus tard).
 - **Provenance** : ne jamais préciser sur le site d'où viennent les vêtements (pas de « Chine », « importé », etc.).
