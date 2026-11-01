@@ -1,7 +1,7 @@
 {
   "produits": [
     {
-      "id": "lb-001",
+      "id": "vet-001",
       "nom": "Jogging molleton ample",
       "categorie": "vetements",
       "type": "jogging",
@@ -24,7 +24,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-002",
+      "id": "vet-002",
       "nom": "Zip hoodie molleton assorti au jogging",
       "categorie": "vetements",
       "type": "hoodie",
@@ -43,7 +43,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-003",
+      "id": "vet-003",
       "nom": "Veste rétro col montant brodée",
       "categorie": "vetements",
       "type": "veste",
@@ -65,7 +65,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-004",
+      "id": "vet-004",
       "nom": "Pull rayé manches longues oversize",
       "categorie": "vetements",
       "type": "haut",
@@ -84,39 +84,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-005",
-      "nom": "Skull cap fin brodé",
-      "categorie": "couvre-chef",
-      "type": "skull-cap",
-      "marque": "",
-      "prix": 12,
-      "description": "Bonnet fin type skull cap, brodé.",
-      "couleurs": [],
-      "tailles": [
-        "Taille unique"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "lb-006",
-      "nom": "Skull cap camouflage pixel",
-      "categorie": "couvre-chef",
-      "type": "skull-cap",
-      "marque": "",
-      "prix": 12,
-      "description": "Bonnet fin type skull cap, motif camouflage pixel.",
-      "couleurs": [
-        "Camouflage"
-      ],
-      "tailles": [
-        "Taille unique"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "lb-007",
+      "id": "vet-005",
       "nom": "Polo maille zippé côtelé",
       "categorie": "vetements",
       "type": "haut",
@@ -135,7 +103,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-008",
+      "id": "vet-006",
       "nom": "Hoodie à capuche doublée satin",
       "categorie": "vetements",
       "type": "hoodie",
@@ -154,7 +122,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-009",
+      "id": "vet-007",
       "nom": "Veste coupe-vent bicolore à capuche",
       "categorie": "vetements",
       "type": "veste",
@@ -173,7 +141,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-010",
+      "id": "vet-008",
       "nom": "Veste softshell imperméable à capuche",
       "categorie": "vetements",
       "type": "veste",
@@ -192,7 +160,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-011",
+      "id": "vet-009",
       "nom": "Ensemble survêtement « air layer »",
       "categorie": "vetements",
       "type": "ensemble",
@@ -211,7 +179,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-013",
+      "id": "vet-011",
       "nom": "Zip hoodie épais oversize, épaules tombantes",
       "categorie": "vetements",
       "type": "hoodie",
@@ -233,7 +201,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-014",
+      "id": "vet-012",
       "nom": "Coupe-vent color-block à capuche",
       "categorie": "vetements",
       "type": "veste",
@@ -255,7 +223,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-015",
+      "id": "vet-013",
       "nom": "Pantalon running léger, zips aux chevilles",
       "categorie": "vetements",
       "type": "jogging",
@@ -274,7 +242,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-017",
+      "id": "vet-015",
       "nom": "Jogging molleton technique fuselé",
       "categorie": "vetements",
       "type": "jogging",
@@ -296,7 +264,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-019",
+      "id": "vet-017",
       "nom": "Veste coupe-pluie style entraînement",
       "categorie": "vetements",
       "type": "veste",
@@ -318,7 +286,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-020",
+      "id": "vet-018",
       "nom": "Ensemble zip hoodie + jogging épais, patch brodé",
       "categorie": "vetements",
       "type": "ensemble",
@@ -337,7 +305,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-021",
+      "id": "vet-019",
       "nom": "Veste outdoor à capuche imperméable",
       "categorie": "vetements",
       "type": "veste",
@@ -361,7 +329,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-022",
+      "id": "vet-020",
       "nom": "Veste col montant color-block brodée, style japonais",
       "categorie": "vetements",
       "type": "veste",
@@ -383,7 +351,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-023",
+      "id": "vet-021",
       "nom": "Jogging large coupe droite",
       "categorie": "vetements",
       "type": "jogging",
@@ -405,7 +373,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-024",
+      "id": "vet-022",
       "nom": "Pantalon large molleton, petite broderie",
       "categorie": "vetements",
       "type": "jogging",
@@ -426,7 +394,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-025",
+      "id": "vet-023",
       "nom": "Zip hoodie couleurs vives",
       "categorie": "vetements",
       "type": "hoodie",
@@ -449,7 +417,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-026",
+      "id": "vet-024",
       "nom": "Hoodie épais brodé, étoile sur capuche et manche",
       "categorie": "vetements",
       "type": "hoodie",
@@ -470,7 +438,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-027",
+      "id": "vet-025",
       "nom": "Bomber suédine col côtelé",
       "categorie": "vetements",
       "type": "veste",
@@ -491,7 +459,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-028",
+      "id": "vet-026",
       "nom": "Zip hoodie brodé fleurs de cerisier",
       "categorie": "vetements",
       "type": "hoodie",
@@ -513,7 +481,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-029",
+      "id": "vet-027",
       "nom": "Pantalon large molleton, taille enfant",
       "categorie": "vetements",
       "type": "jogging",
@@ -532,7 +500,7 @@
       "statut": "precommande"
     },
     {
-      "id": "lb-030",
+      "id": "vet-028",
       "nom": "Pantalon outdoor déperlant, taille enfant",
       "categorie": "vetements",
       "type": "jogging",
@@ -545,6 +513,38 @@
       ],
       "tailles": [
         "Enfant"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-001",
+      "nom": "Skull cap fin brodé",
+      "categorie": "couvre-chef",
+      "type": "skull-cap",
+      "marque": "",
+      "prix": 12,
+      "description": "Bonnet fin type skull cap, brodé.",
+      "couleurs": [],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-002",
+      "nom": "Skull cap camouflage pixel",
+      "categorie": "couvre-chef",
+      "type": "skull-cap",
+      "marque": "",
+      "prix": 12,
+      "description": "Bonnet fin type skull cap, motif camouflage pixel.",
+      "couleurs": [
+        "Camouflage"
+      ],
+      "tailles": [
+        "Taille unique"
       ],
       "photos": [],
       "statut": "precommande"
