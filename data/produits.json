@@ -701,13 +701,17 @@
     },
     {
       "id": "vet-033",
-      "nom": "Veste softshell à capuche",
+      "nom": "Veste imperméable à capuche",
       "categorie": "vetements",
       "type": "veste",
       "marque": "Kailas",
       "prix": null,
       "description": "",
-      "couleurs": [],
+      "couleurs": [
+        "Violet",
+        "Noir",
+        "Vert menthe"
+      ],
       "tailles": [
         "S",
         "M",
@@ -715,7 +719,20 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-033-1.webp",
+          "couleur": "Violet"
+        },
+        {
+          "src": "assets/img/produits/vet-033-2.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-033-3.webp",
+          "couleur": "Vert menthe"
+        }
+      ],
       "statut": "precommande"
     },
     {
@@ -1152,7 +1169,17 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-056-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-056-2.webp",
+          "couleur": "Gris"
+        },
+        "assets/img/produits/vet-056-3.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -1175,6 +1202,31 @@
       ],
       "photos": [
         "assets/img/produits/vet-057-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-058",
+      "nom": "Hoodie Supreme Multi S Logo",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Supreme",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris chiné"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-058-1.webp",
+        "assets/img/produits/vet-058-2.webp",
+        "assets/img/produits/vet-058-3.webp"
       ],
       "statut": "precommande"
     },
@@ -1301,6 +1353,142 @@
       ],
       "photos": [
         "assets/img/produits/cou-003-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-004",
+      "nom": "Casquette « CH » bordeaux",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bordeaux"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-004-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-005",
+      "nom": "Casquette trucker patchs croix",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-005-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-006",
+      "nom": "Casquette dague",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-006-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-007",
+      "nom": "Casquette trucker « Hollywood » noire",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-007-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-008",
+      "nom": "Casquette trucker « Hollywood » rose",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Rose"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-008-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-009",
+      "nom": "Casquettes trucker couleurs vives",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Orange",
+        "Vert fluo",
+        "Bleu"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-009-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-010",
+      "nom": "Casquette trucker patchs croix blancs",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-010-1.webp"
       ],
       "statut": "precommande"
     }
