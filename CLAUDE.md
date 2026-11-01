@@ -22,7 +22,8 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 ## 2. Positionnement et ton
 
 - « Au milieu » : moins cher que Kin Sport / Josk / g.j_store1 (ensembles à 80–90 $), plus soigné que l'entrée de gamme.
-- Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva → à placer dans `assets/img/logo.*` (RG le fournit).
+- Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva : original dans `assets/img/logo-canva.png` ; le site affiche sa version « en ligne » (monogramme LB dans un cercle + nom en Saira, voir `main.js`). Pour utiliser un autre fichier, renseigner `logo` dans `data/config.json`.
+- **Identité visuelle** : définie dans l'artefact claude.ai « LA BOUTIQUE — Identité visuelle » (https://claude.ai/artifact/Vm4SuFaCyg9HLWb2Vpfs3R), reprise dans `css/variables.css`. Couleurs : noir encre `#0E0E0E`, blanc cassé `#F4F4F1`, gris pierre `#9A9A95`, accent unique olive `#5B6340` (`#A9B37E` sur fond noir). Polices (hébergées dans `assets/fonts/`) : Archivo (titres/texte), IBM Plex Mono (prix, détails), Saira (logo). Si l'artefact change, mettre à jour `variables.css`.
 - Deux gammes visibles sur le site :
   - **Essentiels** : pièces de qualité (joggings, hoodies, vestes, t-shirts, skull caps…).
   - **Marques** : section dédiée (Nike, Adidas, Corteiz, Louis Vuitton…). Produits, photos et prix fournis par RG.

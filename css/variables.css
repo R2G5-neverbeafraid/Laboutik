@@ -1,28 +1,35 @@
-/* Tokens de design — modifier ici pour changer l'apparence globale */
+/* Tokens de design — palette et polices issues de l'artefact « LA BOUTIQUE — Identité visuelle ».
+   Modifier ici pour changer l'apparence globale. */
 :root {
   /* Couleurs */
-  --c-bg: #faf9f6;
+  --c-bg: #f4f4f1;          /* Blanc cassé */
   --c-surface: #ffffff;
-  --c-text: #111111;
-  --c-muted: #595959;
-  --c-line: #e6e3dc;
-  --c-stone: #efece5;
-  --c-accent: #111111;
+  --c-text: #0e0e0e;        /* Noir encre */
+  --c-muted: #4a4a46;
+  --c-line: #dadad5;
+  --c-stone: #e4e3de;       /* fonds photo / tuiles */
+  --c-stone-dark: #9a9a95;  /* Gris pierre */
+  --c-accent: #0e0e0e;
   --c-accent-text: #ffffff;
-  --c-wa: #0b7a3e;
-  --c-wa-hover: #096733;
-  --c-badge-pre: #8a5a00;
-  --c-badge-pre-bg: #fff3d6;
-  --c-badge-ok: #0b6b36;
-  --c-badge-ok-bg: #dff3e6;
-  --c-badge-off: #6b6b6b;
-  --c-badge-off-bg: #ececec;
+  --c-olive: #5b6340;       /* Accent unique : prix, détails */
+  --c-olive-dark: #3e4429;
+  --c-olive-light: #a9b37e; /* Accent sur fond noir */
+  --c-wa: #5b6340;
+  --c-wa-hover: #3e4429;
+  --c-badge-pre: #0e0e0e;
+  --c-badge-pre-bg: #e4e3de;
+  --c-badge-ok: #3e4429;
+  --c-badge-ok-bg: #e3e6d6;
+  --c-badge-off: #4a4a46;
+  --c-badge-off-bg: #ececea;
   --c-error: #b3261e;
   --c-focus: #1a5fd0;
 
-  /* Typographie (polices système : zéro téléchargement) */
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-title: "Avenir Next", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  /* Typographie : Archivo (titres, texte), IBM Plex Mono (prix, détails), Saira (logo) */
+  --font-body: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-title: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-logo: "Saira", "Archivo", system-ui, sans-serif;
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
   --fs-lg: 1.25rem;

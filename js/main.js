@@ -57,13 +57,18 @@ const LIENS = [
   ['a-propos.html', 'Comment ça marche', 'a-propos'],
 ];
 
+/** Logo : image de config.logo si fournie, sinon monogramme LB + nom (comme le logo retenu). */
+function blocLogo(config) {
+  if (config.logo) return el('img', { src: config.logo, alt: config.nom, height: 36 });
+  return [el('span', { class: 'monogram', 'aria-hidden': 'true' }, 'LB'), el('span', {}, config.nom)];
+}
+
 function creerHeader(config) {
   const page = document.body.dataset.page;
   const marque = el(
     'a',
     { class: 'brand', href: 'index.html' },
-    config.logo ? el('img', { src: config.logo, alt: '', height: 36 }) : null,
-    config.nom
+    blocLogo(config)
   );
   const nav = el(
     'nav',
@@ -109,7 +114,7 @@ function creerFooter(config) {
       el(
         'div',
         { class: 'footer-grid' },
-        el('div', {}, el('h2', {}, config.nom), el('p', {}, config.slogan), el('p', {}, config.ville)),
+        el('div', {}, el('p', { class: 'brand' }, blocLogo(config)), el('p', {}, config.slogan), el('p', {}, config.ville)),
         el(
           'div',
           {},

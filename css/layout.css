@@ -36,14 +36,28 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-2);
-  font-family: var(--font-title);
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  gap: var(--sp-3);
+  font-family: var(--font-logo);
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  line-height: 1;
 }
 .brand img { height: 36px; width: auto; }
+/* Monogramme LB : cercle à anneau olive (version « en ligne » du logo) */
+.monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--c-olive);
+  border-radius: 50%;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+}
+.site-footer .monogram { border-color: var(--c-olive-light); }
 
 .nav-toggle {
   background: none;
