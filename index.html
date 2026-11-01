@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LA BOUTIQUE — Vêtements sans logo à Kinshasa</title>
+  <meta name="description" content="Joggings, hoodies, vestes et ensembles importés de Chine, livrés à Kinshasa. Pré-commande et commande par WhatsApp.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="accueil">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <main id="contenu">
+    <section class="hero container">
+      <h1 data-config="slogan">Des vêtements sans logo, choisis pour Kinshasa.</h1>
+      <p>Joggings, hoodies, vestes et ensembles importés de Chine. Prix clairs en dollars, commande en deux clics sur WhatsApp.</p>
+      <div class="hero__actions">
+        <a class="btn" href="catalogue.html">Voir le catalogue</a>
+        <a class="btn btn--ghost" href="a-propos.html">Comment ça marche</a>
+      </div>
+    </section>
+
+    <section class="section--tight container" aria-labelledby="t-drop">
+      <h2 class="sr-only" id="t-drop">Drop en cours</h2>
+      <div id="drop"></div>
+    </section>
+
+    <section class="section container" aria-labelledby="t-cats">
+      <div class="section__head"><h2 id="t-cats">Catégories</h2></div>
+      <div id="categories" class="grid-cats"></div>
+    </section>
+
+    <section class="section container" aria-labelledby="t-sel">
+      <div class="section__head">
+        <h2 id="t-sel">À découvrir</h2>
+        <a href="catalogue.html">Tout voir</a>
+      </div>
+      <ul id="selection" class="grid-products"></ul>
+    </section>
+
+    <section class="section container" aria-labelledby="t-avis">
+      <div class="section__head"><h2 id="t-avis">Avis clients</h2></div>
+      <div id="avis"></div>
+    </section>
+
+    <section class="section container" aria-labelledby="t-contact">
+      <h2 id="t-contact">Une question ?</h2>
+      <p>Écris-nous sur WhatsApp : taille, couleur, délai, livraison à Kinshasa.</p>
+      <a class="btn btn--wa" data-wa href="#">Écrire sur WhatsApp</a>
+    </section>
+  </main>
+  <script type="module" src="js/accueil.js"></script>
+</body>
+</html>
