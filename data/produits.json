@@ -1603,7 +1603,8 @@
       "couleurs": [
         "Beige sable",
         "Bleu nuit",
-        "Chocolat"
+        "Chocolat",
+        "Noir"
       ],
       "tailles": [
         "S",
@@ -1624,6 +1625,14 @@
         {
           "src": "assets/img/produits/vet-073-3.webp",
           "couleur": "Chocolat"
+        },
+        {
+          "src": "assets/img/produits/vet-073-4.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-073-5.webp",
+          "couleur": "Bleu nuit"
         }
       ],
       "statut": "precommande"
@@ -1656,6 +1665,85 @@
           "src": "assets/img/produits/vet-074-2.webp",
           "couleur": "Beige"
         }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-075",
+      "nom": "Ensemble zip hoodie + pantalon SU",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Suvene",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-075-1.webp",
+        "assets/img/produits/vet-075-2.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-076",
+      "nom": "Zip hoodie SU",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Suvene",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-076-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-077",
+      "nom": "Pantalon large SU",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "Suvene",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Bleu marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-077-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-077-2.webp",
+          "couleur": "Bleu marine"
+        },
+        "assets/img/produits/vet-077-3.webp"
       ],
       "statut": "precommande"
     },
