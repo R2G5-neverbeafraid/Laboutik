@@ -2733,6 +2733,75 @@
       "statut": "precommande"
     },
     {
+      "id": "vet-117",
+      "nom": "Pantalon Woven Track NOCTA × NikeLab noir",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "NOCTA (Nike x Drake)",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-117-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-118",
+      "nom": "Pantalon NRG Fleece NOCTA noir",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "NOCTA (Nike x Drake)",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-118-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-119",
+      "nom": "Ensemble zip hoodie + pantalon gris foncé",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Polo Ralph Lauren",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris foncé"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-119-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
       "id": "acc-001",
       "nom": "Chaussettes (lot de 6 paires)",
       "categorie": "accessoires",
