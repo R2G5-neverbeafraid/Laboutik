@@ -33,7 +33,7 @@
   "drop": {
     "actif": true,
     "titre": "Drop en cours",
-    "description": "Arrivage groupé depuis la Chine. Réserve ta pièce en pré-commande avant la clôture.",
+    "description": "Arrivage groupé. Réserve ta pièce en pré-commande avant la clôture.",
     "cloture": "À confirmer",
     "arrivee": "À confirmer"
   },

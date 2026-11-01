@@ -132,7 +132,7 @@ if (donnees) {
         'p',
         { class: 'note' },
         p.statut === 'precommande'
-          ? 'Article en pré-commande : il arrive de Chine avec le prochain drop. '
+          ? 'Article en pré-commande : il arrive avec le prochain drop. '
           : '',
         el('a', { href: 'a-propos.html' }, 'Comment ça marche ?')
       )

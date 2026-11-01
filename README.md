@@ -1,6 +1,6 @@
 # LA BOUTIQUE
 
-Site vitrine + catalogue de LA BOUTIQUE : vêtements importés de Chine, vendus à Kinshasa. Commande via WhatsApp.
+Site vitrine + catalogue de LA BOUTIQUE : vêtements et accessoires, vendus à Kinshasa. Commande via WhatsApp.
 HTML + CSS + JavaScript vanilla, sans build. Brief complet : [CLAUDE.md](CLAUDE.md).
 
 ## Lancer en local

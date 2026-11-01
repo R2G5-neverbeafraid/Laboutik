@@ -135,7 +135,7 @@ function creerFooter(config) {
           )
         )
       ),
-      el('p', { class: 'footer-note' }, `© ${new Date().getFullYear()} ${config.nom} · Prix en dollars US ($).`)
+      el('p', { class: 'footer-note' }, `© ${new Date().getFullYear()} ${config.nom} · Site powered by © 25 Labs`)
     )
   );
 }

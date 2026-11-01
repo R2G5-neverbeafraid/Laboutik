@@ -30,6 +30,8 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 - Catégories : **Vêtements**, **Accessoires**, puis **Parfums** et d'autres plus tard → le site doit permettre d'ajouter une catégorie ou une gamme sans toucher au code (listes dans `data/config.json`).
 - Langue du site : français.
 - **Bandeau noir du haut** : texte dans `annonce` (`data/config.json`), à actualiser à chaque drop/nouveauté. Pour l'instant : « Pré-commandes ouvertes sur WhatsApp » (les pré-commandes sur le site viendront plus tard).
+- **Provenance** : ne jamais préciser sur le site d'où viennent les vêtements (pas de « Chine », « importé », etc.).
+- **Pied de page** : « © année LA BOUTIQUE · Site powered by © 25 Labs » (pas de mention des prix).
 - **Kinshasa** : affiché seulement au-dessus du titre de l'accueil et dans « Livraison partout à Kinshasa. » (à l'essai, le temps d'ajouter d'autres villes). Pas ailleurs dans les textes du site.
 
 ## 3. Prix (USD)
