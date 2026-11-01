@@ -26,6 +26,7 @@
       "toujours_visible": true,
       "types": [
         "chaussures",
+        "lunettes",
         "divers"
       ]
     },
@@ -107,6 +108,10 @@
     {
       "id": "divers",
       "nom": "Autres"
+    },
+    {
+      "id": "lunettes",
+      "nom": "Lunettes"
     }
   ]
 }

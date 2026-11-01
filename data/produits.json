@@ -755,7 +755,14 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-035-1.webp"
+        {
+          "src": "assets/img/produits/vet-035-1.webp",
+          "couleur": "Blanc / noir"
+        },
+        {
+          "src": "assets/img/produits/vet-035-2.webp",
+          "couleur": "Blanc / bleu"
+        }
       ],
       "statut": "precommande"
     },
@@ -1231,6 +1238,308 @@
       "statut": "precommande"
     },
     {
+      "id": "vet-059",
+      "nom": "T-shirt poche Chrome Hearts",
+      "categorie": "vetements",
+      "type": "haut",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-059-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-060",
+      "nom": "Hoodie zippé Chrome Hearts noir",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-060-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-061",
+      "nom": "Hoodie zippé Chrome Hearts blanc",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-061-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-062",
+      "nom": "Long sleeve poche Chrome Hearts noir",
+      "categorie": "vetements",
+      "type": "haut",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-062-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-063",
+      "nom": "Track Jacket « Year of the Horse »",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "On",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Kaki"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-063-1.webp",
+        "assets/img/produits/vet-063-2.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-064",
+      "nom": "Ensemble veste + pantalon On noir et gris",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "On",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir / gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-064-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-065",
+      "nom": "Ensemble veste + pantalon On gris bicolore",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "On",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-065-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-066",
+      "nom": "Ensemble demi-zip + pantalon large (femme)",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Lululemon",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Crème"
+      ],
+      "tailles": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-066-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-067",
+      "nom": "Veste zippée Define (femme)",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "Lululemon",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Lavande",
+        "Noir"
+      ],
+      "tailles": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-067-1.webp",
+          "couleur": "Lavande"
+        },
+        {
+          "src": "assets/img/produits/vet-067-2.webp",
+          "couleur": "Noir"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-068",
+      "nom": "Ensemble brassière + legging liseré (femme)",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Alo",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Blanc"
+      ],
+      "tailles": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-068-1.webp",
+          "couleur": "Noir"
+        },
+        "assets/img/produits/vet-068-2.webp",
+        {
+          "src": "assets/img/produits/vet-068-3.webp",
+          "couleur": "Blanc"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-069",
+      "nom": "Ensemble débardeur + legging évasé (femme)",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Alo",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-069-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-070",
+      "nom": "Ensemble T-shirt + pantalon large (femme)",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Alo",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Kaki"
+      ],
+      "tailles": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-070-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-070-2.webp",
+          "couleur": "Kaki"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
       "id": "acc-001",
       "nom": "Chaussettes (lot de 6 paires)",
       "categorie": "accessoires",
@@ -1304,6 +1613,33 @@
       ],
       "photos": [
         "assets/img/produits/acc-005-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "acc-006",
+      "nom": "Lunettes Chrome Hearts",
+      "categorie": "accessoires",
+      "type": "lunettes",
+      "marque": "Chrome Hearts",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Transparent",
+        "Noir"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/acc-006-1.webp",
+          "couleur": "Transparent"
+        },
+        {
+          "src": "assets/img/produits/acc-006-2.webp",
+          "couleur": "Noir"
+        }
       ],
       "statut": "precommande"
     },
