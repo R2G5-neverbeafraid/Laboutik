@@ -58,7 +58,7 @@ Les prix vivent dans **un seul fichier de données** (voir §5) pour être modif
 
 ## 4. Catalogue de départ
 
-Source : `Plan_achat_vetements_Chine.xlsx` (fichier du Projet claude.ai). Gamme Essentiels :
+Source : liste d'articles de RG (codes LB-001…LB-030, prix d'achat et fournisseurs en privé dans `interne/`, **jamais publiés** : dossier ignoré par git). Gamme Essentiels :
 
 1. Jogging molleton ample (gris, noir, marine…)
 2. Zip hoodie molleton assorti au jogging
@@ -76,6 +76,8 @@ Source : `Plan_achat_vetements_Chine.xlsx` (fichier du Projet claude.ai). Gamme 
 Ajouts prévus dans la version à 20 articles : zip hoodie épais, coupe-vent color-block, pantalon running, doudoune légère, jogging tech fleece, sweat poche manche, veste coupe-pluie foot, ensemble « Torom ».
 Gamme Marques et catégorie Accessoires : articles et prix à venir, fournis par RG.
 Photos : RG fournit ses propres photos (pas d'images reprises aux concurrents). En attendant, utiliser des placeholders neutres.
+
+**Règles du catalogue** : uniquement des articles **sans marque** pour l'instant. Les « copies de marques » de la liste de RG (section B) ne sont pas ajoutées au site (voir §2). Articles sans prix défini (LB-012, LB-016, LB-018) : non publiés tant que le prix n'est pas fixé. Couleurs « à confirmer » : champ `couleurs` vide (la fiche ne demande pas de couleur).
 
 ## 5. Structure du code (règle impérative de RG)
 

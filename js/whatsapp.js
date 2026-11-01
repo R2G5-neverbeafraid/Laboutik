@@ -13,11 +13,13 @@ export function messageCommande(config, produit, taille, couleur) {
   return [
     `Bonjour ${config.nom}, je souhaite commander :`,
     `- Article : ${produit.nom}`,
-    `- Taille : ${taille}`,
-    `- Couleur : ${couleur}`,
+    taille ? `- Taille : ${taille}` : null,
+    couleur ? `- Couleur : ${couleur}` : null,
     `- Prix : ${formaterPrix(produit.prix)}`,
     `- Statut : ${STATUTS[produit.statut] || produit.statut}`,
-  ].join('\n');
+  ]
+    .filter(Boolean)
+    .join('\n');
 }
 
 export function lienCommande(config, produit, taille, couleur) {

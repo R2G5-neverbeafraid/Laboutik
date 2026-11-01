@@ -14,6 +14,7 @@ export function chargerDonnees() {
         config,
         gammes: config.gammes || [],
         categories: config.categories || [],
+        types: config.types || [],
         produits: catalogue.produits,
       }))
       .catch((err) => {

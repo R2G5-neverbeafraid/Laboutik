@@ -21,9 +21,9 @@ Puis ouvrir <http://localhost:8000>.
   (`whatsapp` au format international sans `+`, ex. `243812345678`).
 - **Logo** : déposer le fichier dans `assets/img/` et renseigner `logo` dans `config.json`.
 - **Photos** : déposer les images dans `assets/img/produits/`, en WebP compressé (portrait 4:5, environ 800×1000, moins de 150 Ko).
-  Nom conseillé : `<id-du-produit>-1.webp`, `<id-du-produit>-2.webp`… (ex. `jogging-molleton-1.webp`).
+  Nom conseillé : `<id-du-produit>-1.webp`, `<id-du-produit>-2.webp`… (ex. `lb-001-1.webp`).
   Puis lister les chemins dans `photos` du produit, dans `data/produits.json` :
-  `"photos": ["assets/img/produits/jogging-molleton-1.webp", "assets/img/produits/jogging-molleton-2.webp"]`.
+  `"photos": ["assets/img/produits/lb-001-1.webp", "assets/img/produits/lb-001-2.webp"]`.
   La première photo est celle de la carte ; les suivantes apparaissent en vignettes sur la fiche.
 - **Catégories et gammes** : listes `categories` et `gammes` dans `data/config.json`. Une catégorie sans article n'est pas affichée.
 

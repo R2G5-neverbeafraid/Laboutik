@@ -88,20 +88,26 @@ if (donnees) {
     const form = el(
       'form',
       { novalidate: true },
-      groupeOptions('taille', 'Taille', p.tailles),
-      groupeOptions('couleur', 'Couleur', p.couleurs),
+      p.tailles.length ? groupeOptions('taille', 'Taille', p.tailles) : null,
+      p.couleurs.length ? groupeOptions('couleur', 'Couleur', p.couleurs) : null,
       erreur,
       bouton
     );
 
+    // Taille / couleur : obligatoires seulement si l'article en propose
     const choix = () => ({
       taille: form.querySelector('input[name="taille"]:checked')?.value,
       couleur: form.querySelector('input[name="couleur"]:checked')?.value,
     });
+    const manque = ({ taille, couleur }) => [
+      p.tailles.length && !taille ? 'une taille' : null,
+      p.couleurs.length && !couleur ? 'une couleur' : null,
+    ].filter(Boolean);
 
     function majLien() {
-      const { taille, couleur } = choix();
-      if (taille && couleur && !epuise) {
+      const c = choix();
+      const { taille, couleur } = c;
+      if (!manque(c).length && !epuise) {
         bouton.href = lienCommande(config, p, taille, couleur);
         bouton.target = '_blank';
         bouton.rel = 'noopener';
@@ -111,11 +117,11 @@ if (donnees) {
     form.addEventListener('change', majLien);
     form.addEventListener('submit', (e) => e.preventDefault());
     bouton.addEventListener('click', (e) => {
-      const { taille, couleur } = choix();
       if (epuise) return e.preventDefault();
-      if (!taille || !couleur) {
+      const m = manque(choix());
+      if (m.length) {
         e.preventDefault();
-        erreur.textContent = `Choisis ${!taille ? 'une taille' : ''}${!taille && !couleur ? ' et ' : ''}${!couleur ? 'une couleur' : ''}.`;
+        erreur.textContent = `Choisis ${m.join(' et ')}.`;
       }
     });
     majLien();

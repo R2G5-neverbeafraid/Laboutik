@@ -51,5 +51,35 @@
   },
   "avis": [],
   "annonce": "Pré-commandes ouvertes sur WhatsApp",
-  "hero_image": ""
+  "hero_image": "",
+  "types": [
+    {
+      "id": "jogging",
+      "nom": "Jogging"
+    },
+    {
+      "id": "hoodie",
+      "nom": "Hoodie"
+    },
+    {
+      "id": "veste",
+      "nom": "Veste"
+    },
+    {
+      "id": "haut",
+      "nom": "Haut"
+    },
+    {
+      "id": "ensemble",
+      "nom": "Ensemble"
+    },
+    {
+      "id": "bonnet",
+      "nom": "Bonnet"
+    },
+    {
+      "id": "enfant",
+      "nom": "Enfant"
+    }
+  ]
 }

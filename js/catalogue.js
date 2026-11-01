@@ -5,7 +5,7 @@ import { initPage, creerCarte, el } from './main.js';
 const donnees = await initPage();
 
 if (donnees) {
-  const { gammes, categories, produits } = donnees;
+  const { gammes, categories, types, produits } = donnees;
   const grille = document.getElementById('catalogue-grille');
   const zoneFiltres = document.getElementById('catalogue-filtres');
   const compteur = document.getElementById('catalogue-compteur');
@@ -15,11 +15,13 @@ if (donnees) {
   const listes = {
     gamme: utiles(gammes, 'gamme'),
     categorie: utiles(categories, 'categorie'),
+    type: utiles(types, 'type'),
   };
   const params = new URLSearchParams(location.search);
   const actif = {
     gamme: listes.gamme.some((g) => g.id === params.get('gamme')) ? params.get('gamme') : 'tous',
     categorie: listes.categorie.some((c) => c.id === params.get('cat')) ? params.get('cat') : 'tous',
+    type: listes.type.some((t) => t.id === params.get('type')) ? params.get('type') : 'tous',
   };
   const TRIS = { 'prix-asc': (a, b) => a.prix - b.prix, 'prix-desc': (a, b) => b.prix - a.prix };
   let tri = TRIS[params.get('tri')] ? params.get('tri') : '';
@@ -28,14 +30,15 @@ if (donnees) {
     tri = selectTri.value;
     afficher();
   });
-  const PARAM = { gamme: 'gamme', categorie: 'cat' };
-  const LEGENDE = { gamme: 'Gamme', categorie: 'Catégorie' };
+  const PARAM = { gamme: 'gamme', categorie: 'cat', type: 'type' };
+  const LEGENDE = { gamme: 'Gamme', categorie: 'Catégorie', type: 'Type' };
 
   function afficher() {
     const liste = produits.filter(
       (p) =>
         (actif.gamme === 'tous' || p.gamme === actif.gamme) &&
-        (actif.categorie === 'tous' || p.categorie === actif.categorie)
+        (actif.categorie === 'tous' || p.categorie === actif.categorie) &&
+        (actif.type === 'tous' || p.type === actif.type)
     );
     if (tri) liste.sort(TRIS[tri]);
     grille.replaceChildren(

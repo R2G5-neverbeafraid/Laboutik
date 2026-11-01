@@ -1,13 +1,14 @@
 {
   "produits": [
     {
-      "id": "jogging-molleton",
+      "id": "lb-001",
       "nom": "Jogging molleton ample",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "jogging",
       "marque": "",
       "prix": 35,
-      "description": "Jogging en molleton, coupe ample, taille élastique avec cordon.",
+      "description": "Jogging en molleton, coupe ample.",
       "couleurs": [
         "Gris",
         "Noir",
@@ -17,63 +18,41 @@
         "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
       ],
       "photos": [],
       "statut": "precommande"
     },
     {
-      "id": "zip-hoodie-molleton",
-      "nom": "Zip hoodie molleton",
+      "id": "lb-002",
+      "nom": "Zip hoodie molleton assorti au jogging",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "hoodie",
       "marque": "",
       "prix": 42,
       "description": "Hoodie zippé en molleton, assorti au jogging.",
-      "couleurs": [
-        "Gris",
-        "Noir",
-        "Marine"
-      ],
+      "couleurs": [],
       "tailles": [
         "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
       ],
       "photos": [],
       "statut": "precommande"
     },
     {
-      "id": "pack-zip-hoodie-jogging",
-      "nom": "Pack zip hoodie + jogging",
-      "gamme": "essentiels",
-      "categorie": "vetements",
-      "marque": "",
-      "prix": 69,
-      "description": "Le zip hoodie et le jogging molleton assortis, à prix pack.",
-      "couleurs": [
-        "Gris",
-        "Noir",
-        "Marine"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "veste-retro-brodee",
+      "id": "lb-003",
       "nom": "Veste rétro col montant brodée",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "veste",
       "marque": "",
       "prix": 45,
-      "description": "Veste rétro à col montant avec broderie.",
+      "description": "Veste rétro à col montant, brodée.",
       "couleurs": [
         "Noir",
         "Blanc"
@@ -82,44 +61,42 @@
         "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
       ],
       "photos": [],
       "statut": "precommande"
     },
     {
-      "id": "pull-raye-oversize",
-      "nom": "Pull rayé oversize",
+      "id": "lb-004",
+      "nom": "Pull rayé manches longues oversize",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "haut",
       "marque": "",
       "prix": 45,
-      "description": "Pull en maille rayée à manches longues, coupe oversize.",
-      "couleurs": [
-        "Noir / blanc",
-        "Marine / écru"
-      ],
+      "description": "Pull rayé à manches longues, coupe oversize.",
+      "couleurs": [],
       "tailles": [
+        "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
       ],
       "photos": [],
       "statut": "precommande"
     },
     {
-      "id": "skull-cap-brode",
+      "id": "lb-005",
       "nom": "Skull cap fin brodé",
       "gamme": "essentiels",
       "categorie": "couvre-chef",
+      "type": "bonnet",
       "marque": "",
       "prix": 12,
-      "description": "Bonnet fin type skull cap, brodé. Taille unique.",
-      "couleurs": [
-        "Noir",
-        "Gris",
-        "Marine"
-      ],
+      "description": "Bonnet fin type skull cap, brodé.",
+      "couleurs": [],
       "tailles": [
         "Taille unique"
       ],
@@ -127,13 +104,14 @@
       "statut": "precommande"
     },
     {
-      "id": "skull-cap-camo",
+      "id": "lb-006",
       "nom": "Skull cap camouflage pixel",
       "gamme": "essentiels",
       "categorie": "couvre-chef",
+      "type": "bonnet",
       "marque": "",
       "prix": 12,
-      "description": "Bonnet fin type skull cap, motif camouflage pixel. Taille unique.",
+      "description": "Bonnet fin type skull cap, motif camouflage pixel.",
       "couleurs": [
         "Camouflage"
       ],
@@ -144,35 +122,114 @@
       "statut": "precommande"
     },
     {
-      "id": "polo-maille-zippe",
+      "id": "lb-007",
       "nom": "Polo maille zippé côtelé",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "haut",
       "marque": "",
       "prix": 29,
-      "description": "Polo en maille côtelée avec col zippé.",
-      "couleurs": [
-        "Noir",
-        "Blanc",
-        "Marine"
-      ],
+      "description": "Polo en maille côtelée, col zippé.",
+      "couleurs": [],
       "tailles": [
         "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
       ],
       "photos": [],
       "statut": "precommande"
     },
     {
-      "id": "hoodie-satin",
+      "id": "lb-008",
       "nom": "Hoodie à capuche doublée satin",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "hoodie",
       "marque": "",
       "prix": 50,
-      "description": "Hoodie avec capuche doublée en satin.",
+      "description": "Hoodie à capuche doublée en satin.",
+      "couleurs": [],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-009",
+      "nom": "Veste coupe-vent bicolore à capuche",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "",
+      "prix": 59,
+      "description": "Coupe-vent bicolore à capuche.",
+      "couleurs": [],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-010",
+      "nom": "Veste softshell imperméable à capuche",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "",
+      "prix": 59,
+      "description": "Softshell imperméable à capuche.",
+      "couleurs": [],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-011",
+      "nom": "Ensemble survêtement « air layer »",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "",
+      "prix": 75,
+      "description": "Ensemble veste + pantalon en tissu air layer.",
+      "couleurs": [],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-013",
+      "nom": "Zip hoodie épais oversize, épaules tombantes",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "",
+      "prix": 42,
+      "description": "Zip hoodie épais, coupe oversize, épaules tombantes.",
       "couleurs": [
         "Noir",
         "Gris"
@@ -181,92 +238,340 @@
         "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
       ],
       "photos": [],
       "statut": "precommande"
     },
     {
-      "id": "coupe-vent-bicolore",
-      "nom": "Coupe-vent bicolore à capuche",
+      "id": "lb-014",
+      "nom": "Coupe-vent color-block à capuche",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "veste",
       "marque": "",
       "prix": 59,
-      "description": "Veste coupe-vent légère bicolore, avec capuche.",
+      "description": "Coupe-vent color-block à capuche.",
       "couleurs": [
-        "Noir / gris",
-        "Marine / blanc"
+        "Turquoise",
+        "Rose"
       ],
       "tailles": [
         "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
       ],
       "photos": [],
       "statut": "precommande"
     },
     {
-      "id": "softshell-impermeable",
-      "nom": "Veste softshell imperméable",
+      "id": "lb-015",
+      "nom": "Pantalon running léger, zips aux chevilles",
       "gamme": "essentiels",
       "categorie": "vetements",
+      "type": "jogging",
+      "marque": "",
+      "prix": 35,
+      "description": "Pantalon running léger, zips aux chevilles.",
+      "couleurs": [],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-017",
+      "nom": "Jogging molleton technique fuselé",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "",
+      "prix": 35,
+      "description": "Jogging fuselé en molleton technique.",
+      "couleurs": [
+        "Noir",
+        "Gris chiné"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-019",
+      "nom": "Veste coupe-pluie style entraînement",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "veste",
       "marque": "",
       "prix": 59,
-      "description": "Veste softshell imperméable à capuche.",
+      "description": "Veste coupe-pluie à capuche, style entraînement.",
       "couleurs": [
-        "Noir",
-        "Marine"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "ensemble-air-layer",
-      "nom": "Ensemble survêtement « air layer »",
-      "gamme": "essentiels",
-      "categorie": "vetements",
-      "marque": "",
-      "prix": 75,
-      "description": "Ensemble complet : veste + pantalon en tissu air layer.",
-      "couleurs": [
-        "Noir",
-        "Gris",
-        "Marine"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "maillot-retro",
-      "nom": "Maillot style foot rétro",
-      "gamme": "essentiels",
-      "categorie": "vetements",
-      "marque": "",
-      "prix": 25,
-      "description": "Maillot style foot rétro, design perso.",
-      "couleurs": [
-        "Blanc",
+        "Beige",
         "Noir"
       ],
       "tailles": [
         "S",
         "M",
         "L",
-        "XL"
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-020",
+      "nom": "Ensemble zip hoodie + jogging épais, patch brodé",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "",
+      "prix": 69,
+      "description": "Ensemble zip hoodie et jogging épais, patch brodé.",
+      "couleurs": [],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-021",
+      "nom": "Veste outdoor à capuche imperméable",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "",
+      "prix": 59,
+      "description": "Veste outdoor imperméable à capuche.",
+      "couleurs": [
+        "Noir",
+        "Gris",
+        "Marine",
+        "Kaki"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-022",
+      "nom": "Veste col montant color-block brodée, style japonais",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "",
+      "prix": 45,
+      "description": "Veste à col montant, color-block brodée, style japonais.",
+      "couleurs": [
+        "Marine / vert",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-023",
+      "nom": "Jogging large coupe droite",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "",
+      "prix": 35,
+      "description": "Jogging large, coupe droite.",
+      "couleurs": [
+        "Noir",
+        "Gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-024",
+      "nom": "Pantalon large molleton, petite broderie",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "",
+      "prix": 35,
+      "description": "Pantalon large en molleton, petite broderie. Veste assortie disponible.",
+      "couleurs": [
+        "Gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-025",
+      "nom": "Zip hoodie couleurs vives",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "",
+      "prix": 42,
+      "description": "Zip hoodie en couleurs vives. Pantalon assorti disponible.",
+      "couleurs": [
+        "Jaune",
+        "Violet",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-026",
+      "nom": "Hoodie épais brodé, étoile sur capuche et manche",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "",
+      "prix": 50,
+      "description": "Hoodie épais, étoile brodée sur la capuche et la manche.",
+      "couleurs": [
+        "Gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-027",
+      "nom": "Bomber suédine col côtelé",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "",
+      "prix": 57,
+      "description": "Bomber en suédine, col côtelé.",
+      "couleurs": [
+        "Beige"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-028",
+      "nom": "Zip hoodie brodé fleurs de cerisier",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "",
+      "prix": 50,
+      "description": "Zip hoodie brodé de fleurs de cerisier.",
+      "couleurs": [
+        "Gris",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-029",
+      "nom": "Pantalon large molleton, taille enfant",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "enfant",
+      "marque": "",
+      "prix": 33,
+      "description": "Pantalon large en molleton, pour grands enfants.",
+      "couleurs": [
+        "Gris",
+        "Noir",
+        "Marine"
+      ],
+      "tailles": [
+        "Enfant"
+      ],
+      "photos": [],
+      "statut": "precommande"
+    },
+    {
+      "id": "lb-030",
+      "nom": "Pantalon outdoor déperlant, taille enfant",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "type": "enfant",
+      "marque": "",
+      "prix": 26,
+      "description": "Pantalon outdoor déperlant, pour grands enfants.",
+      "couleurs": [
+        "Beige",
+        "Marine"
+      ],
+      "tailles": [
+        "Enfant"
       ],
       "photos": [],
       "statut": "precommande"
