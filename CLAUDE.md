@@ -2,7 +2,7 @@
 
 Site vitrine + catalogue de LA BOUTIQUE, à Kinshasa (RDC) : vêtements, accessoires, puis parfums et d'autres catégories au fur et à mesure.
 
-**Mot d'ordre : « Des vêtements et des accessoires de qualité, disponibles pour tous. »**
+**Mot d'ordre : « Des vêtements et des accessoires de qualité pour tous. »**
 
 Porteur du projet : RG (Rahel Lukunku), étudiant en L1 Informatique à l'UPC. Projets signés « 25 (TwentyFive) Labs » / 25 Corporations.
 
@@ -29,7 +29,8 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
   - **Marques** : section dédiée (Nike, Adidas, Corteiz, Louis Vuitton…). Produits, photos et prix fournis par RG.
 - Catégories : **Vêtements**, **Accessoires**, puis **Parfums** et d'autres plus tard → le site doit permettre d'ajouter une catégorie ou une gamme sans toucher au code (listes dans `data/config.json`).
 - Langue du site : français.
-- **Kinshasa** : affiché seulement au-dessus du titre de l'accueil et dans « Livraison à Kinshasa. » (à l'essai, le temps d'ajouter d'autres villes). Pas ailleurs dans les textes du site.
+- **Bandeau noir du haut** : texte dans `annonce` (`data/config.json`), à actualiser à chaque drop/nouveauté. Pour l'instant : « Pré-commandes ouvertes sur WhatsApp » (les pré-commandes sur le site viendront plus tard).
+- **Kinshasa** : affiché seulement au-dessus du titre de l'accueil et dans « Livraison partout à Kinshasa. » (à l'essai, le temps d'ajouter d'autres villes). Pas ailleurs dans les textes du site.
 
 ## 3. Prix (USD)
 
