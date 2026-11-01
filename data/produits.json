@@ -1677,7 +1677,8 @@
       "prix": null,
       "description": "",
       "couleurs": [
-        "Bleu marine"
+        "Bleu marine",
+        "Gris chiné"
       ],
       "tailles": [
         "S",
@@ -1687,8 +1688,15 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-075-1.webp",
-        "assets/img/produits/vet-075-2.webp"
+        {
+          "src": "assets/img/produits/vet-075-1.webp",
+          "couleur": "Bleu marine"
+        },
+        "assets/img/produits/vet-075-2.webp",
+        {
+          "src": "assets/img/produits/vet-075-3.webp",
+          "couleur": "Gris chiné"
+        }
       ],
       "statut": "precommande"
     },
@@ -1701,7 +1709,9 @@
       "prix": null,
       "description": "",
       "couleurs": [
-        "Bleu marine"
+        "Bleu marine",
+        "Anthracite",
+        "Bleu ciel"
       ],
       "tailles": [
         "S",
@@ -1711,7 +1721,19 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-076-1.webp"
+        {
+          "src": "assets/img/produits/vet-076-1.webp",
+          "couleur": "Bleu marine"
+        },
+        {
+          "src": "assets/img/produits/vet-076-2.webp",
+          "couleur": "Anthracite"
+        },
+        "assets/img/produits/vet-076-3.webp",
+        {
+          "src": "assets/img/produits/vet-076-4.webp",
+          "couleur": "Bleu ciel"
+        }
       ],
       "statut": "precommande"
     },
@@ -1744,6 +1766,146 @@
           "couleur": "Bleu marine"
         },
         "assets/img/produits/vet-077-3.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-078",
+      "nom": "Hoodie à capuche SU",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Suvene",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris chiné",
+        "Bleu marine",
+        "Noir",
+        "Bordeaux"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-078-1.webp",
+          "couleur": "Gris chiné"
+        },
+        {
+          "src": "assets/img/produits/vet-078-2.webp",
+          "couleur": "Bleu marine"
+        },
+        {
+          "src": "assets/img/produits/vet-078-3.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-078-4.webp",
+          "couleur": "Bordeaux"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-079",
+      "nom": "Ensemble T-shirt + short SU noir",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Suvene",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-079-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-080",
+      "nom": "Pantalon à boutons-pression SU",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "Suvene",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Bleu marine",
+        "Rose",
+        "Gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-080-1.webp",
+        {
+          "src": "assets/img/produits/vet-080-2.webp",
+          "couleur": "Noir"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-081",
+      "nom": "T-shirt SU grand logo blanc",
+      "categorie": "vetements",
+      "type": "haut",
+      "marque": "Suvene",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-081-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-082",
+      "nom": "T-shirt Born Saint noir",
+      "categorie": "vetements",
+      "type": "haut",
+      "marque": "Saint Michael",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-082-1.webp"
       ],
       "statut": "precommande"
     },
