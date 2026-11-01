@@ -217,8 +217,14 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-011-1.webp",
-        "assets/img/produits/vet-011-2.webp"
+        {
+          "src": "assets/img/produits/vet-011-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-011-2.webp",
+          "couleur": "Gris"
+        }
       ],
       "statut": "precommande"
     },
@@ -552,8 +558,14 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-026-1.webp",
-        "assets/img/produits/vet-026-2.webp"
+        {
+          "src": "assets/img/produits/vet-026-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-026-2.webp",
+          "couleur": "Gris"
+        }
       ],
       "statut": "precommande"
     },
@@ -574,8 +586,14 @@
         "Enfant"
       ],
       "photos": [
-        "assets/img/produits/vet-027-1.webp",
-        "assets/img/produits/vet-027-2.webp"
+        {
+          "src": "assets/img/produits/vet-027-1.webp",
+          "couleur": "Marine"
+        },
+        {
+          "src": "assets/img/produits/vet-027-2.webp",
+          "couleur": "Gris"
+        }
       ],
       "statut": "precommande"
     },
@@ -937,8 +955,14 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-046-1.webp",
-        "assets/img/produits/vet-046-2.webp"
+        {
+          "src": "assets/img/produits/vet-046-1.webp",
+          "couleur": "Gris"
+        },
+        {
+          "src": "assets/img/produits/vet-046-2.webp",
+          "couleur": "Noir"
+        }
       ],
       "statut": "precommande"
     },

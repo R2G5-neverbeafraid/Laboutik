@@ -33,3 +33,7 @@ export const STATUTS = {
 export function formaterPrix(prix) {
   return prix == null ? 'Prix à confirmer' : `${prix} $`;
 }
+
+/** Une photo est soit un chemin (texte), soit { src, couleur } pour lier la photo à une couleur. */
+export const srcPhoto = (ph) => (typeof ph === 'string' ? ph : ph.src);
+export const couleurPhoto = (ph) => (typeof ph === 'string' ? '' : ph.couleur || '');

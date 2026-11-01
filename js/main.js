@@ -1,5 +1,5 @@
 // Éléments communs : header, footer, menu mobile, remplissage depuis la config, cartes produit.
-import { chargerDonnees, formaterPrix, STATUTS } from './data.js';
+import { chargerDonnees, formaterPrix, STATUTS, srcPhoto } from './data.js';
 import { lienContact } from './whatsapp.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
@@ -46,7 +46,7 @@ export function el(tag, attrs = {}, ...enfants) {
 }
 
 export function creerCarte(produit) {
-  const photo = produit.photos && produit.photos[0] ? produit.photos[0] : PLACEHOLDER;
+  const photo = produit.photos && produit.photos[0] ? srcPhoto(produit.photos[0]) : PLACEHOLDER;
   const img = el('img', {
     src: photo,
     alt: produit.photos && produit.photos[0] ? produit.nom : `${produit.nom} (photo à venir)`,

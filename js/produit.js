@@ -1,6 +1,6 @@
 // Fiche produit : lit ?id=, affiche les options et construit le lien WhatsApp.
 import { initPage, creerCarte, el } from './main.js';
-import { formaterPrix, STATUTS } from './data.js';
+import { formaterPrix, STATUTS, srcPhoto, couleurPhoto } from './data.js';
 import { lienCommande } from './whatsapp.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
@@ -49,28 +49,31 @@ if (donnees) {
     introuvable();
   } else {
     document.title = `${p.nom} — ${config.nom}`;
-    const photos = p.photos && p.photos.length ? p.photos : [PLACEHOLDER];
+    const brutes = p.photos && p.photos.length ? p.photos : [PLACEHOLDER];
+    const photos = brutes.map((ph) => ({ src: srcPhoto(ph), couleur: couleurPhoto(ph) }));
     const sansPhoto = !(p.photos && p.photos.length);
 
     // Galerie
     const principale = el('img', {
-      src: photos[0],
+      src: photos[0].src,
       alt: sansPhoto ? `${p.nom} (photo à venir)` : p.nom,
       width: 800,
       height: 1000,
     });
     const galerie = el('div', { class: 'gallery' }, el('div', { class: 'gallery__main' }, principale));
+    let vignettes = [];
+    function afficherPhoto(i) {
+      principale.src = photos[i].src;
+      vignettes.forEach((v, j) => v.setAttribute('aria-current', String(j === i)));
+    }
     if (photos.length > 1) {
-      const vignettes = photos.map((src, i) => {
+      vignettes = photos.map(({ src, couleur }, i) => {
         const b = el(
           'button',
-          { type: 'button', 'aria-label': `Photo ${i + 1}`, 'aria-current': String(i === 0) },
+          { type: 'button', 'aria-label': couleur ? `Photo ${i + 1} (${couleur})` : `Photo ${i + 1}`, 'aria-current': String(i === 0) },
           el('img', { src, alt: '', width: 64, height: 80, loading: 'lazy' })
         );
-        b.addEventListener('click', () => {
-          principale.src = src;
-          vignettes.forEach((v) => v.setAttribute('aria-current', String(v === b)));
-        });
+        b.addEventListener('click', () => afficherPhoto(i));
         return b;
       });
       galerie.append(el('div', { class: 'gallery__thumbs' }, vignettes));
@@ -115,6 +118,12 @@ if (donnees) {
       }
     }
     form.addEventListener('change', majLien);
+    // Choisir une couleur affiche la photo de cette couleur, si elle existe
+    form.addEventListener('change', (e) => {
+      if (e.target.name !== 'couleur') return;
+      const i = photos.findIndex((ph) => ph.couleur && ph.couleur.toLowerCase() === e.target.value.toLowerCase());
+      if (i >= 0) afficherPhoto(i);
+    });
     form.addEventListener('submit', (e) => e.preventDefault());
     bouton.addEventListener('click', (e) => {
       if (epuise) return e.preventDefault();
