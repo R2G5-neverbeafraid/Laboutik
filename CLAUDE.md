@@ -1,6 +1,9 @@
 # LA BOUTIQUE — brief pour Claude Code
 
-Site vitrine + catalogue de LA BOUTIQUE : vêtements importés de Chine (Pinduoduo / 1688 / Taobao), vendus à Kinshasa (RDC).
+Site vitrine + catalogue de LA BOUTIQUE, à Kinshasa (RDC) : vêtements, accessoires, puis parfums et d'autres catégories au fur et à mesure.
+
+**Mot d'ordre : « Des vêtements et des accessoires de qualité, disponibles pour tous. »**
+
 Porteur du projet : RG (Rahel Lukunku), étudiant en L1 Informatique à l'UPC. Projets signés « 25 (TwentyFive) Labs » / 25 Corporations.
 
 Ce fichier est la source de vérité partagée entre la conversation claude.ai (Projet « LA BOUTIQUE ») et Claude Code. Mets-le à jour quand une décision change.
@@ -11,19 +14,24 @@ Ce fichier est la source de vérité partagée entre la conversation claude.ai (
 
 - Montrer le catalogue (photos, prix en USD, tailles, couleurs).
 - Faire commander le client **via WhatsApp** (bouton qui ouvre un message pré-rempli avec l'article, la taille et la couleur). Pas de paiement en ligne pour la v1.
-- Mettre en avant les **drops / pré-commandes** (arrivages groupés depuis la Chine).
+- Mettre en avant les **drops / pré-commandes** (arrivages groupés).
 - Inspirer confiance : prix clairs, délais d'arrivage, livraison à Kinshasa, contact.
 
-Public : jeunes de Kinshasa, consultation surtout **sur téléphone**, souvent avec une connexion lente → site léger et rapide.
+Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphone**, souvent avec une connexion lente → site léger et rapide.
 
 ## 2. Positionnement et ton
 
 - « Au milieu » : moins cher que Kin Sport / Josk / g.j_store1 (ensembles à 80–90 $), plus soigné que l'entrée de gamme.
 - Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva → à placer dans `assets/img/logo.*` (RG le fournit).
-- **Positionnement premium (décision RG)** : on ne met plus en avant « sans logo ». Le site propose des vêtements et accessoires de qualité, et le catalogue accueillera aussi des **articles de marque** (Nike, Adidas, Chrome Hearts…). **Uniquement des produits authentiques : aucune contrefaçon ni copie.** Les marques ne figurent pas dans le slogan ni les titres de pages ; elles apparaissent dans les fiches produits concernées.
+- Deux gammes visibles sur le site :
+  - **Essentiels** : pièces de qualité (joggings, hoodies, vestes, t-shirts, skull caps…).
+  - **Marques** : section dédiée (Nike, Adidas, Corteiz, Louis Vuitton…). Produits, photos et prix fournis par RG.
+- Catégories : **Vêtements**, **Accessoires**, puis **Parfums** et d'autres plus tard → le site doit permettre d'ajouter une catégorie ou une gamme sans toucher au code (listes dans `data/config.json`).
 - Langue du site : français.
 
-## 3. Grille de prix (USD) — décidée par RG
+## 3. Prix (USD)
+
+**RG fixe lui-même les prix finaux**, y compris ceux des articles de marque. La grille ci-dessous est l'estimation de départ pour la gamme Essentiels.
 
 | Article | Prix |
 |---|---|
@@ -45,7 +53,7 @@ Les prix vivent dans **un seul fichier de données** (voir §5) pour être modif
 
 ## 4. Catalogue de départ
 
-Source : `Plan_achat_vetements_Chine.xlsx` (fichier du Projet claude.ai). Articles de départ (sans marque) :
+Source : `Plan_achat_vetements_Chine.xlsx` (fichier du Projet claude.ai). Gamme Essentiels :
 
 1. Jogging molleton ample (gris, noir, marine…)
 2. Zip hoodie molleton assorti au jogging
@@ -61,7 +69,8 @@ Source : `Plan_achat_vetements_Chine.xlsx` (fichier du Projet claude.ai). Articl
 12. Maillot style foot rétro (design perso)
 
 Ajouts prévus dans la version à 20 articles : zip hoodie épais, coupe-vent color-block, pantalon running, doudoune légère, jogging tech fleece, sweat poche manche, veste coupe-pluie foot, ensemble « Torom ».
-Photos : RG fournit ses propres photos (pas d'images de concurrents ni de photos de vendeurs chinois avec logos). En attendant, utiliser des placeholders neutres.
+Gamme Marques et catégorie Accessoires : articles et prix à venir, fournis par RG.
+Photos : RG fournit ses propres photos (pas d'images reprises aux concurrents). En attendant, utiliser des placeholders neutres.
 
 ## 5. Structure du code (règle impérative de RG)
 
@@ -69,8 +78,8 @@ Photos : RG fournit ses propres photos (pas d'images de concurrents ni de photos
 
 ```
 la-boutique/
-├── index.html            # accueil : hero, drop en cours, catégories, avis, contact
-├── catalogue.html        # grille produits + filtres par catégorie
+├── index.html            # accueil : hero, drop en cours, gammes/catégories, avis, contact
+├── catalogue.html        # grille produits + filtres par gamme, catégorie et marque
 ├── produit.html          # fiche produit (lit ?id= dans l'URL)
 ├── a-propos.html         # comment ça marche : pré-commande, délais, livraison
 ├── css/
@@ -85,8 +94,8 @@ la-boutique/
 │   ├── whatsapp.js       # construction du lien wa.me pré-rempli
 │   └── main.js           # menu mobile, éléments communs
 ├── data/
-│   ├── produits.json     # id, nom, catégorie, prix, couleurs, tailles, photos, statut (dispo / précommande / épuisé)
-│   └── config.json       # numéro WhatsApp, nom de la boutique, liens réseaux, drop en cours
+│   ├── produits.json     # id, nom, gamme (essentiels / marques), catégorie (vêtements / accessoires / parfums…), marque, prix, couleurs, tailles, photos, statut (dispo / précommande / épuisé)
+│   └── config.json       # numéro WhatsApp, nom de la boutique, liens réseaux, drop en cours, listes des gammes et catégories
 ├── assets/img/           # logo, photos produits (WebP compressées)
 ├── README.md
 └── CLAUDE.md
@@ -116,7 +125,8 @@ Ordre de commits suggéré :
 
 - Numéro WhatsApp de la boutique et liens Instagram / TikTok.
 - Nom exact affiché sur le site (« LA BOUTIQUE » ou autre) et fichier du logo Canva.
+- Liste et prix des articles de la gamme Marques et des Accessoires.
 - Pack hoodie + jogging : 69 $ ou 72 $.
 - Frais et zones de livraison à Kinshasa.
-- Délai annoncé pour les pré-commandes (dépend du transitaire, hypothèses de coûts encore à confirmer par devis).
+- Délai annoncé pour les pré-commandes (dépend du transitaire, coûts encore à confirmer par devis).
 - Nom du dépôt GitHub.

@@ -7,6 +7,7 @@
 }
 
 .section { padding-block: var(--sp-6); }
+@media (min-width: 720px) { .section { padding-block: var(--sp-7); } }
 .section--tight { padding-block: var(--sp-5); }
 .section__head {
   display: flex;
@@ -120,13 +121,11 @@
   .grid-products { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
+/* Catégories : s'adapte au nombre de catégories (parfums, etc. viendront plus tard) */
 .grid-cats {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: var(--sp-3);
-}
-@media (min-width: 720px) {
-  .grid-cats { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
 .steps {

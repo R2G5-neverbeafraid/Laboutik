@@ -1,11 +1,35 @@
 {
   "nom": "LA BOUTIQUE",
-  "slogan": "Des vêtements et accessoires de qualité, disponibles à Kinshasa.",
+  "slogan": "Des vêtements et des accessoires de qualité, disponibles pour tous.",
   "logo": "",
   "whatsapp": "243000000000",
   "instagram": "",
   "tiktok": "",
   "ville": "Kinshasa, RDC",
+  "gammes": [
+    {
+      "id": "essentiels",
+      "nom": "Essentiels"
+    },
+    {
+      "id": "marques",
+      "nom": "Marques"
+    }
+  ],
+  "categories": [
+    {
+      "id": "vetements",
+      "nom": "Vêtements"
+    },
+    {
+      "id": "accessoires",
+      "nom": "Accessoires"
+    },
+    {
+      "id": "parfums",
+      "nom": "Parfums"
+    }
+  ],
   "drop": {
     "actif": true,
     "titre": "Drop en cours",
@@ -21,5 +45,7 @@
     "zones": "À confirmer",
     "frais": "À confirmer"
   },
-  "avis": []
+  "avis": [],
+  "annonce": "Pré-commandes ouvertes · Commande simple sur WhatsApp",
+  "hero_image": ""
 }

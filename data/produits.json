@@ -1,152 +1,273 @@
 {
-  "categories": [
-    { "id": "hauts", "nom": "Hauts" },
-    { "id": "bas", "nom": "Bas" },
-    { "id": "vestes", "nom": "Vestes" },
-    { "id": "ensembles", "nom": "Ensembles" },
-    { "id": "accessoires", "nom": "Accessoires" }
-  ],
   "produits": [
     {
       "id": "jogging-molleton",
       "nom": "Jogging molleton ample",
-      "categorie": "bas",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 35,
       "description": "Jogging en molleton, coupe ample, taille élastique avec cordon.",
-      "couleurs": ["Gris", "Noir", "Marine"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Gris",
+        "Noir",
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "zip-hoodie-molleton",
       "nom": "Zip hoodie molleton",
-      "categorie": "hauts",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 42,
       "description": "Hoodie zippé en molleton, assorti au jogging.",
-      "couleurs": ["Gris", "Noir", "Marine"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Gris",
+        "Noir",
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "pack-zip-hoodie-jogging",
       "nom": "Pack zip hoodie + jogging",
-      "categorie": "ensembles",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 69,
       "description": "Le zip hoodie et le jogging molleton assortis, à prix pack.",
-      "couleurs": ["Gris", "Noir", "Marine"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Gris",
+        "Noir",
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "veste-retro-brodee",
       "nom": "Veste rétro col montant brodée",
-      "categorie": "vestes",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 45,
       "description": "Veste rétro à col montant avec broderie.",
-      "couleurs": ["Noir", "Blanc"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Noir",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "pull-raye-oversize",
       "nom": "Pull rayé oversize",
-      "categorie": "hauts",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 45,
       "description": "Pull en maille rayée à manches longues, coupe oversize.",
-      "couleurs": ["Noir / blanc", "Marine / écru"],
-      "tailles": ["M", "L", "XL"],
+      "couleurs": [
+        "Noir / blanc",
+        "Marine / écru"
+      ],
+      "tailles": [
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "skull-cap-brode",
       "nom": "Skull cap fin brodé",
+      "gamme": "essentiels",
       "categorie": "accessoires",
+      "marque": "",
       "prix": 12,
       "description": "Bonnet fin type skull cap, brodé. Taille unique.",
-      "couleurs": ["Noir", "Gris", "Marine"],
-      "tailles": ["Taille unique"],
+      "couleurs": [
+        "Noir",
+        "Gris",
+        "Marine"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "skull-cap-camo",
       "nom": "Skull cap camouflage pixel",
+      "gamme": "essentiels",
       "categorie": "accessoires",
+      "marque": "",
       "prix": 12,
       "description": "Bonnet fin type skull cap, motif camouflage pixel. Taille unique.",
-      "couleurs": ["Camouflage"],
-      "tailles": ["Taille unique"],
+      "couleurs": [
+        "Camouflage"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "polo-maille-zippe",
       "nom": "Polo maille zippé côtelé",
-      "categorie": "hauts",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 29,
       "description": "Polo en maille côtelée avec col zippé.",
-      "couleurs": ["Noir", "Blanc", "Marine"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Noir",
+        "Blanc",
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "hoodie-satin",
       "nom": "Hoodie à capuche doublée satin",
-      "categorie": "hauts",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 50,
       "description": "Hoodie avec capuche doublée en satin.",
-      "couleurs": ["Noir", "Gris"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Noir",
+        "Gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "coupe-vent-bicolore",
       "nom": "Coupe-vent bicolore à capuche",
-      "categorie": "vestes",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 59,
       "description": "Veste coupe-vent légère bicolore, avec capuche.",
-      "couleurs": ["Noir / gris", "Marine / blanc"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Noir / gris",
+        "Marine / blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "softshell-impermeable",
       "nom": "Veste softshell imperméable",
-      "categorie": "vestes",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 59,
       "description": "Veste softshell imperméable à capuche.",
-      "couleurs": ["Noir", "Marine"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Noir",
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "ensemble-air-layer",
       "nom": "Ensemble survêtement « air layer »",
-      "categorie": "ensembles",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 75,
       "description": "Ensemble complet : veste + pantalon en tissu air layer.",
-      "couleurs": ["Noir", "Gris", "Marine"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Noir",
+        "Gris",
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     },
     {
       "id": "maillot-retro",
       "nom": "Maillot style foot rétro",
-      "categorie": "hauts",
+      "gamme": "essentiels",
+      "categorie": "vetements",
+      "marque": "",
       "prix": 25,
       "description": "Maillot style foot rétro, design perso.",
-      "couleurs": ["Blanc", "Noir"],
-      "tailles": ["S", "M", "L", "XL"],
+      "couleurs": [
+        "Blanc",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "photos": [],
       "statut": "precommande"
     }

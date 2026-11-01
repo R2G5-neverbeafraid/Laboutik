@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LA BOUTIQUE — Vêtements et accessoires de qualité à Kinshasa</title>
-  <meta name="description" content="Joggings, hoodies, vestes et ensembles importés de Chine, livrés à Kinshasa. Pré-commande et commande par WhatsApp.">
+  <title>LA BOUTIQUE — Vêtements et accessoires à Kinshasa</title>
+  <meta name="description" content="Des vêtements et des accessoires de qualité, disponibles pour tous à Kinshasa. Prix clairs en dollars, pré-commande et commande par WhatsApp.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -13,26 +13,37 @@
 <body data-page="accueil">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <main id="contenu">
-    <section class="hero container">
-      <h1 data-config="slogan">Des vêtements et accessoires de qualité, disponibles à Kinshasa.</h1>
-      <p>Joggings, hoodies, vestes et ensembles importés de Chine. Prix clairs en dollars, commande en deux clics sur WhatsApp.</p>
-      <div class="hero__actions">
-        <a class="btn" href="catalogue.html">Voir le catalogue</a>
-        <a class="btn btn--ghost" href="a-propos.html">Comment ça marche</a>
+
+    <section class="hero" aria-labelledby="t-hero">
+      <div id="hero-inner" class="container hero__inner">
+        <div>
+          <p class="hero__eyebrow" data-config="nom">LA BOUTIQUE</p>
+          <h1 id="t-hero" data-config="slogan">Des vêtements et des accessoires de qualité, disponibles pour tous.</h1>
+          <p class="hero__text">Livraison à Kinshasa. Prix clairs en dollars, commande en deux clics sur WhatsApp.</p>
+          <div class="hero__actions">
+            <a class="btn" href="catalogue.html">Voir le catalogue</a>
+            <a class="btn btn--ghost" href="a-propos.html">Comment ça marche</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section--tight container" aria-labelledby="t-drop">
-      <h2 class="sr-only" id="t-drop">Drop en cours</h2>
-      <div id="drop"></div>
-    </section>
+    <div class="container">
+      <ul class="trust">
+        <li><strong>Commande sur WhatsApp</strong><span>Un message déjà prêt, en un clic.</span></li>
+        <li><strong>Drops et pré-commandes</strong><span>Arrivages groupés, tu réserves ta pièce.</span></li>
+        <li><strong>Prix clairs en $</strong><span>Pas de surprise au moment de payer.</span></li>
+      </ul>
+    </div>
 
     <section class="section container" aria-labelledby="t-cats">
+      <p class="eyebrow">Explorer</p>
       <div class="section__head"><h2 id="t-cats">Catégories</h2></div>
       <div id="categories" class="grid-cats"></div>
     </section>
 
-    <section class="section container" aria-labelledby="t-sel">
+    <section class="container" aria-labelledby="t-sel">
+      <p class="eyebrow">Sélection</p>
       <div class="section__head">
         <h2 id="t-sel">À découvrir</h2>
         <a href="catalogue.html">Tout voir</a>
@@ -40,7 +51,21 @@
       <ul id="selection" class="grid-products"></ul>
     </section>
 
-    <section class="section container" aria-labelledby="t-avis">
+    <section id="marques" class="section container" aria-labelledby="t-marques" hidden>
+      <div class="band">
+        <p class="eyebrow">Gamme</p>
+        <h2 id="t-marques">Marques</h2>
+        <p>Une sélection d'articles de marque, choisis par nos soins.</p>
+        <a class="btn" href="catalogue.html?gamme=marques">Voir les marques</a>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="t-drop">
+      <h2 class="sr-only" id="t-drop">Drop en cours</h2>
+      <div id="drop"></div>
+    </section>
+
+    <section class="container" aria-labelledby="t-avis">
       <div class="section__head"><h2 id="t-avis">Avis clients</h2></div>
       <div id="avis"></div>
     </section>

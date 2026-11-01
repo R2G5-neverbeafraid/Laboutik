@@ -1,10 +1,23 @@
-// Page d'accueil : drop en cours, catégories, nouveautés, avis.
+// Page d'accueil : hero (image optionnelle), drop en cours, catégories, sélection, avis.
 import { initPage, creerCarte, el } from './main.js';
 
 const donnees = await initPage();
 
 if (donnees) {
   const { config, categories, produits } = donnees;
+
+  // Image du hero : affichée seulement si config.hero_image est renseigné
+  if (config.hero_image) {
+    const inner = document.getElementById('hero-inner');
+    inner.classList.add('hero__inner--image');
+    inner.append(
+      el(
+        'div',
+        { class: 'hero__image' },
+        el('img', { src: config.hero_image, alt: '', width: 800, height: 1000, decoding: 'async' })
+      )
+    );
+  }
 
   // Drop en cours
   const zoneDrop = document.getElementById('drop');
@@ -30,10 +43,24 @@ if (donnees) {
     zoneDrop.closest('section').hidden = true;
   }
 
-  // Catégories
+  // Catégories : seulement celles qui contiennent des articles (parfums etc. apparaîtront d'eux-mêmes)
+  const comptes = {};
+  produits.forEach((p) => (comptes[p.categorie] = (comptes[p.categorie] || 0) + 1));
   document.getElementById('categories').replaceChildren(
-    ...categories.map((c) => el('a', { class: 'cat-tile', href: `catalogue.html?cat=${c.id}` }, c.nom))
+    ...categories
+      .filter((c) => comptes[c.id])
+      .map((c) =>
+        el(
+          'a',
+          { class: 'cat-tile', href: `catalogue.html?cat=${c.id}` },
+          el('span', { class: 'cat-tile__name' }, c.nom),
+          el('span', { class: 'cat-tile__count' }, `${comptes[c.id]} article${comptes[c.id] > 1 ? 's' : ''}`)
+        )
+      )
   );
+
+  // Gamme Marques : bande visible seulement s'il y a des articles de marque
+  if (produits.some((p) => p.gamme === 'marques')) document.getElementById('marques').hidden = false;
 
   // Sélection (4 premiers articles)
   document.getElementById('selection').replaceChildren(...produits.slice(0, 4).map(creerCarte));

@@ -152,7 +152,9 @@ export async function initPage() {
   try {
     const donnees = await chargerDonnees();
     const { config } = donnees;
-    document.body.prepend(creerHeader(config));
+    const header = creerHeader(config);
+    document.querySelector('.skip-link').after(header);
+    if (config.annonce) header.before(el('div', { class: 'announce' }, el('p', { class: 'container' }, config.annonce)));
     document.body.append(creerFooter(config));
     remplirDepuisConfig(config);
     return donnees;
