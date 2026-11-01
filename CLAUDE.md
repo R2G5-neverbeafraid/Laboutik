@@ -20,7 +20,7 @@ Public : jeunes de Kinshasa, consultation surtout **sur téléphone**, souvent a
 
 - « Au milieu » : moins cher que Kin Sport / Josk / g.j_store1 (ensembles à 80–90 $), plus soigné que l'entrée de gamme.
 - Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva → à placer dans `assets/img/logo.*` (RG le fournit).
-- **Aucune marque copiée** sur le site (pas de Nike, Corteiz, Barça, etc.) : uniquement des articles sans logo. Risque de blocage des comptes et de saisie.
+- **Positionnement premium (décision RG)** : on ne met plus en avant « sans logo ». Le site propose des vêtements et accessoires de qualité, et le catalogue accueillera aussi des **articles de marque** (Nike, Adidas, Chrome Hearts…). **Uniquement des produits authentiques : aucune contrefaçon ni copie.** Les marques ne figurent pas dans le slogan ni les titres de pages ; elles apparaissent dans les fiches produits concernées.
 - Langue du site : français.
 
 ## 3. Grille de prix (USD) — décidée par RG
@@ -45,7 +45,7 @@ Les prix vivent dans **un seul fichier de données** (voir §5) pour être modif
 
 ## 4. Catalogue de départ
 
-Source : `Plan_achat_vetements_Chine.xlsx` (fichier du Projet claude.ai). Articles sans marque :
+Source : `Plan_achat_vetements_Chine.xlsx` (fichier du Projet claude.ai). Articles de départ (sans marque) :
 
 1. Jogging molleton ample (gris, noir, marine…)
 2. Zip hoodie molleton assorti au jogging
