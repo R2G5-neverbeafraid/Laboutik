@@ -12,7 +12,6 @@ export function chargerDonnees() {
     cache = Promise.all([charger('data/config.json'), charger('data/produits.json')])
       .then(([config, catalogue]) => ({
         config,
-        gammes: config.gammes || [],
         categories: config.categories || [],
         types: config.types || [],
         produits: catalogue.produits,

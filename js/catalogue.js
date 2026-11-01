@@ -1,4 +1,4 @@
-// Page catalogue : grille + filtres (?gamme= ?cat= ?type= ?tri= dans l'URL).
+// Page catalogue : grille + filtres (?cat= ?type= ?tri= dans l'URL). Tous les articles sont mélangés.
 // - Catégories : celles marquées « toujours_visible » dans config.json, plus celles qui contiennent des articles.
 // - Types : proposés seulement quand une catégorie est choisie, et uniquement ceux de cette catégorie.
 import { initPage, creerCarte, el } from './main.js';
@@ -6,13 +6,12 @@ import { initPage, creerCarte, el } from './main.js';
 const donnees = await initPage();
 
 if (donnees) {
-  const { gammes, categories, types, produits } = donnees;
+  const { categories, types, produits } = donnees;
   const grille = document.getElementById('catalogue-grille');
   const zoneFiltres = document.getElementById('catalogue-filtres');
   const compteur = document.getElementById('catalogue-compteur');
   const selectTri = document.getElementById('catalogue-tri');
 
-  const gammesUtiles = gammes.filter((g) => produits.some((p) => p.gamme === g.id));
   const categoriesVisibles = categories.filter(
     (c) => c.toujours_visible || produits.some((p) => p.categorie === c.id)
   );
@@ -22,8 +21,7 @@ if (donnees) {
   };
 
   const params = new URLSearchParams(location.search);
-  const etat = { gamme: 'tous', categorie: 'tous', type: 'tous' };
-  if (gammesUtiles.some((g) => g.id === params.get('gamme'))) etat.gamme = params.get('gamme');
+  const etat = { categorie: 'tous', type: 'tous' };
   if (categoriesVisibles.some((c) => c.id === params.get('cat'))) etat.categorie = params.get('cat');
   if (typesDe(etat.categorie).some((t) => t.id === params.get('type'))) etat.type = params.get('type');
 
@@ -35,8 +33,8 @@ if (donnees) {
     afficher();
   });
 
-  const PARAM = { gamme: 'gamme', categorie: 'cat', type: 'type' };
-  const LEGENDE = { gamme: 'Gamme', categorie: 'Catégorie', type: 'Type' };
+  const PARAM = { categorie: 'cat', type: 'type' };
+  const LEGENDE = { categorie: 'Catégorie', type: 'Type' };
 
   function groupe(cle, options) {
     const boutons = [{ id: 'tous', nom: 'Tous' }, ...options].map((x) => {
@@ -68,7 +66,6 @@ if (donnees) {
   function afficher() {
     const liste = produits.filter(
       (p) =>
-        (etat.gamme === 'tous' || p.gamme === etat.gamme) &&
         (etat.categorie === 'tous' || p.categorie === etat.categorie) &&
         (etat.type === 'tous' || p.type === etat.type)
     );
@@ -93,7 +90,6 @@ if (donnees) {
   }
 
   zoneFiltres.replaceChildren(
-    ...(gammesUtiles.length > 1 ? [groupe('gamme', gammesUtiles)] : []),
     groupe('categorie', categoriesVisibles),
     conteneurType
   );

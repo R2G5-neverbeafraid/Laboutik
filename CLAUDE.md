@@ -24,10 +24,8 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 - « Au milieu » : moins cher que Kin Sport / Josk / g.j_store1 (ensembles à 80–90 $), plus soigné que l'entrée de gamme.
 - Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva : original dans `assets/img/logo-canva.png` ; le site affiche sa version « en ligne » (monogramme LB dans un cercle + nom en Saira, voir `main.js`). Pour utiliser un autre fichier, renseigner `logo` dans `data/config.json`.
 - **Identité visuelle** : définie dans l'artefact claude.ai « LA BOUTIQUE — Identité visuelle » (https://claude.ai/artifact/Vm4SuFaCyg9HLWb2Vpfs3R), reprise dans `css/variables.css`. Couleurs : noir encre `#0E0E0E`, blanc cassé `#F4F4F1`, gris pierre `#9A9A95`, accent unique olive `#5B6340` (`#A9B37E` sur fond noir). Polices (hébergées dans `assets/fonts/`) : Archivo (titres/texte), IBM Plex Mono (prix, détails), Saira (logo). Si l'artefact change, mettre à jour `variables.css`.
-- Deux gammes visibles sur le site :
-  - **Essentiels** : pièces de qualité (joggings, hoodies, vestes, t-shirts, skull caps…).
-  - **Marques** : section dédiée (Nike, Adidas, Corteiz, Louis Vuitton…). Produits, photos et prix fournis par RG.
-- Catégories : **Vêtements**, **Accessoires**, **Couvre-chef** (casquettes, skull caps, bonnets…), puis **Parfums** et d'autres plus tard (les skull caps sont en Couvre-chef, pas en Accessoires). Types par catégorie (filtres du catalogue) : Vêtements = jogging, hoodie, veste, haut, ensemble ; Couvre-chef = bonnet, skull cap, casquette ; Accessoires = à définir. Pas de type « enfant » ni « bonnet » dans Vêtements. Accessoires et Couvre-chef sont affichés même vides (`toujours_visible`). → le site doit permettre d'ajouter une catégorie ou une gamme sans toucher au code (listes dans `data/config.json`).
+- **Pas de gammes séparées** (décision RG) : tous les articles sont mélangés dans le même catalogue, sans section « premium / non premium ». Seuls les prix diffèrent. Le champ `marque` des articles reste disponible (vide par défaut).
+- Catégories : **Vêtements**, **Accessoires**, **Couvre-chef** (casquettes, skull caps, bonnets…), puis **Parfums** et d'autres plus tard (les skull caps sont en Couvre-chef, pas en Accessoires). Types par catégorie (filtres du catalogue) : Vêtements = jogging, hoodie, veste, haut, ensemble ; Couvre-chef = bonnet, skull cap, casquette ; Accessoires = à définir. Pas de type « enfant » ni « bonnet » dans Vêtements. Accessoires et Couvre-chef sont affichés même vides (`toujours_visible`). → le site doit permettre d'ajouter une catégorie ou un type sans toucher au code (listes dans `data/config.json`).
 - Langue du site : français.
 - **Bandeau noir du haut** : texte dans `annonce` (`data/config.json`), à actualiser à chaque drop/nouveauté. Pour l'instant : « Pré-commandes ouvertes sur WhatsApp » (les pré-commandes sur le site viendront plus tard).
 - **Provenance** : ne jamais préciser sur le site d'où viennent les vêtements (pas de « Chine », « importé », etc.).
@@ -36,7 +34,7 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 
 ## 3. Prix (USD)
 
-**RG fixe lui-même les prix finaux**, y compris ceux des articles de marque. La grille ci-dessous est l'estimation de départ pour la gamme Essentiels.
+**RG fixe lui-même les prix finaux**, y compris ceux d'éventuels articles de marque. La grille ci-dessous est l'estimation de départ.
 
 | Article | Prix |
 |---|---|
@@ -58,7 +56,7 @@ Les prix vivent dans **un seul fichier de données** (voir §5) pour être modif
 
 ## 4. Catalogue de départ
 
-Source : liste d'articles de RG (codes LB-001…LB-030, prix d'achat et fournisseurs en privé dans `interne/`, **jamais publiés** : dossier ignoré par git). Gamme Essentiels :
+Source : liste d'articles de RG (codes LB-001…LB-030, prix d'achat et fournisseurs en privé dans `interne/`, **jamais publiés** : dossier ignoré par git). Catalogue mélangé :
 
 1. Jogging molleton ample (gris, noir, marine…)
 2. Zip hoodie molleton assorti au jogging
@@ -74,7 +72,7 @@ Source : liste d'articles de RG (codes LB-001…LB-030, prix d'achat et fourniss
 12. Maillot style foot rétro (design perso)
 
 Ajouts prévus dans la version à 20 articles : zip hoodie épais, coupe-vent color-block, pantalon running, doudoune légère, jogging tech fleece, sweat poche manche, veste coupe-pluie foot, ensemble « Torom ».
-Gamme Marques et catégorie Accessoires : articles et prix à venir, fournis par RG.
+Catégorie Accessoires : articles et prix à venir, fournis par RG.
 Photos : RG fournit ses propres photos (pas d'images reprises aux concurrents). En attendant, utiliser des placeholders neutres.
 
 **Règles du catalogue** : uniquement des articles **sans marque** pour l'instant. Les « copies de marques » de la liste de RG (section B) ne sont pas ajoutées au site (voir §2). Articles sans prix défini (LB-012, LB-016, LB-018) : non publiés tant que le prix n'est pas fixé. Couleurs « à confirmer » : champ `couleurs` vide (la fiche ne demande pas de couleur).
@@ -85,8 +83,8 @@ Photos : RG fournit ses propres photos (pas d'images reprises aux concurrents). 
 
 ```
 la-boutique/
-├── index.html            # accueil : hero, drop en cours, gammes/catégories, avis, contact
-├── catalogue.html        # grille produits + filtres par gamme, catégorie et marque
+├── index.html            # accueil : hero, drop en cours, catégories, avis, contact
+├── catalogue.html        # grille produits + filtres par catégorie et type
 ├── produit.html          # fiche produit (lit ?id= dans l'URL)
 ├── a-propos.html         # comment ça marche : pré-commande, délais, livraison
 ├── css/
@@ -101,8 +99,8 @@ la-boutique/
 │   ├── whatsapp.js       # construction du lien wa.me pré-rempli
 │   └── main.js           # menu mobile, éléments communs
 ├── data/
-│   ├── produits.json     # id, nom, gamme (essentiels / marques), catégorie (vêtements / accessoires / parfums…), marque, prix, couleurs, tailles, photos, statut (dispo / précommande / épuisé)
-│   └── config.json       # numéro WhatsApp, nom de la boutique, liens réseaux, drop en cours, listes des gammes et catégories
+│   ├── produits.json     # id, nom, catégorie (vêtements / accessoires / couvre-chef / parfums…), type, marque, prix, couleurs, tailles, photos, statut (dispo / précommande / épuisé)
+│   └── config.json       # numéro WhatsApp, nom de la boutique, liens réseaux, drop en cours, listes des catégories et types
 ├── assets/img/           # logo, photos produits (WebP compressées)
 ├── README.md
 └── CLAUDE.md
@@ -132,7 +130,7 @@ Ordre de commits suggéré :
 
 - Numéro WhatsApp de la boutique et liens Instagram / TikTok.
 - Nom exact affiché sur le site (« LA BOUTIQUE » ou autre) et fichier du logo Canva.
-- Liste et prix des articles de la gamme Marques et des Accessoires.
+- Liste et prix des articles de la catégorie Accessoires.
 - Pack hoodie + jogging : 69 $ ou 72 $.
 - Frais et zones de livraison à Kinshasa.
 - Délai annoncé pour les pré-commandes (dépend du transitaire, coûts encore à confirmer par devis).

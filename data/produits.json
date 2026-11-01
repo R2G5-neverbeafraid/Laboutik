@@ -3,7 +3,6 @@
     {
       "id": "lb-001",
       "nom": "Jogging molleton ample",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
@@ -27,7 +26,6 @@
     {
       "id": "lb-002",
       "nom": "Zip hoodie molleton assorti au jogging",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
@@ -47,7 +45,6 @@
     {
       "id": "lb-003",
       "nom": "Veste rétro col montant brodée",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -70,7 +67,6 @@
     {
       "id": "lb-004",
       "nom": "Pull rayé manches longues oversize",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "haut",
       "marque": "",
@@ -90,7 +86,6 @@
     {
       "id": "lb-005",
       "nom": "Skull cap fin brodé",
-      "gamme": "essentiels",
       "categorie": "couvre-chef",
       "type": "skull-cap",
       "marque": "",
@@ -106,7 +101,6 @@
     {
       "id": "lb-006",
       "nom": "Skull cap camouflage pixel",
-      "gamme": "essentiels",
       "categorie": "couvre-chef",
       "type": "skull-cap",
       "marque": "",
@@ -124,7 +118,6 @@
     {
       "id": "lb-007",
       "nom": "Polo maille zippé côtelé",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "haut",
       "marque": "",
@@ -144,7 +137,6 @@
     {
       "id": "lb-008",
       "nom": "Hoodie à capuche doublée satin",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
@@ -164,7 +156,6 @@
     {
       "id": "lb-009",
       "nom": "Veste coupe-vent bicolore à capuche",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -184,7 +175,6 @@
     {
       "id": "lb-010",
       "nom": "Veste softshell imperméable à capuche",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -204,7 +194,6 @@
     {
       "id": "lb-011",
       "nom": "Ensemble survêtement « air layer »",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "",
@@ -224,7 +213,6 @@
     {
       "id": "lb-013",
       "nom": "Zip hoodie épais oversize, épaules tombantes",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
@@ -247,7 +235,6 @@
     {
       "id": "lb-014",
       "nom": "Coupe-vent color-block à capuche",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -270,7 +257,6 @@
     {
       "id": "lb-015",
       "nom": "Pantalon running léger, zips aux chevilles",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
@@ -290,7 +276,6 @@
     {
       "id": "lb-017",
       "nom": "Jogging molleton technique fuselé",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
@@ -313,7 +298,6 @@
     {
       "id": "lb-019",
       "nom": "Veste coupe-pluie style entraînement",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -336,7 +320,6 @@
     {
       "id": "lb-020",
       "nom": "Ensemble zip hoodie + jogging épais, patch brodé",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "",
@@ -356,7 +339,6 @@
     {
       "id": "lb-021",
       "nom": "Veste outdoor à capuche imperméable",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -381,7 +363,6 @@
     {
       "id": "lb-022",
       "nom": "Veste col montant color-block brodée, style japonais",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -404,7 +385,6 @@
     {
       "id": "lb-023",
       "nom": "Jogging large coupe droite",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
@@ -427,7 +407,6 @@
     {
       "id": "lb-024",
       "nom": "Pantalon large molleton, petite broderie",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
@@ -449,7 +428,6 @@
     {
       "id": "lb-025",
       "nom": "Zip hoodie couleurs vives",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
@@ -473,7 +451,6 @@
     {
       "id": "lb-026",
       "nom": "Hoodie épais brodé, étoile sur capuche et manche",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
@@ -495,7 +472,6 @@
     {
       "id": "lb-027",
       "nom": "Bomber suédine col côtelé",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
@@ -517,7 +493,6 @@
     {
       "id": "lb-028",
       "nom": "Zip hoodie brodé fleurs de cerisier",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
@@ -540,7 +515,6 @@
     {
       "id": "lb-029",
       "nom": "Pantalon large molleton, taille enfant",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
@@ -560,7 +534,6 @@
     {
       "id": "lb-030",
       "nom": "Pantalon outdoor déperlant, taille enfant",
-      "gamme": "essentiels",
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",

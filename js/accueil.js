@@ -63,9 +63,6 @@ if (donnees) {
       )
   );
 
-  // Gamme Marques : bande visible seulement s'il y a des articles de marque
-  if (produits.some((p) => p.gamme === 'marques')) document.getElementById('marques').hidden = false;
-
   // Sélection (4 premiers articles)
   document.getElementById('selection').replaceChildren(...produits.slice(0, 4).map(creerCarte));
 

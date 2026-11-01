@@ -6,16 +6,6 @@
   "instagram": "",
   "tiktok": "",
   "ville": "Kinshasa",
-  "gammes": [
-    {
-      "id": "essentiels",
-      "nom": "Essentiels"
-    },
-    {
-      "id": "marques",
-      "nom": "Marques"
-    }
-  ],
   "categories": [
     {
       "id": "vetements",
