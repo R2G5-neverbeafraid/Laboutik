@@ -114,7 +114,7 @@ function creerFooter(config) {
       el(
         'div',
         { class: 'footer-grid' },
-        el('div', {}, el('p', { class: 'brand' }, blocLogo(config)), el('p', {}, config.slogan), el('p', {}, config.ville)),
+        el('div', {}, el('p', { class: 'brand' }, blocLogo(config)), el('p', {}, config.slogan)),
         el(
           'div',
           {},

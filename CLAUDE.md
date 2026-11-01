@@ -29,6 +29,7 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
   - **Marques** : section dédiée (Nike, Adidas, Corteiz, Louis Vuitton…). Produits, photos et prix fournis par RG.
 - Catégories : **Vêtements**, **Accessoires**, puis **Parfums** et d'autres plus tard → le site doit permettre d'ajouter une catégorie ou une gamme sans toucher au code (listes dans `data/config.json`).
 - Langue du site : français.
+- **Kinshasa** : affiché seulement au-dessus du titre de l'accueil et dans « Livraison à Kinshasa. » (à l'essai, le temps d'ajouter d'autres villes). Pas ailleurs dans les textes du site.
 
 ## 3. Prix (USD)
 

@@ -33,7 +33,7 @@ if (donnees) {
           {},
           el('dt', {}, 'Clôture des pré-commandes'),
           el('dd', {}, config.drop.cloture),
-          el('dt', {}, 'Arrivée estimée à Kinshasa'),
+          el('dt', {}, 'Arrivée estimée'),
           el('dd', {}, config.drop.arrivee)
         ),
         el('a', { class: 'btn', href: 'catalogue.html' }, 'Voir les articles du drop')
