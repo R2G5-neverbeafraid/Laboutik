@@ -27,7 +27,7 @@ La section « Avis clients » de l'accueil reste masquée tant que `avis` est vi
 ## Structure
 
 ```
-index.html · catalogue.html · produit.html · a-propos.html
+index.html · catalogue.html · produit.html · a-propos.html · 404.html
 css/   variables, base, layout, components
 js/    data, whatsapp, main (commun), catalogue, produit, accueil, a-propos
 data/  produits.json, config.json

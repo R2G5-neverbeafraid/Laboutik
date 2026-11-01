@@ -180,6 +180,15 @@ function remplirDepuisConfig(config) {
   });
 }
 
+/** Bouton WhatsApp flottant (sauf sur la fiche produit, qui a déjà son bouton de commande). */
+function creerBoutonFlottant(config) {
+  return el(
+    'a',
+    { class: 'wa-float', href: lienContact(config), target: '_blank', rel: 'noopener', 'aria-label': 'Écrire sur WhatsApp' },
+    'WhatsApp'
+  );
+}
+
 export async function initPage() {
   try {
     const donnees = await chargerDonnees();
@@ -188,6 +197,7 @@ export async function initPage() {
     document.querySelector('.skip-link').after(header);
     if (config.annonce) header.before(el('div', { class: 'announce' }, el('p', { class: 'container' }, config.annonce)));
     document.body.append(creerFooter(config));
+    if (document.body.dataset.page !== 'produit') document.body.append(creerBoutonFlottant(config));
     remplirDepuisConfig(config);
     return donnees;
   } catch (err) {

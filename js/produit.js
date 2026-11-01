@@ -1,5 +1,5 @@
 // Fiche produit : lit ?id=, affiche les options et construit le lien WhatsApp.
-import { initPage, el } from './main.js';
+import { initPage, creerCarte, el } from './main.js';
 import { formaterPrix, STATUTS } from './data.js';
 import { lienCommande } from './whatsapp.js';
 
@@ -148,5 +148,19 @@ if (donnees) {
       ),
       el('div', { class: 'container product' }, galerie, infos)
     );
+
+    // Autres articles de la même catégorie
+    const proches = produits.filter((x) => x.id !== p.id && x.categorie === p.categorie).slice(0, 4);
+    if (proches.length) {
+      conteneur.append(
+        el(
+          'section',
+          { class: 'section container', 'aria-labelledby': 't-proches' },
+          el('p', { class: 'eyebrow' }, 'Dans la même catégorie'),
+          el('h2', { id: 't-proches' }, 'À voir aussi'),
+          el('ul', { class: 'grid-products' }, proches.map(creerCarte))
+        )
+      );
+    }
   }
 }

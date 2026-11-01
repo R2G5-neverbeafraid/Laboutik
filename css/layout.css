@@ -107,6 +107,7 @@
   color: var(--c-accent-text);
   padding-block: var(--sp-6) var(--sp-5);
   margin-top: var(--sp-6);
+  padding-bottom: 6rem; /* place pour le bouton WhatsApp flottant */
   font-size: var(--fs-sm);
 }
 .site-footer a { color: inherit; }
