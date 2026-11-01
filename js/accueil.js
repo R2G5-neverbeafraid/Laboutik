@@ -48,13 +48,17 @@ if (donnees) {
   produits.forEach((p) => (comptes[p.categorie] = (comptes[p.categorie] || 0) + 1));
   document.getElementById('categories').replaceChildren(
     ...categories
-      .filter((c) => comptes[c.id])
+      .filter((c) => c.toujours_visible || comptes[c.id])
       .map((c) =>
         el(
           'a',
           { class: 'cat-tile', href: `catalogue.html?cat=${c.id}` },
           el('span', { class: 'cat-tile__name' }, c.nom),
-          el('span', { class: 'cat-tile__count' }, `${comptes[c.id]} article${comptes[c.id] > 1 ? 's' : ''}`)
+          el(
+            'span',
+            { class: 'cat-tile__count' },
+            comptes[c.id] ? `${comptes[c.id]} article${comptes[c.id] > 1 ? 's' : ''}` : 'Bientôt'
+          )
         )
       )
   );

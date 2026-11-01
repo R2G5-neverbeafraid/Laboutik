@@ -1,5 +1,6 @@
-// Page catalogue : grille + filtres par gamme et par catégorie (?gamme= et ?cat= dans l'URL).
-// Seules les gammes/catégories qui contiennent des articles sont proposées.
+// Page catalogue : grille + filtres (?gamme= ?cat= ?type= ?tri= dans l'URL).
+// - Catégories : celles marquées « toujours_visible » dans config.json, plus celles qui contiennent des articles.
+// - Types : proposés seulement quand une catégorie est choisie, et uniquement ceux de cette catégorie.
 import { initPage, creerCarte, el } from './main.js';
 
 const donnees = await initPage();
@@ -11,18 +12,21 @@ if (donnees) {
   const compteur = document.getElementById('catalogue-compteur');
   const selectTri = document.getElementById('catalogue-tri');
 
-  const utiles = (liste, cle) => liste.filter((x) => produits.some((p) => p[cle] === x.id));
-  const listes = {
-    gamme: utiles(gammes, 'gamme'),
-    categorie: utiles(categories, 'categorie'),
-    type: utiles(types, 'type'),
+  const gammesUtiles = gammes.filter((g) => produits.some((p) => p.gamme === g.id));
+  const categoriesVisibles = categories.filter(
+    (c) => c.toujours_visible || produits.some((p) => p.categorie === c.id)
+  );
+  const typesDe = (idCategorie) => {
+    const cat = categories.find((c) => c.id === idCategorie);
+    return ((cat && cat.types) || []).map((id) => types.find((t) => t.id === id)).filter(Boolean);
   };
+
   const params = new URLSearchParams(location.search);
-  const actif = {
-    gamme: listes.gamme.some((g) => g.id === params.get('gamme')) ? params.get('gamme') : 'tous',
-    categorie: listes.categorie.some((c) => c.id === params.get('cat')) ? params.get('cat') : 'tous',
-    type: listes.type.some((t) => t.id === params.get('type')) ? params.get('type') : 'tous',
-  };
+  const etat = { gamme: 'tous', categorie: 'tous', type: 'tous' };
+  if (gammesUtiles.some((g) => g.id === params.get('gamme'))) etat.gamme = params.get('gamme');
+  if (categoriesVisibles.some((c) => c.id === params.get('cat'))) etat.categorie = params.get('cat');
+  if (typesDe(etat.categorie).some((t) => t.id === params.get('type'))) etat.type = params.get('type');
+
   const TRIS = { 'prix-asc': (a, b) => a.prix - b.prix, 'prix-desc': (a, b) => b.prix - a.prix };
   let tri = TRIS[params.get('tri')] ? params.get('tri') : '';
   selectTri.value = tri;
@@ -30,51 +34,69 @@ if (donnees) {
     tri = selectTri.value;
     afficher();
   });
+
   const PARAM = { gamme: 'gamme', categorie: 'cat', type: 'type' };
   const LEGENDE = { gamme: 'Gamme', categorie: 'Catégorie', type: 'Type' };
+
+  function groupe(cle, options) {
+    const boutons = [{ id: 'tous', nom: 'Tous' }, ...options].map((x) => {
+      const b = el(
+        'button',
+        { type: 'button', class: 'chip', 'data-cle': cle, 'data-val': x.id, 'aria-pressed': 'false' },
+        x.nom
+      );
+      b.addEventListener('click', () => {
+        etat[cle] = x.id;
+        if (cle === 'categorie') {
+          etat.type = 'tous'; // les types dépendent de la catégorie
+          majGroupeType();
+        }
+        afficher();
+      });
+      return b;
+    });
+    return el('div', { class: 'filters', role: 'group', 'aria-label': LEGENDE[cle] }, boutons);
+  }
+
+  // Le groupe « Type » est reconstruit à chaque changement de catégorie
+  const conteneurType = el('div', {});
+  function majGroupeType() {
+    const options = etat.categorie === 'tous' ? [] : typesDe(etat.categorie);
+    conteneurType.replaceChildren(...(options.length ? [groupe('type', options)] : []));
+  }
 
   function afficher() {
     const liste = produits.filter(
       (p) =>
-        (actif.gamme === 'tous' || p.gamme === actif.gamme) &&
-        (actif.categorie === 'tous' || p.categorie === actif.categorie) &&
-        (actif.type === 'tous' || p.type === actif.type)
+        (etat.gamme === 'tous' || p.gamme === etat.gamme) &&
+        (etat.categorie === 'tous' || p.categorie === etat.categorie) &&
+        (etat.type === 'tous' || p.type === etat.type)
     );
     if (tri) liste.sort(TRIS[tri]);
     grille.replaceChildren(
-      ...(liste.length ? liste.map(creerCarte) : [el('li', { class: 'empty' }, 'Aucun article dans cette sélection.')])
+      ...(liste.length
+        ? liste.map(creerCarte)
+        : [el('li', { class: 'empty' }, "Aucun article pour l'instant. Reviens bientôt.")])
     );
     compteur.textContent = `${liste.length} article${liste.length > 1 ? 's' : ''}`;
     zoneFiltres.querySelectorAll('button').forEach((b) => {
-      b.setAttribute('aria-pressed', String(actif[b.dataset.type] === b.dataset.val));
+      b.setAttribute('aria-pressed', String(etat[b.dataset.cle] === b.dataset.val));
     });
     const url = new URL(location.href);
-    for (const type of Object.keys(PARAM)) {
-      if (actif[type] === 'tous') url.searchParams.delete(PARAM[type]);
-      else url.searchParams.set(PARAM[type], actif[type]);
+    for (const cle of Object.keys(PARAM)) {
+      if (etat[cle] === 'tous') url.searchParams.delete(PARAM[cle]);
+      else url.searchParams.set(PARAM[cle], etat[cle]);
     }
     if (tri) url.searchParams.set('tri', tri);
     else url.searchParams.delete('tri');
     history.replaceState(null, '', url);
   }
 
-  function groupe(type) {
-    const boutons = [{ id: 'tous', nom: 'Tous' }, ...listes[type]].map((x) => {
-      const b = el(
-        'button',
-        { type: 'button', class: 'chip', 'data-type': type, 'data-val': x.id, 'aria-pressed': 'false' },
-        x.nom
-      );
-      b.addEventListener('click', () => {
-        actif[type] = x.id;
-        afficher();
-      });
-      return b;
-    });
-    return el('div', { class: 'filters', role: 'group', 'aria-label': LEGENDE[type] }, boutons);
-  }
-
-  // Un groupe de filtres n'a d'intérêt que s'il offre un vrai choix (au moins 2 options)
-  zoneFiltres.replaceChildren(...Object.keys(listes).filter((t) => listes[t].length > 1).map(groupe));
+  zoneFiltres.replaceChildren(
+    ...(gammesUtiles.length > 1 ? [groupe('gamme', gammesUtiles)] : []),
+    groupe('categorie', categoriesVisibles),
+    conteneurType
+  );
+  majGroupeType();
   afficher();
 }

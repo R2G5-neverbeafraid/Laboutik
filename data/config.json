@@ -19,19 +19,36 @@
   "categories": [
     {
       "id": "vetements",
-      "nom": "Vêtements"
+      "nom": "Vêtements",
+      "toujours_visible": true,
+      "types": [
+        "jogging",
+        "hoodie",
+        "veste",
+        "haut",
+        "ensemble"
+      ]
     },
     {
       "id": "accessoires",
-      "nom": "Accessoires"
+      "nom": "Accessoires",
+      "toujours_visible": true,
+      "types": []
     },
     {
       "id": "couvre-chef",
-      "nom": "Couvre-chef"
+      "nom": "Couvre-chef",
+      "toujours_visible": true,
+      "types": [
+        "bonnet",
+        "skull-cap",
+        "casquette"
+      ]
     },
     {
       "id": "parfums",
-      "nom": "Parfums"
+      "nom": "Parfums",
+      "types": []
     }
   ],
   "drop": {
@@ -78,8 +95,12 @@
       "nom": "Bonnet"
     },
     {
-      "id": "enfant",
-      "nom": "Enfant"
+      "id": "skull-cap",
+      "nom": "Skull cap"
+    },
+    {
+      "id": "casquette",
+      "nom": "Casquette"
     }
   ]
 }

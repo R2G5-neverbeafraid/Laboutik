@@ -25,7 +25,9 @@ Puis ouvrir <http://localhost:8000>.
   Puis lister les chemins dans `photos` du produit, dans `data/produits.json` :
   `"photos": ["assets/img/produits/lb-001-1.webp", "assets/img/produits/lb-001-2.webp"]`.
   La première photo est celle de la carte ; les suivantes apparaissent en vignettes sur la fiche.
-- **Catégories et gammes** : listes `categories` et `gammes` dans `data/config.json`. Une catégorie sans article n'est pas affichée.
+- **Catégories, types et gammes** : listes `categories`, `types` et `gammes` dans `data/config.json`.
+  Chaque catégorie liste ses propres `types` (ex. Couvre-chef : bonnet, skull-cap, casquette). `"toujours_visible": true` affiche la catégorie même sans article ; sinon elle apparaît dès qu'un article la contient.
+  Sur chaque article (`data/produits.json`) : `categorie` et `type` doivent correspondre à ces listes.
 
 La section « Avis clients » de l'accueil reste masquée tant que `avis` est vide : n'y mettre que de vrais avis.
 
