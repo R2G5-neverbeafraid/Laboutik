@@ -1,6 +1,6 @@
 // Fiche produit : lit ?id=, affiche les options et construit le lien WhatsApp.
-import { initPage, creerCarte, el } from './main.js';
-import { formaterPrix, STATUTS, srcPhoto, couleurPhoto } from './data.js';
+import { initPage, creerCarte, el, pastille } from './main.js';
+import { formaterPrix, STATUTS, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
 import { lienCommande } from './whatsapp.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
@@ -39,6 +39,29 @@ function groupeOptions(nom, legende, valeurs) {
   );
 }
 
+/** Choix de couleur : pastilles rondes (le nom de la couleur choisie s'affiche à côté du titre). */
+function groupeCouleurs(valeurs) {
+  const auto = valeurs.length === 1;
+  const courante = el('span', { class: 'option-current' }, auto ? valeurs[0] : '');
+  return el(
+    'fieldset',
+    { class: 'option-group' },
+    el('legend', {}, 'Couleur', el('span', { class: 'option-sep' }, ' : '), courante),
+    el(
+      'div',
+      { class: 'options options--swatches' },
+      valeurs.map((v, i) =>
+        el(
+          'label',
+          { class: 'swatch-opt', title: v },
+          el('input', { type: 'radio', name: 'couleur', value: v, checked: auto && i === 0, 'aria-label': v }),
+          pastille(v)
+        )
+      )
+    )
+  );
+}
+
 if (donnees) {
   const { config, produits, categories } = donnees;
   const id = new URLSearchParams(location.search).get('id');
@@ -50,27 +73,48 @@ if (donnees) {
   } else {
     document.title = `${p.nom} — ${config.nom}`;
     const brutes = p.photos && p.photos.length ? p.photos : [PLACEHOLDER];
-    const photos = brutes.map((ph) => ({ src: srcPhoto(ph), couleur: couleurPhoto(ph) }));
+    const photos = brutes.map((ph) => ({ src: srcPhoto(ph), couleurs: couleursPhoto(ph) }));
     const sansPhoto = !(p.photos && p.photos.length);
 
-    // Galerie
-    const principale = el('img', {
-      src: photos[0].src,
-      alt: sansPhoto ? `${p.nom} (photo à venir)` : p.nom,
-      width: 800,
-      height: 1000,
+    // Galerie : on glisse d'une photo à l'autre (défilement horizontal), les vignettes servent de repères
+    const piste = el('div', {
+      class: 'gallery__track',
+      tabindex: '0',
+      role: 'group',
+      'aria-roledescription': 'carrousel',
+      'aria-label': photos.length > 1 ? `Photos de ${p.nom} : glisse pour voir les autres` : `Photo de ${p.nom}`,
     });
-    const galerie = el('div', { class: 'gallery' }, el('div', { class: 'gallery__main' }, principale));
+    photos.forEach(({ src }, i) =>
+      piste.append(
+        el(
+          'div',
+          { class: 'gallery__slide' },
+          el('img', {
+            src,
+            alt: sansPhoto ? `${p.nom} (photo à venir)` : `${p.nom}, photo ${i + 1}`,
+            width: 800,
+            height: 1000,
+            loading: i === 0 ? 'eager' : 'lazy',
+            decoding: 'async',
+            draggable: 'false',
+          })
+        )
+      )
+    );
+    const galerie = el('div', { class: 'gallery' }, el('div', { class: 'gallery__main' }, piste));
     let vignettes = [];
-    function afficherPhoto(i) {
-      principale.src = photos[i].src;
+    let courante = 0;
+    const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function afficherPhoto(i, defiler = true) {
+      courante = i;
       vignettes.forEach((v, j) => v.setAttribute('aria-current', String(j === i)));
+      if (defiler) piste.scrollTo({ left: i * piste.clientWidth, behavior: reduit ? 'auto' : 'smooth' });
     }
     if (photos.length > 1) {
-      vignettes = photos.map(({ src, couleur }, i) => {
+      vignettes = photos.map(({ src, couleurs }, i) => {
         const b = el(
           'button',
-          { type: 'button', 'aria-label': couleur ? `Photo ${i + 1} (${couleur})` : `Photo ${i + 1}`, 'aria-current': String(i === 0) },
+          { type: 'button', 'aria-label': couleurs.length === 1 ? `Photo ${i + 1} (${couleurs[0]})` : `Photo ${i + 1}`, 'aria-current': String(i === 0) },
           el('img', { src, alt: '', width: 64, height: 80, loading: 'lazy' })
         );
         b.addEventListener('click', () => afficherPhoto(i));
@@ -92,7 +136,7 @@ if (donnees) {
       'form',
       { novalidate: true },
       p.tailles.length ? groupeOptions('taille', 'Taille', p.tailles) : null,
-      p.couleurs.length ? groupeOptions('couleur', 'Couleur', p.couleurs) : null,
+      p.couleurs.length ? groupeCouleurs(p.couleurs) : null,
       erreur,
       bouton
     );
@@ -118,11 +162,37 @@ if (donnees) {
       }
     }
     form.addEventListener('change', majLien);
-    // Choisir une couleur affiche la photo de cette couleur, si elle existe
+    // Choisir une couleur affiche la photo de cette couleur ; glisser vers une photo d'une couleur choisit cette couleur
+    const nomCouleur = form.querySelector('.option-current');
+    function marquerCouleur(nom) {
+      if (nomCouleur) nomCouleur.textContent = nom || '';
+    }
     form.addEventListener('change', (e) => {
       if (e.target.name !== 'couleur') return;
-      const i = photos.findIndex((ph) => ph.couleur && ph.couleur.toLowerCase() === e.target.value.toLowerCase());
-      if (i >= 0) afficherPhoto(i);
+      marquerCouleur(e.target.value);
+      const i = photos.findIndex((ph) => ph.couleurs.some((c) => memeCouleur(c, e.target.value)));
+      if (i >= 0 && i !== courante) afficherPhoto(i);
+    });
+    let minuteur;
+    piste.addEventListener('scroll', () => {
+      clearTimeout(minuteur);
+      minuteur = setTimeout(() => {
+        const i = Math.round(piste.scrollLeft / piste.clientWidth);
+        if (i === courante || i < 0 || i >= photos.length) return;
+        afficherPhoto(i, false);
+        const { couleurs } = photos[i];
+        if (couleurs.length !== 1) return;
+        const radio = [...form.querySelectorAll('input[name="couleur"]')].find((r) => memeCouleur(r.value, couleurs[0]));
+        if (radio && !radio.checked) {
+          radio.checked = true;
+          marquerCouleur(radio.value);
+          majLien();
+        }
+      }, 90);
+    });
+    piste.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' && courante < photos.length - 1) afficherPhoto(courante + 1);
+      if (e.key === 'ArrowLeft' && courante > 0) afficherPhoto(courante - 1);
     });
     form.addEventListener('submit', (e) => e.preventDefault());
     bouton.addEventListener('click', (e) => {

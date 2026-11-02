@@ -2234,52 +2234,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-099",
-      "nom": "Ensemble track Syna World noir et gris néon",
-      "categorie": "vetements",
-      "type": "ensemble",
-      "marque": "Syna World",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Noir / gris"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-099-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-100",
-      "nom": "Ensemble track Syna World noir liseré gris",
-      "categorie": "vetements",
-      "type": "ensemble",
-      "marque": "Syna World",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Noir"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-100-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-101",
       "nom": "Ensemble hoodie + jogging Syna World marron et crème",
       "categorie": "vetements",
@@ -2304,39 +2258,17 @@
     },
     {
       "id": "vet-102",
-      "nom": "Ensemble track Syna World (4 coloris)",
+      "nom": "Ensemble track Syna World",
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Syna World",
       "prix": null,
-      "description": "",
+      "description": "Veste + pantalon track Syna World. Plusieurs coloris : glisse les photos ou choisis une pastille.",
       "couleurs": [
-        "Gris",
-        "Noir",
-        "Beige",
-        "Marron"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-102-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-103",
-      "nom": "Veste track Syna World marron et beige",
-      "categorie": "vetements",
-      "type": "veste",
-      "marque": "Syna World",
-      "prix": null,
-      "description": "",
-      "couleurs": [
+        "Noir / gris néon",
+        "Noir liseré gris",
+        "Anthracite / noir",
+        "Gris clair",
         "Marron / beige"
       ],
       "tailles": [
@@ -2347,31 +2279,27 @@
         "XXL"
       ],
       "photos": [
+        {
+          "src": "assets/img/produits/vet-102-1.webp",
+          "couleur": [
+            "Anthracite / noir",
+            "Gris clair"
+          ]
+        },
+        {
+          "src": "assets/img/produits/vet-099-1.webp",
+          "couleur": "Noir / gris néon"
+        },
+        {
+          "src": "assets/img/produits/vet-100-1.webp",
+          "couleur": "Noir liseré gris"
+        },
+        {
+          "src": "assets/img/produits/vet-104-1.webp",
+          "couleur": "Marron / beige"
+        },
         "assets/img/produits/vet-103-1.webp",
         "assets/img/produits/vet-103-2.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-104",
-      "nom": "Ensemble track Syna World marron et beige",
-      "categorie": "vetements",
-      "type": "ensemble",
-      "marque": "Syna World",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Marron / beige"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-104-1.webp"
       ],
       "statut": "precommande"
     },

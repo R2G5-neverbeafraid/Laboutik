@@ -1,5 +1,5 @@
 // Éléments communs : header, footer, menu mobile, remplissage depuis la config, cartes produit.
-import { chargerDonnees, formaterPrix, STATUTS, srcPhoto } from './data.js';
+import { chargerDonnees, formaterPrix, STATUTS, srcPhoto, fondCouleur } from './data.js';
 import { lienContact } from './whatsapp.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
@@ -45,6 +45,24 @@ export function el(tag, attrs = {}, ...enfants) {
   return n;
 }
 
+/** Pastille ronde de couleur (décorative : le nom est donné par le texte ou le title). */
+export function pastille(nom) {
+  return el('span', { class: 'swatch', style: `background: ${fondCouleur(nom)}`, title: nom, 'aria-hidden': 'true' });
+}
+
+/** Petites pastilles des coloris sous le prix d'une carte (seulement s'il y a un choix). */
+function pastillesCarte(produit) {
+  const cs = produit.couleurs || [];
+  if (cs.length < 2) return null;
+  const MAX = 5;
+  return el(
+    'p',
+    { class: 'card__swatches', 'aria-label': `${cs.length} coloris : ${cs.join(', ')}` },
+    cs.slice(0, MAX).map(pastille),
+    cs.length > MAX ? el('span', { class: 'card__more' }, `+${cs.length - MAX}`) : null
+  );
+}
+
 export function creerCarte(produit) {
   const photo = produit.photos && produit.photos[0] ? srcPhoto(produit.photos[0]) : PLACEHOLDER;
   const img = el('img', {
@@ -70,7 +88,8 @@ export function creerCarte(produit) {
           { class: 'card__body' },
           produit.marque ? el('p', { class: 'card__brand' }, produit.marque) : null,
           el('h3', { class: 'card__title' }, produit.nom),
-          el('p', { class: 'card__price' }, formaterPrix(produit.prix))
+          el('p', { class: 'card__price' }, formaterPrix(produit.prix)),
+          pastillesCarte(produit)
         )
       ),
       el('span', { class: `badge badge--${produit.statut}` }, STATUTS[produit.statut] || produit.statut)
