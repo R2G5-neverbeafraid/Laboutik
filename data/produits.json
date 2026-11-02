@@ -1899,7 +1899,7 @@
     },
     {
       "id": "vet-089",
-      "nom": "Veste Corteiz Gabriel Moses Elitework « Columbia »",
+      "nom": "Corteiz Gabriel Moses Elitework Jacket 'Columbia'",
       "categorie": "vetements",
       "type": "veste",
       "marque": "Corteiz",
@@ -1921,7 +1921,7 @@
     },
     {
       "id": "vet-090",
-      "nom": "Maillot Corteiz Carni Stellations jaune",
+      "nom": "Corteiz Carni Stellations Football Jersey 'Yellow'",
       "categorie": "vetements",
       "type": "maillot",
       "marque": "Corteiz",
@@ -3092,7 +3092,7 @@
     },
     {
       "id": "vet-128",
-      "nom": "Hoodie Vertical Logo Chrome Hearts noir",
+      "nom": "Chrome Hearts Vertical Logo Hoodie 'Black'",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Chrome Hearts",
@@ -3115,7 +3115,7 @@
     },
     {
       "id": "vet-129",
-      "nom": "Hoodie zippé Cross Chrome Hearts blanc",
+      "nom": "Chrome Hearts Cross Zip Up Hoodie Sweatshirt 'White'",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Chrome Hearts",
@@ -3141,7 +3141,7 @@
     },
     {
       "id": "vet-130",
-      "nom": "T-shirt BAPE × Chrome Hearts noir",
+      "nom": "BAPE x Chrome Hearts T-shirt 'Black'",
       "categorie": "vetements",
       "type": "haut",
       "marque": "BAPE × Chrome Hearts",
@@ -3164,7 +3164,7 @@
     },
     {
       "id": "vet-131",
-      "nom": "Sweat zippé à capuche Supreme Arc Thermal noir",
+      "nom": "Supreme Arc Thermal Zip Up Hooded Sweatshirt 'Black'",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Supreme",
@@ -3206,7 +3206,7 @@
     },
     {
       "id": "vet-132",
-      "nom": "T-shirt Corteiz Allstarz manches longues raglan blanc et kaki",
+      "nom": "Corteiz Allstarz Raglan Long-Sleeve Tee 'White/Khaki'",
       "categorie": "vetements",
       "type": "haut",
       "marque": "Corteiz",
@@ -3229,7 +3229,7 @@
     },
     {
       "id": "vet-133",
-      "nom": "Hoodie zippé Polo Ralph Lauren",
+      "nom": "Polo Ralph Lauren Long-Sleeve Full Zip Hoodie",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Polo Ralph Lauren",
@@ -3276,7 +3276,7 @@
     },
     {
       "id": "cou-015",
-      "nom": "Casquette New Era 59FIFTY New York Yankees « Historic Champs »",
+      "nom": "New Era 59FIFTY New York Yankees « Historic Champs »",
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "New Era",
@@ -3307,7 +3307,7 @@
     },
     {
       "id": "cou-016",
-      "nom": "Casquette New Era 59FIFTY New York Yankees « Liberty » noire",
+      "nom": "59FIFTY New Era World Series Black New York Yankees Liberty",
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "New Era",
@@ -3330,7 +3330,33 @@
         "assets/img/produits/cou-016-3.webp",
         "assets/img/produits/cou-016-4.webp",
         "assets/img/produits/cou-016-5.webp",
-        "assets/img/produits/cou-016-6.webp"
+        "assets/img/produits/cou-016-6.webp",
+        "assets/img/produits/cou-016-7.webp",
+        "assets/img/produits/cou-016-8.webp",
+        "assets/img/produits/cou-016-9.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-017",
+      "nom": "Pink 3 Stars Los Angeles Angels Black Visor Gray Bottom 50th Anniversary Side Patch New Era 9Fifty Snapback",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "New Era",
+      "prix": null,
+      "description": "Casquette snapback 9FIFTY rose à visière noire, logo Angels et trois étoiles, patch latéral 50th Anniversary.",
+      "couleurs": [
+        "Rose / noir"
+      ],
+      "tailles": [
+        "Taille unique"
+      ],
+      "photos": [
+        "assets/img/produits/cou-017-1.webp",
+        "assets/img/produits/cou-017-2.webp",
+        "assets/img/produits/cou-017-3.webp",
+        "assets/img/produits/cou-017-4.webp",
+        "assets/img/produits/cou-017-5.webp"
       ],
       "statut": "precommande"
     }
