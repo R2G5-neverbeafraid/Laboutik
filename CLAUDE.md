@@ -130,6 +130,16 @@ Ordre de commits suggéré :
 - Prix toujours affichés en **$**.
 - Lien WhatsApp : `https://wa.me/<numéro>?text=<message encodé>` ; le message reprend le nom de l'article, la taille, la couleur et le prix.
 
+## 6 bis. Suivi du catalogue : mise à jour des deux fichiers (règle impérative de RG)
+
+**Après CHAQUE modification du catalogue** (ajout, suppression, fusion, changement de prix, de nom, de photo, de coloris ou d'ordre dans `data/produits.json`), il faut :
+1. lancer `python3 outils/maj_inventaires.py` ; il régénère, dans `interne/` (dossier non publié) :
+   - `LA_BOUTIQUE_inventaire.docx` : inventaire des articles du site (photos, détails, case prix) ;
+   - `LA_BOUTIQUE_prix.xlsx` : prix de chaque article **classés par marque** (+ feuille « Résumé par marque ») ; après le script, recalculer avec le script `recalc.py` du skill xlsx si disponible ;
+2. envoyer ces deux fichiers à RG dans la conversation (SendUserFile) ;
+3. republier l'Artifact de test si le site a changé.
+Les prix saisis par RG dans l'inventaire sont la référence : ils sont déjà dans `data/produits.json` (un seul article sans prix : « Sweat col rond, poche zippée sur la manche »). Un article co-signé (« Nike × Syna World ») est classé sous sa première marque dans le fichier des prix ; l'ordre du catalogue place en tête le Polo Ralph Lauren gris, le Tech Fleece Nike, le Tech Fleece NOCTA bleu ciel et la casquette Yankees « Historic Champs ».
+
 ## 7. Points encore ouverts (à demander à RG)
 
 - Numéro WhatsApp de la boutique et liens Instagram / TikTok.
