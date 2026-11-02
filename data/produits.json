@@ -910,25 +910,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-037",
-      "nom": "Pull Polo Ralph Lauren",
-      "categorie": "vetements",
-      "type": "haut",
-      "marque": "Polo Ralph Lauren",
-      "prix": 45,
-      "description": "",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-038",
       "nom": "T-shirt délavé Cactus Jack (Utopia)",
       "categorie": "vetements",
