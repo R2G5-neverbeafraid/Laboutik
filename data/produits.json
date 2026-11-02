@@ -1899,7 +1899,7 @@
     },
     {
       "id": "vet-089",
-      "nom": "Veste coupe-vent Corteiz imprimé statue",
+      "nom": "Veste Corteiz Gabriel Moses Elitework « Columbia »",
       "categorie": "vetements",
       "type": "veste",
       "marque": "Corteiz",
@@ -1914,13 +1914,14 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-089-1.webp"
+        "assets/img/produits/vet-089-1.webp",
+        "assets/img/produits/vet-089-2.webp"
       ],
       "statut": "precommande"
     },
     {
       "id": "vet-090",
-      "nom": "Maillot Corteiz n°18 jaune",
+      "nom": "Maillot Corteiz Carni Stellations jaune",
       "categorie": "vetements",
       "type": "maillot",
       "marque": "Corteiz",
@@ -1937,7 +1938,8 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-090-1.webp"
+        "assets/img/produits/vet-090-1.webp",
+        "assets/img/produits/vet-090-2.webp"
       ],
       "statut": "precommande"
     },
@@ -3199,6 +3201,66 @@
       ],
       "photos": [
         "assets/img/produits/cou-014-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-132",
+      "nom": "T-shirt Corteiz Allstarz manches longues raglan blanc et kaki",
+      "categorie": "vetements",
+      "type": "haut",
+      "marque": "Corteiz",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Blanc / kaki"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-132-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-133",
+      "nom": "Hoodie zippé Polo Ralph Lauren",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Polo Ralph Lauren",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Gris chiné",
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-133-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-133-2.webp",
+          "couleur": "Gris chiné"
+        },
+        "assets/img/produits/vet-133-3.webp",
+        {
+          "src": "assets/img/produits/vet-133-4.webp",
+          "couleur": "Marine"
+        }
       ],
       "statut": "precommande"
     }
