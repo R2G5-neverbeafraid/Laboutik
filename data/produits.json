@@ -6,7 +6,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Polo Ralph Lauren",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Noir",
@@ -53,7 +53,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Nike",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Noir",
@@ -89,7 +89,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 70,
       "description": "",
       "couleurs": [
         "Noir",
@@ -127,7 +127,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "New Era",
-      "prix": null,
+      "prix": 25,
       "description": "Casquette fitted 59FIFTY bleu marine : broderies « World Series Champions », patchs 1923 et 2009, pin doré « 27 ».",
       "couleurs": [
         "Bleu marine"
@@ -158,7 +158,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
-      "prix": 35,
+      "prix": 15,
       "description": "Jogging en molleton, coupe ample.",
       "couleurs": [
         "Gris",
@@ -181,7 +181,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
-      "prix": 42,
+      "prix": 30,
       "description": "Hoodie zippé en molleton, assorti au jogging.",
       "couleurs": [],
       "tailles": [
@@ -200,7 +200,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": 45,
+      "prix": 35,
       "description": "Veste rétro à col montant, brodée.",
       "couleurs": [
         "Noir",
@@ -222,7 +222,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "",
-      "prix": 45,
+      "prix": 15,
       "description": "Pull rayé à manches longues, coupe oversize.",
       "couleurs": [],
       "tailles": [
@@ -241,7 +241,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "",
-      "prix": 29,
+      "prix": 19,
       "description": "Polo en maille côtelée, col zippé.",
       "couleurs": [],
       "tailles": [
@@ -260,7 +260,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
-      "prix": 50,
+      "prix": 40,
       "description": "Hoodie à capuche doublée en satin.",
       "couleurs": [],
       "tailles": [
@@ -279,7 +279,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": 59,
+      "prix": 20,
       "description": "Coupe-vent bicolore à capuche.",
       "couleurs": [],
       "tailles": [
@@ -298,7 +298,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": 59,
+      "prix": 25,
       "description": "Softshell imperméable à capuche.",
       "couleurs": [],
       "tailles": [
@@ -317,7 +317,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "",
-      "prix": 75,
+      "prix": 50,
       "description": "Ensemble veste + pantalon en tissu air layer.",
       "couleurs": [],
       "tailles": [
@@ -336,7 +336,7 @@
       "categorie": "vetements",
       "type": "maillot",
       "marque": "",
-      "prix": null,
+      "prix": 20,
       "description": "Maillot style foot rétro, design perso.",
       "couleurs": [],
       "tailles": [
@@ -355,7 +355,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
-      "prix": 42,
+      "prix": 35,
       "description": "Zip hoodie épais, coupe oversize, épaules tombantes.",
       "couleurs": [
         "Noir",
@@ -386,7 +386,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": 59,
+      "prix": 25,
       "description": "Coupe-vent color-block à capuche.",
       "couleurs": [
         "Turquoise",
@@ -408,7 +408,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
-      "prix": 35,
+      "prix": 15,
       "description": "Pantalon running léger, zips aux chevilles.",
       "couleurs": [],
       "tailles": [
@@ -427,7 +427,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": null,
+      "prix": 20,
       "description": "Doudoune légère matelassée, col montant.",
       "couleurs": [],
       "tailles": [
@@ -528,7 +528,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": 59,
+      "prix": 25,
       "description": "Veste outdoor imperméable à capuche.",
       "couleurs": [
         "Noir",
@@ -554,7 +554,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": 45,
+      "prix": 30,
       "description": "Veste à col montant, color-block brodée, style japonais.",
       "couleurs": [
         "Marine / vert",
@@ -578,7 +578,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
-      "prix": 35,
+      "prix": 15,
       "description": "Jogging large, coupe droite.",
       "couleurs": [
         "Noir",
@@ -625,7 +625,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
-      "prix": 50,
+      "prix": 45,
       "description": "Hoodie épais, étoile brodée sur la capuche et la manche.",
       "couleurs": [
         "Gris"
@@ -648,7 +648,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "",
-      "prix": 57,
+      "prix": 30,
       "description": "Bomber en suédine, col côtelé.",
       "couleurs": [
         "Beige"
@@ -671,7 +671,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
-      "prix": 50,
+      "prix": 40,
       "description": "Zip hoodie brodé de fleurs de cerisier.",
       "couleurs": [
         "Gris",
@@ -706,7 +706,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
-      "prix": 33,
+      "prix": 30,
       "description": "Pantalon large en molleton, pour grands enfants.",
       "couleurs": [
         "Gris",
@@ -734,7 +734,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "",
-      "prix": 26,
+      "prix": 16,
       "description": "Pantalon outdoor déperlant, pour grands enfants.",
       "couleurs": [
         "Beige",
@@ -754,7 +754,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": null,
+      "prix": 55,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -773,7 +773,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Noir",
@@ -798,7 +798,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Noir / blanc",
@@ -829,7 +829,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -848,7 +848,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Kailas",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Violet",
@@ -884,7 +884,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Blanc / noir",
@@ -915,7 +915,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Polo Ralph Lauren",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -934,7 +934,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Travis Scott / Cactus Jack",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -955,7 +955,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir",
@@ -985,7 +985,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Nike",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Noir",
@@ -1009,7 +1009,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Under Armour",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Gris",
@@ -1040,7 +1040,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1063,7 +1063,7 @@
       "categorie": "vetements",
       "type": "maillot",
       "marque": "Nike",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -1084,7 +1084,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Polo Ralph Lauren",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -1105,7 +1105,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Mercedes-AMG F1",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Blanc"
@@ -1131,7 +1131,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Nike",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -1152,7 +1152,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Essentials (Fear of God)",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Gris"
@@ -1175,7 +1175,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Supreme",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Noir",
@@ -1218,7 +1218,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1241,7 +1241,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Supreme",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Gris chiné"
@@ -1266,7 +1266,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1289,7 +1289,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1312,7 +1312,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Blanc"
@@ -1335,7 +1335,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1358,7 +1358,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "On",
-      "prix": null,
+      "prix": 50,
       "description": "",
       "couleurs": [
         "Kaki"
@@ -1382,7 +1382,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "On",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Noir / gris"
@@ -1405,7 +1405,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "On",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Gris"
@@ -1428,7 +1428,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Lululemon",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Crème"
@@ -1451,7 +1451,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Lululemon",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Lavande",
@@ -1482,7 +1482,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Alo",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Noir",
@@ -1514,7 +1514,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Alo",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1537,7 +1537,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Alo",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Noir",
@@ -1568,7 +1568,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1591,7 +1591,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1614,7 +1614,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Torom",
-      "prix": null,
+      "prix": 55,
       "description": "",
       "couleurs": [
         "Beige sable",
@@ -1659,7 +1659,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Torom",
-      "prix": null,
+      "prix": 60,
       "description": "",
       "couleurs": [
         "Noir",
@@ -1690,7 +1690,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Suvene",
-      "prix": null,
+      "prix": 50,
       "description": "",
       "couleurs": [
         "Bleu marine",
@@ -1722,7 +1722,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Suvene",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Bleu marine",
@@ -1759,7 +1759,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Suvene",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Noir",
@@ -1791,7 +1791,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Suvene",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Gris chiné",
@@ -1832,7 +1832,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Suvene",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1855,7 +1855,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Suvene",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir",
@@ -1885,7 +1885,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Suvene",
-      "prix": null,
+      "prix": 15,
       "description": "",
       "couleurs": [
         "Blanc"
@@ -1908,7 +1908,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Saint Michael",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1931,7 +1931,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1955,7 +1955,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Noir"
@@ -1978,7 +1978,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2001,7 +2001,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Blanc"
@@ -2024,7 +2024,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir / blanc",
@@ -2055,7 +2055,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 60,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -2077,7 +2077,7 @@
       "categorie": "vetements",
       "type": "maillot",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Jaune"
@@ -2101,7 +2101,7 @@
       "categorie": "vetements",
       "type": "maillot",
       "marque": "Supreme",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir délavé"
@@ -2124,7 +2124,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Bleu ciel",
@@ -2160,7 +2160,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Bleu ciel"
@@ -2183,7 +2183,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Gris chiné"
@@ -2206,7 +2206,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Supreme × Corteiz",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2229,7 +2229,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Bleu marine"
@@ -2252,7 +2252,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike × Corteiz",
-      "prix": null,
+      "prix": 55,
       "description": "",
       "couleurs": [
         "Beige"
@@ -2275,7 +2275,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Noir / rouge"
@@ -2298,7 +2298,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Syna World",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Marron / crème"
@@ -2321,7 +2321,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Syna World",
-      "prix": null,
+      "prix": 40,
       "description": "Veste + pantalon track Syna World. Plusieurs coloris : glisse les photos ou choisis une pastille.",
       "couleurs": [
         "Noir / gris néon",
@@ -2368,7 +2368,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Syna World",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2391,7 +2391,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Syna World",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Beige"
@@ -2414,7 +2414,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Syna World",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2437,7 +2437,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Nike × Syna World",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Noir / gris"
@@ -2460,7 +2460,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Nike × Syna World",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Gris / noir"
@@ -2483,7 +2483,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": null,
+      "prix": 45,
       "description": "",
       "couleurs": [
         "Bleu"
@@ -2506,7 +2506,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 70,
       "description": "",
       "couleurs": [
         "Pêche"
@@ -2529,7 +2529,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 70,
       "description": "",
       "couleurs": [
         "Lavande"
@@ -2552,7 +2552,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 60,
       "description": "",
       "couleurs": [
         "Noir / gris"
@@ -2575,7 +2575,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Nike",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Noir / anthracite"
@@ -2598,7 +2598,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 15,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2621,7 +2621,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 15,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2644,7 +2644,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Polo Ralph Lauren",
-      "prix": null,
+      "prix": 50,
       "description": "",
       "couleurs": [
         "Gris foncé"
@@ -2667,7 +2667,7 @@
       "categorie": "accessoires",
       "type": "divers",
       "marque": "Polo Ralph Lauren",
-      "prix": null,
+      "prix": 10,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -2682,7 +2682,7 @@
       "categorie": "accessoires",
       "type": "divers",
       "marque": "Nike",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -2699,7 +2699,7 @@
       "categorie": "accessoires",
       "type": "lunettes",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Transparent",
@@ -2758,7 +2758,7 @@
       "categorie": "couvre-chef",
       "type": "skull-cap",
       "marque": "Nike",
-      "prix": null,
+      "prix": 15,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -2775,7 +2775,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Bordeaux"
@@ -2794,7 +2794,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2813,7 +2813,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2832,7 +2832,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir",
@@ -2864,7 +2864,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Noir",
@@ -2886,7 +2886,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2905,7 +2905,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 20,
       "description": "",
       "couleurs": [
         "Marron"
@@ -2924,7 +2924,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 15,
       "description": "",
       "couleurs": [
         "Noir"
@@ -2943,7 +2943,7 @@
       "categorie": "couvre-chef",
       "type": "bonnet",
       "marque": "Syna World",
-      "prix": null,
+      "prix": 10,
       "description": "",
       "couleurs": [
         "Gris",
@@ -2963,7 +2963,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Turquoise / noir",
@@ -3003,7 +3003,7 @@
       "categorie": "vetements",
       "type": "maillot",
       "marque": "Adidas",
-      "prix": null,
+      "prix": 25,
       "description": "Maillot rétro de la finale de Ligue des champions 2007 (Athènes).",
       "couleurs": [
         "Blanc"
@@ -3026,7 +3026,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3050,7 +3050,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3073,7 +3073,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3096,7 +3096,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir",
@@ -3127,7 +3127,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Polo Ralph Lauren",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Gris / marine"
@@ -3151,7 +3151,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Polo Ralph Lauren",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Marine"
@@ -3174,7 +3174,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3197,7 +3197,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 40,
       "description": "",
       "couleurs": [
         "Blanc"
@@ -3223,7 +3223,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "BAPE × Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3246,7 +3246,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Supreme",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3269,7 +3269,7 @@
       "categorie": "couvre-chef",
       "type": "bonnet",
       "marque": "Chrome Hearts",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3288,7 +3288,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "Corteiz",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Blanc / kaki"
@@ -3311,7 +3311,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "New Era",
-      "prix": null,
+      "prix": 20,
       "description": "Casquette fitted 59FIFTY noire : logo NY blanc, Statue de la Liberté turquoise, patch World Series 2000.",
       "couleurs": [
         "Noir"
@@ -3343,7 +3343,7 @@
       "categorie": "couvre-chef",
       "type": "casquette",
       "marque": "New Era",
-      "prix": null,
+      "prix": 25,
       "description": "Casquette snapback 9FIFTY rose à visière noire, logo Angels et trois étoiles, patch latéral 50th Anniversary.",
       "couleurs": [
         "Rose / noir"
