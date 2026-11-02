@@ -128,7 +128,7 @@ function creerRecherche() {
     id: 'recherche-globale',
     name: 'q',
     type: 'search',
-    placeholder: 'Rechercher : article, marque, couleur…',
+    placeholder: 'Rechercher un article, une marque…',
     autocomplete: 'off',
     enterkeyhint: 'search',
     maxlength: '80',
