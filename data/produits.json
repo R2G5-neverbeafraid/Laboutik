@@ -381,66 +381,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-012",
-      "nom": "Coupe-vent color-block à capuche",
-      "categorie": "vetements",
-      "type": "veste",
-      "marque": "",
-      "prix": 25,
-      "description": "Coupe-vent color-block à capuche.",
-      "couleurs": [
-        "Turquoise",
-        "Rose"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-013",
-      "nom": "Pantalon running léger, zips aux chevilles",
-      "categorie": "vetements",
-      "type": "jogging",
-      "marque": "",
-      "prix": 15,
-      "description": "Pantalon running léger, zips aux chevilles.",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-014",
-      "nom": "Doudoune légère matelassée col montant",
-      "categorie": "vetements",
-      "type": "veste",
-      "marque": "",
-      "prix": 20,
-      "description": "Doudoune légère matelassée, col montant.",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-015",
       "nom": "Jogging molleton technique fuselé",
       "categorie": "vetements",
