@@ -3273,6 +3273,66 @@
         }
       ],
       "statut": "precommande"
+    },
+    {
+      "id": "cou-015",
+      "nom": "Casquette New Era 59FIFTY New York Yankees « Historic Champs »",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "New Era",
+      "prix": null,
+      "description": "Casquette fitted 59FIFTY bleu marine : broderies « World Series Champions », patchs 1923 et 2009, pin doré « 27 ».",
+      "couleurs": [
+        "Bleu marine"
+      ],
+      "tailles": [
+        "7 1/8",
+        "7 1/4",
+        "7 3/8",
+        "7 1/2",
+        "7 5/8",
+        "7 3/4"
+      ],
+      "photos": [
+        "assets/img/produits/cou-015-1.webp",
+        "assets/img/produits/cou-015-2.webp",
+        "assets/img/produits/cou-015-3.webp",
+        "assets/img/produits/cou-015-4.webp",
+        "assets/img/produits/cou-015-5.webp",
+        "assets/img/produits/cou-015-6.webp",
+        "assets/img/produits/cou-015-7.webp",
+        "assets/img/produits/cou-015-8.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "cou-016",
+      "nom": "Casquette New Era 59FIFTY New York Yankees « Liberty » noire",
+      "categorie": "couvre-chef",
+      "type": "casquette",
+      "marque": "New Era",
+      "prix": null,
+      "description": "Casquette fitted 59FIFTY noire : logo NY blanc, Statue de la Liberté turquoise, patch World Series 2000.",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "7 1/8",
+        "7 1/4",
+        "7 3/8",
+        "7 1/2",
+        "7 5/8",
+        "7 3/4"
+      ],
+      "photos": [
+        "assets/img/produits/cou-016-1.webp",
+        "assets/img/produits/cou-016-2.webp",
+        "assets/img/produits/cou-016-3.webp",
+        "assets/img/produits/cou-016-4.webp",
+        "assets/img/produits/cou-016-5.webp",
+        "assets/img/produits/cou-016-6.webp"
+      ],
+      "statut": "precommande"
     }
   ]
 }
