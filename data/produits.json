@@ -849,52 +849,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-042",
-      "nom": "Coupe-vent Windrunner turquoise",
-      "categorie": "vetements",
-      "type": "veste",
-      "marque": "Nike",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Turquoise"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-042-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-043",
-      "nom": "Coupe-vent Windrunner rose",
-      "categorie": "vetements",
-      "type": "veste",
-      "marque": "Nike",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Rose"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-043-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-044",
       "nom": "Pantalon running zips chevilles",
       "categorie": "vetements",
@@ -2980,16 +2934,17 @@
     },
     {
       "id": "vet-120",
-      "nom": "Coupe-vent Windrunner color-block (3 coloris)",
+      "nom": "Coupe-vent Windrunner color-block",
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
       "prix": null,
       "description": "",
       "couleurs": [
+        "Turquoise / noir",
         "Menthe / noir",
-        "Rose / gris",
-        "Menthe / gris foncé"
+        "Menthe / gris foncé",
+        "Rose / gris"
       ],
       "tailles": [
         "S",
@@ -2999,7 +2954,21 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-120-1.webp"
+        {
+          "src": "assets/img/produits/vet-120-1.webp",
+          "couleur": [
+            "Menthe / noir",
+            "Menthe / gris foncé"
+          ]
+        },
+        {
+          "src": "assets/img/produits/vet-042-1.webp",
+          "couleur": "Turquoise / noir"
+        },
+        {
+          "src": "assets/img/produits/vet-043-1.webp",
+          "couleur": "Rose / gris"
+        }
       ],
       "statut": "precommande"
     },
