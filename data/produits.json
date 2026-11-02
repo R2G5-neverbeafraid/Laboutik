@@ -676,7 +676,7 @@
       "nom": "Veste Barça",
       "categorie": "vetements",
       "type": "veste",
-      "marque": "FC Barcelone / Nike",
+      "marque": "Nike",
       "prix": null,
       "description": "",
       "couleurs": [],
@@ -802,7 +802,7 @@
       "nom": "Veste coupe-pluie Brésil",
       "categorie": "vetements",
       "type": "veste",
-      "marque": "Nike / CBF",
+      "marque": "Nike",
       "prix": null,
       "description": "",
       "couleurs": [
@@ -825,46 +825,6 @@
           "couleur": "Rose"
         }
       ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-041",
-      "nom": "Doudoune légère matelassée",
-      "categorie": "vetements",
-      "type": "veste",
-      "marque": "Nike",
-      "prix": null,
-      "description": "",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-041-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-044",
-      "nom": "Pantalon running zips chevilles",
-      "categorie": "vetements",
-      "type": "jogging",
-      "marque": "Nike",
-      "prix": null,
-      "description": "",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
       "statut": "precommande"
     },
     {
@@ -923,25 +883,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-047",
-      "nom": "Sweat poche lentille sur la manche",
-      "categorie": "vetements",
-      "type": "haut",
-      "marque": "C.P. Company",
-      "prix": null,
-      "description": "",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-049",
       "nom": "Long sleeve noir motifs or",
       "categorie": "vetements",
@@ -969,7 +910,7 @@
       "nom": "Maillot rétro Espagne (collab Travis Scott)",
       "categorie": "vetements",
       "type": "maillot",
-      "marque": "Travis Scott × Espagne",
+      "marque": "Nike",
       "prix": null,
       "description": "",
       "couleurs": [],
@@ -1552,10 +1493,10 @@
     },
     {
       "id": "vet-074",
-      "nom": "Ensemble zip hoodie + pantalon trèfle brodé",
+      "nom": "Ensemble Torom zip hoodie + pantalon trèfle brodé",
       "categorie": "vetements",
       "type": "ensemble",
-      "marque": "Y.R.",
+      "marque": "Torom",
       "prix": null,
       "description": "",
       "couleurs": [
@@ -2977,7 +2918,7 @@
       "nom": "Maillot AC Milan rétro extérieur 2006/07, manches longues",
       "categorie": "vetements",
       "type": "maillot",
-      "marque": "Adidas / AC Milan",
+      "marque": "Adidas",
       "prix": null,
       "description": "Maillot rétro de la finale de Ligue des champions 2007 (Athènes).",
       "couleurs": [

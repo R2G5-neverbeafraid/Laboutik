@@ -226,25 +226,16 @@ if (donnees) {
       )
     );
 
-    // Depuis le catalogue, « Catalogue » revient en arrière : on retrouve la même vue (filtres, recherche, position)
-    const lienCatalogue = el('a', { href: 'catalogue.html' }, 'Catalogue');
-    lienCatalogue.addEventListener('click', (e) => {
-      let venaitDuCatalogue = false;
-      try {
-        venaitDuCatalogue = new URL(document.referrer).pathname.endsWith('/catalogue.html') && history.length > 1;
-      } catch {
-        /* pas de referrer */
-      }
-      if (venaitDuCatalogue) {
-        e.preventDefault();
-        history.back();
-      }
-    });
+    // Bouton « Retour » : ramène à la page d'où l'on vient, avec ses filtres et sa position (adresse transmise par la carte)
+    const retourBrut = new URLSearchParams(location.search).get('retour') || '';
+    const retour = /^[\w-]+\.html(\?[^#\s]*)?$/.test(retourBrut) ? retourBrut : 'catalogue.html';
+    const boutonRetour = el('a', { class: 'back-link', href: retour }, '← Retour');
     conteneur.replaceChildren(
       el(
         'p',
         { class: 'breadcrumb container' },
-        lienCatalogue,
+        boutonRetour,
+        el('a', { href: 'catalogue.html' }, 'Catalogue'),
         cat ? ' / ' : '',
         cat ? el('a', { href: `catalogue.html?cat=${cat.id}` }, cat.nom) : ''
       ),

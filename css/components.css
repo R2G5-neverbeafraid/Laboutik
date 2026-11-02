@@ -164,7 +164,21 @@
 .facts th, .facts td { text-align: left; padding: var(--sp-3); border-bottom: 1px solid var(--c-line); vertical-align: top; }
 .facts th { width: 40%; font-weight: 600; }
 
-.breadcrumb { font-size: var(--fs-sm); color: var(--c-muted); padding-top: var(--sp-4); }
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-1); font-size: var(--fs-sm); color: var(--c-muted); padding-top: var(--sp-4); }
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-right: var(--sp-3);
+  padding: var(--sp-2) var(--sp-4);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-pill);
+  background: var(--c-surface);
+  color: var(--c-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.back-link:hover { border-color: var(--c-text); }
 
 /* ---------- Fiche produit ---------- */
 .gallery, .product__info { min-width: 0; }

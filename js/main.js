@@ -63,6 +63,13 @@ function pastillesCarte(produit) {
   );
 }
 
+/** Adresse de la page courante avec la position de défilement : le bouton « Retour » de la fiche y ramène exactement. */
+function urlAvecPosition() {
+  const u = new URL(location.href);
+  u.searchParams.set('y', String(Math.round(window.scrollY)));
+  return (u.pathname.split('/').pop() || 'index.html') + u.search;
+}
+
 export function creerCarte(produit) {
   const photo = produit.photos && produit.photos[0] ? srcPhoto(produit.photos[0]) : PLACEHOLDER;
   const img = el('img', {
@@ -73,27 +80,27 @@ export function creerCarte(produit) {
     loading: 'lazy',
     decoding: 'async',
   });
+  const lien = el(
+    'a',
+    { class: 'card__link', href: `produit.html?id=${encodeURIComponent(produit.id)}` },
+    el('div', { class: 'card__media' }, img),
+    el(
+      'div',
+      { class: 'card__body' },
+      produit.marque ? el('p', { class: 'card__brand' }, produit.marque) : null,
+      el('h3', { class: 'card__title' }, produit.nom),
+      el('p', { class: 'card__price' }, formaterPrix(produit.prix)),
+      pastillesCarte(produit)
+    )
+  );
+  // Au clic, la fiche reçoit l'adresse de la page d'où l'on vient (filtres + position) pour son bouton « Retour »
+  lien.addEventListener('click', () => {
+    lien.href = `produit.html?id=${encodeURIComponent(produit.id)}&retour=${encodeURIComponent(urlAvecPosition())}`;
+  });
   return el(
     'li',
     {},
-    el(
-      'article',
-      { class: 'card' },
-      el(
-        'a',
-        { class: 'card__link', href: `produit.html?id=${encodeURIComponent(produit.id)}` },
-        el('div', { class: 'card__media' }, img),
-        el(
-          'div',
-          { class: 'card__body' },
-          produit.marque ? el('p', { class: 'card__brand' }, produit.marque) : null,
-          el('h3', { class: 'card__title' }, produit.nom),
-          el('p', { class: 'card__price' }, formaterPrix(produit.prix)),
-          pastillesCarte(produit)
-        )
-      ),
-      el('span', { class: `badge badge--${produit.statut}` }, STATUTS[produit.statut] || produit.statut)
-    )
+    el('article', { class: 'card' }, lien, el('span', { class: `badge badge--${produit.statut}` }, STATUTS[produit.statut] || produit.statut))
   );
 }
 
@@ -238,7 +245,13 @@ window.addEventListener('pagehide', enregistrerPosition);
 export function restaurerPosition() {
   const nav = performance.getEntriesByType('navigation')[0];
   let y = 0;
-  if (nav && (nav.type === 'back_forward' || nav.type === 'reload')) {
+  // Retour demandé par le bouton « Retour » : la position est dans l'adresse (?y=…), on la retire aussitôt
+  const url = new URL(location.href);
+  if (url.searchParams.has('y')) {
+    y = Number(url.searchParams.get('y')) || 0;
+    url.searchParams.delete('y');
+    history.replaceState(null, '', url);
+  } else if (nav && (nav.type === 'back_forward' || nav.type === 'reload')) {
     try {
       y = Number(sessionStorage.getItem(cleDefilement())) || 0;
     } catch {
