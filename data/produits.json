@@ -3238,7 +3238,9 @@
       "couleurs": [
         "Noir",
         "Gris chiné",
-        "Marine"
+        "Marine",
+        "Crème",
+        "Camel"
       ],
       "tailles": [
         "S",
@@ -3260,6 +3262,14 @@
         {
           "src": "assets/img/produits/vet-133-4.webp",
           "couleur": "Marine"
+        },
+        {
+          "src": "assets/img/produits/vet-133-5.webp",
+          "couleur": "Crème"
+        },
+        {
+          "src": "assets/img/produits/vet-133-6.webp",
+          "couleur": "Camel"
         }
       ],
       "statut": "precommande"

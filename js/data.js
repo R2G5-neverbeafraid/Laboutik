@@ -44,7 +44,7 @@ export const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u0
 // Teintes des pastilles (clés sans accents). Une couleur composée (« Noir / gris », « Noir liseré gris ») donne une pastille bicolore.
 const TEINTES = {
   'noir': '#121212', 'gris neon': '#c4dc3a', 'blanc casse': '#ece8df', 'blanc': '#f7f7f4', 'gris clair': '#cfcfcb', 'gris chine': '#b4b4b0',
-  'gris fonce': '#585858', 'gris': '#9a9a96', 'anthracite': '#3b3d40', 'beige sable': '#d9c7a3', 'beige': '#d8c4a0',
+  'gris fonce': '#585858', 'gris': '#9a9a96', 'anthracite': '#3b3d40', 'beige sable': '#d9c7a3', 'beige': '#d8c4a0', 'camel': '#c9a77a',
   'creme': '#f0e6cf', 'marron': '#6b4a32', 'chocolat': '#4a2e1f', 'bordeaux': '#6d1a2b', 'rouge': '#c0272d',
   'rose': '#f0509a', 'peche': '#f8b79a', 'orange': '#f08a2c', 'jaune': '#f2d94e', 'vert fluo': '#b6f21c',
   'kaki': '#7a7a4a', "vert d'eau": '#a7d8c5', 'vert menthe': '#9fe5c9', 'menthe': '#9fe5c9', 'vert': '#3f8f55',
