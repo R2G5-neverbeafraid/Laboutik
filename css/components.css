@@ -248,19 +248,6 @@
 .contact-links { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
 
 /* Barre d'outils du catalogue */
-.search { margin-bottom: var(--sp-3); }
-.search input {
-  width: 100%;
-  min-height: 48px;
-  padding: var(--sp-2) var(--sp-4);
-  border: 1px solid var(--c-line);
-  border-radius: var(--radius-pill);
-  background: var(--c-surface);
-  font: inherit;
-  font-size: 1rem;
-  color: var(--c-text);
-}
-.search input:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
 .toolbar { display: flex; flex-direction: column; align-items: stretch; gap: var(--sp-3); margin-bottom: var(--sp-3); }
 .toolbar .note { margin: 0; }
 .selects { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }

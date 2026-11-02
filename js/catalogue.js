@@ -14,7 +14,7 @@ if (donnees) {
   const compteur = document.getElementById('catalogue-compteur');
   const selectTri = document.getElementById('catalogue-tri');
   const selectMarque = document.getElementById('catalogue-marque');
-  const champRecherche = document.getElementById('catalogue-recherche');
+  const champRecherche = document.getElementById('recherche-globale');
 
   const categoriesVisibles = categories.filter(
     (c) => c.toujours_visible || produits.some((p) => p.categorie === c.id)

@@ -116,6 +116,39 @@ function blocLogo(config) {
   return [el('span', { class: 'monogram', 'aria-hidden': 'true' }, 'LB'), el('span', {}, config.nom)];
 }
 
+/** Barre de recherche présente sur toutes les pages. Sur le catalogue elle filtre en direct ; ailleurs elle ouvre le catalogue. */
+function creerRecherche() {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('width', '20');
+  svg.setAttribute('height', '20');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.innerHTML = '<circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+  const champ = el('input', {
+    id: 'recherche-globale',
+    name: 'q',
+    type: 'search',
+    placeholder: 'Rechercher : article, marque, couleur…',
+    autocomplete: 'off',
+    enterkeyhint: 'search',
+    maxlength: '80',
+  });
+  const form = el(
+    'form',
+    { class: 'container header-search', role: 'search', action: 'catalogue.html', method: 'get' },
+    el('label', { class: 'sr-only', for: 'recherche-globale' }, 'Rechercher un article'),
+    champ,
+    el('button', { type: 'submit', class: 'header-search__btn', 'aria-label': 'Rechercher' }, svg)
+  );
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (document.body.dataset.page === 'catalogue') return champ.blur(); // le catalogue filtre déjà en direct
+    const q = champ.value.trim();
+    location.href = q ? `catalogue.html?q=${encodeURIComponent(q)}` : 'catalogue.html';
+  });
+  return form;
+}
+
 function creerHeader(config) {
   const page = document.body.dataset.page;
   const marque = el(
@@ -150,7 +183,12 @@ function creerHeader(config) {
       bouton.focus();
     }
   });
-  return el('header', { class: 'site-header' }, el('div', { class: 'container header-inner' }, marque, bouton, nav));
+  return el(
+    'header',
+    { class: 'site-header' },
+    el('div', { class: 'container header-inner' }, marque, bouton, nav),
+    creerRecherche()
+  );
 }
 
 function creerFooter(config) {

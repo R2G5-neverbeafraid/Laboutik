@@ -33,6 +33,37 @@
   justify-content: space-between;
   min-height: var(--header-h);
 }
+/* Barre de recherche du header (toutes les pages) */
+.header-search { position: relative; padding-bottom: var(--sp-3); }
+.header-search input {
+  width: 100%;
+  min-height: 46px;
+  padding: var(--sp-2) calc(var(--sp-4) + 40px) var(--sp-2) var(--sp-4);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-pill);
+  background: var(--c-surface);
+  font: inherit;
+  font-size: 1rem;
+  color: var(--c-text);
+}
+.header-search input:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
+.header-search__btn {
+  position: absolute;
+  right: calc(var(--sp-4) + 4px);
+  top: 0;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: none;
+  color: var(--c-muted);
+  cursor: pointer;
+}
+@media (min-width: 48rem) {
+  .header-search { max-width: 40rem; }
+}
 .brand {
   display: inline-flex;
   align-items: center;
