@@ -39,7 +39,7 @@ export const srcPhoto = (ph) => (typeof ph === 'string' ? ph : ph.src);
 /** Couleur(s) liée(s) à une photo : toujours une liste (vide si la photo n'est pas liée à une couleur). */
 export const couleursPhoto = (ph) => (typeof ph === 'string' || !ph.couleur ? [] : [].concat(ph.couleur));
 
-const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’`]/g, "'");
+export const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’`]/g, "'");
 
 // Teintes des pastilles (clés sans accents). Une couleur composée (« Noir / gris », « Noir liseré gris ») donne une pastille bicolore.
 const TEINTES = {
@@ -71,3 +71,18 @@ export function fondCouleur(nom) {
 }
 
 export const memeCouleur = (a, b) => norm(a) === norm(b);
+
+/**
+ * Marques d'un article, pour le filtre « Marque » : « Nike × Syna World » → Nike et Syna World.
+ * Un nom entre parenthèses (« NOCTA (Nike x Drake) ») n'est gardé que s'il est lui-même une marque du catalogue.
+ */
+export function marquesDe(produit, toutesLesMarques) {
+  const brut = produit.marque || '';
+  if (!brut) return [];
+  const dansParentheses = (brut.match(/\(([^)]*)\)/) || [])[1];
+  const principal = brut.replace(/\([^)]*\)/, '').split(/\s*(?:×|\/)\s*/).map((m) => m.trim()).filter(Boolean);
+  const bonus = dansParentheses
+    ? dansParentheses.split(/\s+x\s+/i).map((m) => m.trim()).filter((m) => toutesLesMarques.has(norm(m)))
+    : [];
+  return [...new Set([...principal, ...bonus])];
+}

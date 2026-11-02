@@ -1,4 +1,5 @@
 // Page « Comment ça marche » : le contenu dynamique (infos pratiques, lien WhatsApp) est rempli par main.js.
-import { initPage } from './main.js';
+import { initPage, restaurerPosition } from './main.js';
 
-initPage();
+await initPage();
+restaurerPosition();

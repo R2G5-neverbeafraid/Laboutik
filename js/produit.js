@@ -1,5 +1,5 @@
 // Fiche produit : lit ?id=, affiche les options et construit le lien WhatsApp.
-import { initPage, creerCarte, el, pastille } from './main.js';
+import { initPage, creerCarte, el, pastille, restaurerPosition } from './main.js';
 import { formaterPrix, STATUTS, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
 import { lienCommande } from './whatsapp.js';
 
@@ -226,11 +226,25 @@ if (donnees) {
       )
     );
 
+    // Depuis le catalogue, « Catalogue » revient en arrière : on retrouve la même vue (filtres, recherche, position)
+    const lienCatalogue = el('a', { href: 'catalogue.html' }, 'Catalogue');
+    lienCatalogue.addEventListener('click', (e) => {
+      let venaitDuCatalogue = false;
+      try {
+        venaitDuCatalogue = new URL(document.referrer).pathname.endsWith('/catalogue.html') && history.length > 1;
+      } catch {
+        /* pas de referrer */
+      }
+      if (venaitDuCatalogue) {
+        e.preventDefault();
+        history.back();
+      }
+    });
     conteneur.replaceChildren(
       el(
         'p',
         { class: 'breadcrumb container' },
-        el('a', { href: 'catalogue.html' }, 'Catalogue'),
+        lienCatalogue,
         cat ? ' / ' : '',
         cat ? el('a', { href: `catalogue.html?cat=${cat.id}` }, cat.nom) : ''
       ),
@@ -252,3 +266,5 @@ if (donnees) {
     }
   }
 }
+
+restaurerPosition();

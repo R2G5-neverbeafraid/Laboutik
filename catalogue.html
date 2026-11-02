@@ -17,16 +17,26 @@
   <main id="contenu">
     <div class="container section--tight">
       <h1>Catalogue</h1>
+      <div class="search">
+        <label class="sr-only" for="catalogue-recherche">Rechercher un article</label>
+        <input id="catalogue-recherche" type="search" placeholder="Rechercher : article, marque, couleur…" autocomplete="off" enterkeyhint="search">
+      </div>
       <div id="catalogue-filtres"></div>
       <div class="toolbar">
         <p id="catalogue-compteur" class="note" aria-live="polite"></p>
-        <label class="sort">Trier
-          <select id="catalogue-tri">
-            <option value="">Par défaut</option>
-            <option value="prix-asc">Prix croissant</option>
-            <option value="prix-desc">Prix décroissant</option>
-          </select>
-        </label>
+        <div class="selects">
+          <label class="sort">Marque
+            <select id="catalogue-marque"></select>
+          </label>
+          <label class="sort">Trier
+            <select id="catalogue-tri">
+              <option value="">Par défaut</option>
+              <option value="prix-asc">Prix croissant</option>
+              <option value="prix-desc">Prix décroissant</option>
+              <option value="marque">Marque (A–Z)</option>
+            </select>
+          </label>
+        </div>
       </div>
       <ul id="catalogue-grille" class="grid-products"></ul>
       <noscript><p class="empty">Active JavaScript pour voir le catalogue.</p></noscript>

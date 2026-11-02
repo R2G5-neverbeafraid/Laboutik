@@ -209,6 +209,64 @@ function creerBoutonFlottant(config) {
   );
 }
 
+// ---------- Retour à la même position (précédent / suivant du navigateur) ----------
+// Le contenu est construit en JavaScript : le navigateur ne peut pas retrouver tout seul la position. On la mémorise.
+const cleDefilement = () => `lb-defilement:${location.pathname}${location.search}`;
+let memoriser = false;
+function enregistrerPosition() {
+  if (!memoriser) return;
+  try {
+    sessionStorage.setItem(cleDefilement(), String(Math.round(window.scrollY)));
+  } catch {
+    /* stockage indisponible : on ignore */
+  }
+}
+let enAttente = false;
+function surDefilement() {
+  if (enAttente) return;
+  enAttente = true;
+  requestAnimationFrame(() => {
+    enAttente = false;
+    enregistrerPosition();
+  });
+}
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('scroll', surDefilement, { passive: true });
+window.addEventListener('pagehide', enregistrerPosition);
+
+/** À appeler quand la page a fini de construire son contenu : si on revient en arrière, on remet la position d'avant. */
+export function restaurerPosition() {
+  const nav = performance.getEntriesByType('navigation')[0];
+  let y = 0;
+  if (nav && (nav.type === 'back_forward' || nav.type === 'reload')) {
+    try {
+      y = Number(sessionStorage.getItem(cleDefilement())) || 0;
+    } catch {
+      y = 0;
+    }
+  }
+  if (!y) {
+    memoriser = true;
+    return;
+  }
+  let fini = false;
+  const arreter = () => {
+    fini = true;
+    memoriser = true;
+  };
+  ['touchstart', 'wheel', 'keydown', 'mousedown'].forEach((e) =>
+    window.addEventListener(e, arreter, { once: true, passive: true })
+  );
+  const debut = performance.now();
+  (function essayer() {
+    if (fini) return;
+    window.scrollTo(0, y);
+    // les images chargent et la page s'allonge : on réessaie un court instant jusqu'à atteindre la position
+    if (Math.abs(window.scrollY - y) > 2 && performance.now() - debut < 2500) requestAnimationFrame(essayer);
+    else memoriser = true;
+  })();
+}
+
 export async function initPage() {
   try {
     const donnees = await chargerDonnees();

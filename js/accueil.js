@@ -1,5 +1,5 @@
 // Page d'accueil : hero (image optionnelle), drop en cours, catégories, sélection, avis.
-import { initPage, creerCarte, el } from './main.js';
+import { initPage, creerCarte, el, restaurerPosition } from './main.js';
 
 const donnees = await initPage();
 
@@ -78,3 +78,5 @@ if (donnees) {
     zoneAvis.closest('section').hidden = true;
   }
 }
+
+restaurerPosition();

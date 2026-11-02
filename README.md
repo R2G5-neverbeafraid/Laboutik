@@ -30,6 +30,9 @@ Puis ouvrir <http://localhost:8000>.
   Chaque catégorie liste ses propres `types` (ex. Couvre-chef : bonnet, skull-cap, casquette). `"toujours_visible": true` affiche la catégorie même sans article ; sinon elle apparaît dès qu'un article la contient.
   Sur chaque article (`data/produits.json`) : `categorie` et `type` doivent correspondre à ces listes.
 
+**Catalogue** : recherche (nom, marque, couleur, catégorie…), filtres Catégorie / Type / Marque et tri sont mémorisés dans l'URL (`?q=` `?cat=` `?type=` `?marque=` `?tri=`) ; en revenant en arrière depuis une fiche, on retrouve la même vue à la même position (`restaurerPosition()` dans `js/main.js`).
+La marque d'un article vient du champ `marque` : « Nike × Syna World » compte pour Nike et Syna World.
+
 La section « Avis clients » de l'accueil reste masquée tant que `avis` est vide : n'y mettre que de vrais avis.
 
 ## Structure
