@@ -468,31 +468,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-023",
-      "nom": "Zip hoodie couleurs vives",
-      "categorie": "vetements",
-      "type": "hoodie",
-      "marque": "",
-      "prix": 42,
-      "description": "Zip hoodie en couleurs vives. Pantalon assorti disponible.",
-      "couleurs": [
-        "Jaune",
-        "Violet",
-        "Noir"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-023-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-024",
       "nom": "Hoodie épais brodé, étoile sur capuche et manche",
       "categorie": "vetements",
@@ -823,25 +798,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-039",
-      "nom": "Jogging On",
-      "categorie": "vetements",
-      "type": "jogging",
-      "marque": "On",
-      "prix": null,
-      "description": "",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-040",
       "nom": "Veste coupe-pluie Brésil",
       "categorie": "vetements",
@@ -1094,25 +1050,6 @@
       "photos": [
         "assets/img/produits/vet-051-1.webp"
       ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-052",
-      "nom": "T-shirt sport respirant",
-      "categorie": "vetements",
-      "type": "haut",
-      "marque": "Alo",
-      "prix": null,
-      "description": "",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
       "statut": "precommande"
     },
     {
@@ -2823,51 +2760,6 @@
       "tailles": [
         "Taille unique"
       ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "acc-002",
-      "nom": "Baskets Air Max Plus (TN) noires",
-      "categorie": "accessoires",
-      "type": "chaussures",
-      "marque": "Nike",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Noir"
-      ],
-      "tailles": [],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "acc-003",
-      "nom": "Baskets Track noires",
-      "categorie": "accessoires",
-      "type": "chaussures",
-      "marque": "Balenciaga",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Noir"
-      ],
-      "tailles": [],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
-      "id": "acc-004",
-      "nom": "Baskets running noir/argent",
-      "categorie": "accessoires",
-      "type": "chaussures",
-      "marque": "Under Armour",
-      "prix": null,
-      "description": "",
-      "couleurs": [
-        "Noir / argent"
-      ],
-      "tailles": [],
       "photos": [],
       "statut": "precommande"
     },

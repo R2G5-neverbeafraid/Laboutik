@@ -25,7 +25,6 @@
       "nom": "Accessoires",
       "toujours_visible": true,
       "types": [
-        "chaussures",
         "lunettes",
         "divers"
       ]
@@ -100,10 +99,6 @@
     {
       "id": "maillot",
       "nom": "Maillot"
-    },
-    {
-      "id": "chaussures",
-      "nom": "Chaussures"
     },
     {
       "id": "divers",
