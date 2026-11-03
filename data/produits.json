@@ -3900,6 +3900,29 @@
         "assets/img/produits/vet-155-1.webp"
       ],
       "statut": "precommande"
+    },
+    {
+      "id": "vet-156",
+      "nom": "Hoodie zippé oversize noir",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-156-1.webp"
+      ],
+      "statut": "precommande"
     }
   ]
 }
