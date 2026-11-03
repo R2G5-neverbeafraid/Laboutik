@@ -95,7 +95,10 @@
         "Noir",
         "Bleu ciel",
         "Pêche",
-        "Menthe"
+        "Menthe",
+        "Lavande",
+        "Jaune",
+        "Crème"
       ],
       "tailles": [
         "S",
@@ -122,6 +125,18 @@
         {
           "src": "assets/img/produits/vet-112-6.webp",
           "couleur": "Menthe"
+        },
+        {
+          "src": "assets/img/produits/vet-112-7.webp",
+          "couleur": "Lavande"
+        },
+        {
+          "src": "assets/img/produits/vet-112-8.webp",
+          "couleur": "Jaune"
+        },
+        {
+          "src": "assets/img/produits/vet-112-9.webp",
+          "couleur": "Crème"
         }
       ],
       "statut": "precommande"
@@ -702,7 +717,10 @@
       "prix": 80,
       "description": "",
       "couleurs": [
-        "Gris chiné"
+        "Gris chiné",
+        "Gris clair",
+        "Beige / marron",
+        "Marron"
       ],
       "tailles": [
         "S",
@@ -715,6 +733,18 @@
         {
           "src": "assets/img/produits/vet-029-1.webp",
           "couleur": "Gris chiné"
+        },
+        {
+          "src": "assets/img/produits/vet-029-2.webp",
+          "couleur": "Gris clair"
+        },
+        {
+          "src": "assets/img/produits/vet-029-3.webp",
+          "couleur": "Beige / marron"
+        },
+        {
+          "src": "assets/img/produits/vet-029-4.webp",
+          "couleur": "Marron"
         }
       ],
       "statut": "precommande"
@@ -2474,7 +2504,9 @@
         {
           "src": "assets/img/produits/vet-113-3.webp",
           "couleur": "Noir"
-        }
+        },
+        "assets/img/produits/vet-113-4.webp",
+        "assets/img/produits/vet-113-5.webp"
       ],
       "statut": "precommande"
     },
@@ -3921,6 +3953,121 @@
       ],
       "photos": [
         "assets/img/produits/vet-156-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-157",
+      "nom": "Coupe-vent Nike Windrunner blanc",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-157-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-158",
+      "nom": "Ensemble Nike Running coupe-vent + pantalon bleu marine",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-158-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-159",
+      "nom": "Hoodie NOCTA Oil Green",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "NOCTA (Nike x Drake)",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Vert olive"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-159-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-160",
+      "nom": "Ensemble Supreme veste demi-zip + short noir",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Supreme",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-160-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-161",
+      "nom": "Ensemble Drama coupe-vent + short vert olive",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Drama",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Vert olive"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-161-1.webp"
       ],
       "statut": "precommande"
     }
