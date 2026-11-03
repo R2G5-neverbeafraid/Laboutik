@@ -3808,6 +3808,98 @@
         "assets/img/produits/vet-151-1.webp"
       ],
       "statut": "precommande"
+    },
+    {
+      "id": "vet-152",
+      "nom": "Ensemble Nike Running coupe-vent + short bleu",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu / marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-152-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-153",
+      "nom": "Ensemble track nylon Nike gris anthracite",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Gris anthracite"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-153-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-154",
+      "nom": "Haut manches longues NOCTA imprimé thermique",
+      "categorie": "vetements",
+      "type": "haut",
+      "marque": "NOCTA (Nike x Drake)",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Multicolore"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-154-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-155",
+      "nom": "Veste Nike T90 rétro noir, gris et jaune",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir / gris"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-155-1.webp"
+      ],
+      "statut": "precommande"
     }
   ]
 }
