@@ -696,7 +696,9 @@
       "marque": "Nike",
       "prix": 80,
       "description": "",
-      "couleurs": [],
+      "couleurs": [
+        "Gris chiné"
+      ],
       "tailles": [
         "S",
         "M",
@@ -704,7 +706,12 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-029-1.webp",
+          "couleur": "Gris chiné"
+        }
+      ],
       "statut": "precommande"
     },
     {
@@ -765,13 +772,15 @@
     },
     {
       "id": "vet-032",
-      "nom": "Veste Barça",
+      "nom": "Veste Nike FC Barcelone rétro bleu marine et grenat",
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
       "prix": 25,
       "description": "",
-      "couleurs": [],
+      "couleurs": [
+        "Bleu marine / grenat"
+      ],
       "tailles": [
         "S",
         "M",
@@ -779,7 +788,9 @@
         "XL",
         "XXL"
       ],
-      "photos": [],
+      "photos": [
+        "assets/img/produits/vet-032-1.webp"
+      ],
       "statut": "precommande"
     },
     {
@@ -2423,14 +2434,16 @@
     },
     {
       "id": "vet-113",
-      "nom": "Ensemble Tech Fleece NOCTA pêche",
+      "nom": "Nike x NOCTA Tech Fleece Tracksuit Hoodie & Joggers",
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 90,
       "description": "",
       "couleurs": [
-        "Pêche"
+        "Pêche",
+        "Lavande",
+        "Jaune"
       ],
       "tailles": [
         "S",
@@ -2440,30 +2453,18 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-113-1.webp"
-      ],
-      "statut": "precommande"
-    },
-    {
-      "id": "vet-114",
-      "nom": "Ensemble Tech Fleece NOCTA lavande",
-      "categorie": "vetements",
-      "type": "ensemble",
-      "marque": "NOCTA (Nike x Drake)",
-      "prix": 90,
-      "description": "",
-      "couleurs": [
-        "Lavande"
-      ],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [
-        "assets/img/produits/vet-114-1.webp"
+        {
+          "src": "assets/img/produits/vet-113-1.webp",
+          "couleur": "Pêche"
+        },
+        {
+          "src": "assets/img/produits/vet-114-1.webp",
+          "couleur": "Lavande"
+        },
+        {
+          "src": "assets/img/produits/vet-113-2.webp",
+          "couleur": "Jaune"
+        }
       ],
       "statut": "precommande"
     },
@@ -3749,6 +3750,52 @@
       ],
       "photos": [
         "assets/img/produits/vet-149-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-150",
+      "nom": "Veste Adidas Originals Espagne blanc cassé et bordeaux",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "Adidas",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Blanc cassé / bordeaux"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-150-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-151",
+      "nom": "Veste Nike FC Barcelone rétro satinée rouge à capuche",
+      "categorie": "vetements",
+      "type": "veste",
+      "marque": "Nike",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Rouge"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-151-1.webp"
       ],
       "statut": "precommande"
     }
