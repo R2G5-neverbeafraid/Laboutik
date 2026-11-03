@@ -46,7 +46,7 @@ const TEINTES = {
   'noir': '#121212', 'gris neon': '#c4dc3a', 'blanc casse': '#ece8df', 'blanc': '#f7f7f4', 'gris clair': '#cfcfcb', 'gris chine': '#b4b4b0',
   'gris fonce': '#585858', 'gris': '#9a9a96', 'anthracite': '#3b3d40', 'beige sable': '#d9c7a3', 'beige': '#d8c4a0', 'camel': '#c9a77a',
   'creme': '#f0e6cf', 'marron': '#6b4a32', 'chocolat': '#4a2e1f', 'bordeaux': '#6d1a2b', 'rouge': '#c0272d',
-  'rose': '#f0509a', 'peche': '#f8b79a', 'orange': '#f08a2c', 'jaune': '#f2d94e', 'vert olive': '#6b6b3a', 'vert fluo': '#b6f21c',
+  'rose': '#f0509a', 'framboise': '#a3143c', 'peche': '#f8b79a', 'orange': '#f08a2c', 'jaune': '#f2d94e', 'vert olive': '#6b6b3a', 'vert fluo': '#b6f21c',
   'kaki': '#7a7a4a', "vert d'eau": '#a7d8c5', 'vert menthe': '#9fe5c9', 'menthe': '#9fe5c9', 'vert': '#3f8f55',
   'turquoise': '#2fc6b3', 'bleu ciel': '#8fc6ee', 'bleu poudre': '#8fa9cf', 'bleu clair': '#a9cdee', 'bleu roi': '#2748c5', 'bleu marine': '#1c2a4d',
   'bleu nuit': '#101b3a', 'bleu': '#2f6fd1', 'marine': '#1c2a4d', 'lavande': '#b9a6e0', 'violet': '#7a3fb0',

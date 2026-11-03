@@ -1422,7 +1422,14 @@
       "description": "",
       "couleurs": [
         "Lavande",
-        "Noir"
+        "Noir",
+        "Bleu ciel",
+        "Marron",
+        "Chocolat",
+        "Blanc",
+        "Rose",
+        "Beige",
+        "Framboise"
       ],
       "tailles": [
         "XS",
@@ -1439,7 +1446,37 @@
         {
           "src": "assets/img/produits/vet-067-2.webp",
           "couleur": "Noir"
-        }
+        },
+        {
+          "src": "assets/img/produits/vet-067-11.webp",
+          "couleur": "Bleu ciel"
+        },
+        {
+          "src": "assets/img/produits/vet-067-3.webp",
+          "couleur": "Marron"
+        },
+        {
+          "src": "assets/img/produits/vet-067-4.webp",
+          "couleur": "Chocolat"
+        },
+        {
+          "src": "assets/img/produits/vet-067-5.webp",
+          "couleur": "Blanc"
+        },
+        {
+          "src": "assets/img/produits/vet-067-6.webp",
+          "couleur": "Rose"
+        },
+        {
+          "src": "assets/img/produits/vet-067-7.webp",
+          "couleur": "Beige"
+        },
+        {
+          "src": "assets/img/produits/vet-067-8.webp",
+          "couleur": "Framboise"
+        },
+        "assets/img/produits/vet-067-10.webp",
+        "assets/img/produits/vet-067-9.webp"
       ],
       "statut": "precommande"
     },
@@ -4068,6 +4105,52 @@
       ],
       "photos": [
         "assets/img/produits/vet-161-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-162",
+      "nom": "Ensemble veste zippée + short bleu (femme)",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-162-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-163",
+      "nom": "Ensemble Alo veste zippée + short marine (femme)",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Alo",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-163-1.webp"
       ],
       "statut": "precommande"
     }
