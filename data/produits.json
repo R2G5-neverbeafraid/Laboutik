@@ -89,7 +89,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": 70,
+      "prix": 90,
       "description": "",
       "couleurs": [
         "Noir",
@@ -694,7 +694,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": 55,
+      "prix": 80,
       "description": "",
       "couleurs": [],
       "tailles": [
@@ -2427,7 +2427,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": 70,
+      "prix": 90,
       "description": "",
       "couleurs": [
         "Pêche"
@@ -2450,7 +2450,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": 70,
+      "prix": 90,
       "description": "",
       "couleurs": [
         "Lavande"
