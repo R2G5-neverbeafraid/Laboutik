@@ -3280,6 +3280,254 @@
         "assets/img/produits/cou-017-5.webp"
       ],
       "statut": "precommande"
+    },
+    {
+      "id": "vet-134",
+      "nom": "BAPE Color Camo Shark Full Zip Hoodie 'Purple'",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "BAPE",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Violet"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-134-1.webp",
+          "couleur": "Violet"
+        },
+        {
+          "src": "assets/img/produits/vet-134-2.webp",
+          "couleur": "Violet"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-135",
+      "nom": "BAPE ABC Camo Shark Full Zip Hoodie 'Pink'",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "BAPE",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Rose"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-135-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-136",
+      "nom": "BAPE Space Camo Shark Full Zip Hoodie",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "BAPE",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Blanc",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-136-1.webp",
+          "couleur": "Blanc"
+        },
+        {
+          "src": "assets/img/produits/vet-136-2.webp",
+          "couleur": "Noir"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-137",
+      "nom": "Sp5der OG Web Hoodie 'Purple'",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Violet"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-137-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-138",
+      "nom": "Sp5der Web Hoodie + Sweatpants 'Sky Blue'",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu ciel",
+        "Bleu poudré"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-138-1.webp",
+          "couleur": "Bleu ciel"
+        },
+        {
+          "src": "assets/img/produits/vet-138-2.webp",
+          "couleur": "Bleu poudré"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-139",
+      "nom": "Sp5der OG Web V2 Phantom Zip Up 'Black'",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-139-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-140",
+      "nom": "Sp5der Beluga Hoodie + Sweatpants 'Blue / Yellow'",
+      "categorie": "vetements",
+      "type": "ensemble",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Bleu / jaune"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-140-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-141",
+      "nom": "Sp5der Atlanta Zip Up Hoodie",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Rouge",
+        "Gris chiné"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-141-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-142",
+      "nom": "Sp5der Atlanta Hoodie",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Marine",
+        "Rose",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-142-1.webp",
+          "couleur": "Marine"
+        },
+        {
+          "src": "assets/img/produits/vet-142-2.webp",
+          "couleur": "Marine"
+        },
+        {
+          "src": "assets/img/produits/vet-142-3.webp",
+          "couleur": "Rose"
+        },
+        {
+          "src": "assets/img/produits/vet-142-4.webp",
+          "couleur": "Noir"
+        }
+      ],
+      "statut": "precommande"
     }
   ]
 }

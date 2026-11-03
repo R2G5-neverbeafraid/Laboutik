@@ -48,7 +48,7 @@ const TEINTES = {
   'creme': '#f0e6cf', 'marron': '#6b4a32', 'chocolat': '#4a2e1f', 'bordeaux': '#6d1a2b', 'rouge': '#c0272d',
   'rose': '#f0509a', 'peche': '#f8b79a', 'orange': '#f08a2c', 'jaune': '#f2d94e', 'vert fluo': '#b6f21c',
   'kaki': '#7a7a4a', "vert d'eau": '#a7d8c5', 'vert menthe': '#9fe5c9', 'menthe': '#9fe5c9', 'vert': '#3f8f55',
-  'turquoise': '#2fc6b3', 'bleu ciel': '#8fc6ee', 'bleu clair': '#a9cdee', 'bleu roi': '#2748c5', 'bleu marine': '#1c2a4d',
+  'turquoise': '#2fc6b3', 'bleu ciel': '#8fc6ee', 'bleu poudre': '#8fa9cf', 'bleu clair': '#a9cdee', 'bleu roi': '#2748c5', 'bleu marine': '#1c2a4d',
   'bleu nuit': '#101b3a', 'bleu': '#2f6fd1', 'marine': '#1c2a4d', 'lavande': '#b9a6e0', 'violet': '#7a3fb0',
   'transparent': '#e6eef2', 'camouflage': '#5b6340',
 };
