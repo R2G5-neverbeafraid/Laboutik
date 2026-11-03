@@ -3367,14 +3367,17 @@
     },
     {
       "id": "vet-137",
-      "nom": "Sp5der OG Web Hoodie 'Purple'",
+      "nom": "Sp5der OG Web Hoodie",
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": null,
       "description": "",
       "couleurs": [
-        "Violet"
+        "Violet",
+        "Bleu ciel",
+        "Jaune",
+        "Crème"
       ],
       "tailles": [
         "S",
@@ -3384,7 +3387,22 @@
         "XXL"
       ],
       "photos": [
-        "assets/img/produits/vet-137-1.webp"
+        {
+          "src": "assets/img/produits/vet-137-1.webp",
+          "couleur": "Violet"
+        },
+        {
+          "src": "assets/img/produits/vet-137-2.webp",
+          "couleur": "Bleu ciel"
+        },
+        {
+          "src": "assets/img/produits/vet-137-3.webp",
+          "couleur": "Jaune"
+        },
+        {
+          "src": "assets/img/produits/vet-137-4.webp",
+          "couleur": "Crème"
+        }
       ],
       "statut": "precommande"
     },
@@ -3523,9 +3541,214 @@
           "couleur": "Rose"
         },
         {
+          "src": "assets/img/produits/vet-142-5.webp",
+          "couleur": "Noir"
+        },
+        {
           "src": "assets/img/produits/vet-142-4.webp",
           "couleur": "Noir"
         }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-143",
+      "nom": "Sp5der Worldwide Sweatpants",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir",
+        "Bleu ciel"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-143-1.webp",
+          "couleur": "Noir"
+        },
+        {
+          "src": "assets/img/produits/vet-143-2.webp",
+          "couleur": "Bleu ciel"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-144",
+      "nom": "Sp5der P*NK Hoodie 'Black'",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-144-1.webp"
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-145",
+      "nom": "Sp5der Beluga Hoodie",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir / jaune",
+        "Marine / rouge"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-145-1.webp",
+          "couleur": "Noir / jaune"
+        },
+        {
+          "src": "assets/img/produits/vet-145-2.webp",
+          "couleur": "Marine / rouge"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-146",
+      "nom": "Sp5der Beluga Sweatpants",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir / jaune",
+        "Marine / rouge"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-146-1.webp",
+          "couleur": "Noir / jaune"
+        },
+        {
+          "src": "assets/img/produits/vet-146-2.webp",
+          "couleur": "Marine / rouge"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-147",
+      "nom": "Sp5der Arachnophobia Hoodie",
+      "categorie": "vetements",
+      "type": "hoodie",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Marine",
+        "Gris chiné"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-147-1.webp",
+          "couleur": "Marine"
+        },
+        {
+          "src": "assets/img/produits/vet-147-2.webp",
+          "couleur": "Gris chiné"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-148",
+      "nom": "Sp5der Arachnophobia Sweatpants",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Marine",
+        "Gris chiné"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        {
+          "src": "assets/img/produits/vet-148-1.webp",
+          "couleur": "Marine"
+        },
+        {
+          "src": "assets/img/produits/vet-148-2.webp",
+          "couleur": "Gris chiné"
+        }
+      ],
+      "statut": "precommande"
+    },
+    {
+      "id": "vet-149",
+      "nom": "Sp5der Atlanta Sweatpants",
+      "categorie": "vetements",
+      "type": "jogging",
+      "marque": "Sp5der",
+      "prix": null,
+      "description": "",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "photos": [
+        "assets/img/produits/vet-149-1.webp"
       ],
       "statut": "precommande"
     }
