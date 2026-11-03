@@ -94,7 +94,8 @@
       "couleurs": [
         "Noir",
         "Bleu ciel",
-        "Pêche"
+        "Pêche",
+        "Menthe"
       ],
       "tailles": [
         "S",
@@ -117,6 +118,10 @@
         {
           "src": "assets/img/produits/vet-112-5.webp",
           "couleur": "Pêche"
+        },
+        {
+          "src": "assets/img/produits/vet-112-6.webp",
+          "couleur": "Menthe"
         }
       ],
       "statut": "precommande"
@@ -2443,7 +2448,8 @@
       "couleurs": [
         "Pêche",
         "Lavande",
-        "Jaune"
+        "Jaune",
+        "Noir"
       ],
       "tailles": [
         "S",
@@ -2464,6 +2470,10 @@
         {
           "src": "assets/img/produits/vet-113-2.webp",
           "couleur": "Jaune"
+        },
+        {
+          "src": "assets/img/produits/vet-113-3.webp",
+          "couleur": "Noir"
         }
       ],
       "statut": "precommande"
