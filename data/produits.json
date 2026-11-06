@@ -423,25 +423,6 @@
       "statut": "precommande"
     },
     {
-      "id": "vet-016",
-      "nom": "Sweat col rond, poche zippée sur la manche",
-      "categorie": "vetements",
-      "type": "haut",
-      "marque": "",
-      "prix": null,
-      "description": "Sweat col rond avec poche zippée sur la manche.",
-      "couleurs": [],
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "photos": [],
-      "statut": "precommande"
-    },
-    {
       "id": "vet-017",
       "nom": "Veste coupe-pluie style entraînement",
       "categorie": "vetements",

@@ -138,7 +138,7 @@ Ordre de commits suggéré :
    - `LA_BOUTIQUE_prix.xlsx` : prix de chaque article **classés par marque** (+ feuille « Résumé par marque ») ; après le script, recalculer avec le script `recalc.py` du skill xlsx si disponible ;
 2. envoyer ces deux fichiers à RG dans la conversation (SendUserFile) ;
 3. republier l'Artifact de test si le site a changé.
-Les prix saisis par RG dans l'inventaire sont la référence : ils sont déjà dans `data/produits.json` (un seul article sans prix : « Sweat col rond, poche zippée sur la manche »). Un article co-signé (« Nike × Syna World ») est classé sous sa première marque dans le fichier des prix ; l'ordre du catalogue place en tête le Polo Ralph Lauren gris, le Tech Fleece Nike, le Tech Fleece NOCTA bleu ciel et la casquette Yankees « Historic Champs ».
+Les prix saisis par RG dans l'inventaire sont la référence : ils sont déjà dans `data/produits.json` (tous les articles ont un prix). Un article co-signé (« Nike × Syna World ») est classé sous sa première marque dans le fichier des prix ; l'ordre du catalogue place en tête le Polo Ralph Lauren gris, le Tech Fleece Nike, le Tech Fleece NOCTA bleu ciel et la casquette Yankees « Historic Champs ».
 
 ## 6 ter. Favoris et panier (demande de RG)
 
