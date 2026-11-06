@@ -3367,7 +3367,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "BAPE",
-      "prix": null,
+      "prix": 38,
       "description": "",
       "couleurs": [
         "Violet"
@@ -3397,7 +3397,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "BAPE",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Rose"
@@ -3420,7 +3420,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "BAPE",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Blanc",
@@ -3451,7 +3451,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Violet",
@@ -3492,7 +3492,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 43,
       "description": "",
       "couleurs": [
         "Bleu ciel",
@@ -3523,7 +3523,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3546,7 +3546,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 38,
       "description": "",
       "couleurs": [
         "Bleu / jaune"
@@ -3569,7 +3569,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 28,
       "description": "",
       "couleurs": [
         "Rouge",
@@ -3593,7 +3593,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 28,
       "description": "",
       "couleurs": [
         "Marine",
@@ -3637,7 +3637,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 23,
       "description": "",
       "couleurs": [
         "Noir",
@@ -3668,7 +3668,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 28,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3691,7 +3691,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Noir / jaune",
@@ -3722,7 +3722,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 23,
       "description": "",
       "couleurs": [
         "Noir / jaune",
@@ -3753,7 +3753,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 28,
       "description": "",
       "couleurs": [
         "Marine",
@@ -3784,7 +3784,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 23,
       "description": "",
       "couleurs": [
         "Marine",
@@ -3815,7 +3815,7 @@
       "categorie": "vetements",
       "type": "jogging",
       "marque": "Sp5der",
-      "prix": null,
+      "prix": 23,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3838,7 +3838,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Adidas",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Blanc cassé / bordeaux"
@@ -3861,7 +3861,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Rouge"
@@ -3884,7 +3884,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": null,
+      "prix": 28,
       "description": "",
       "couleurs": [
         "Bleu / marine"
@@ -3907,7 +3907,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": null,
+      "prix": 38,
       "description": "",
       "couleurs": [
         "Gris anthracite"
@@ -3930,7 +3930,7 @@
       "categorie": "vetements",
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 23,
       "description": "",
       "couleurs": [
         "Multicolore"
@@ -3953,7 +3953,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
-      "prix": null,
+      "prix": 28,
       "description": "",
       "couleurs": [
         "Noir / gris"
@@ -3976,7 +3976,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "",
-      "prix": null,
+      "prix": 28,
       "description": "",
       "couleurs": [
         "Noir"
@@ -3999,7 +3999,7 @@
       "categorie": "vetements",
       "type": "veste",
       "marque": "Nike",
-      "prix": null,
+      "prix": 25,
       "description": "",
       "couleurs": [
         "Blanc"
@@ -4022,7 +4022,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Nike",
-      "prix": null,
+      "prix": 37,
       "description": "",
       "couleurs": [
         "Bleu marine"
@@ -4045,7 +4045,7 @@
       "categorie": "vetements",
       "type": "hoodie",
       "marque": "NOCTA (Nike x Drake)",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Vert olive"
@@ -4068,7 +4068,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Supreme",
-      "prix": null,
+      "prix": 42,
       "description": "",
       "couleurs": [
         "Noir"
@@ -4091,7 +4091,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Drama",
-      "prix": null,
+      "prix": 37,
       "description": "",
       "couleurs": [
         "Vert olive"
@@ -4114,7 +4114,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "",
-      "prix": null,
+      "prix": 30,
       "description": "",
       "couleurs": [
         "Bleu"
@@ -4137,7 +4137,7 @@
       "categorie": "vetements",
       "type": "ensemble",
       "marque": "Alo",
-      "prix": null,
+      "prix": 35,
       "description": "",
       "couleurs": [
         "Marine"
