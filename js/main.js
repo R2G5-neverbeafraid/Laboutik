@@ -184,7 +184,7 @@ const LIENS = [
 /** Logo : image de config.logo si fournie, sinon monogramme LB + nom (comme le logo retenu). */
 function blocLogo(config) {
   if (config.logo) return el('img', { src: config.logo, alt: config.nom, height: 36 });
-  return [el('span', { class: 'monogram', 'aria-hidden': 'true' }, 'LB'), el('span', {}, config.nom)];
+  return [el('span', { class: 'monogram', 'aria-hidden': 'true' }, 'LB'), el('span', {}, config.logo_texte || config.nom)];
 }
 
 /** Barre de recherche présente sur toutes les pages. Sur le catalogue elle filtre en direct ; ailleurs elle ouvre le catalogue. */

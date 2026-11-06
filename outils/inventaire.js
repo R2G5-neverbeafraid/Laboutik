@@ -24,9 +24,9 @@ const body=rows.map(r=>{
 const doc=new Document({
   styles:{default:{document:{run:{font:'Arial',size:20}}}},
   sections:[{properties:{page:{size:{width:11906,height:16838,orientation:PageOrientation.LANDSCAPE},margin:{top:720,bottom:720,left:700,right:700}}},
-   footers:{default:new Footer({children:[new Paragraph({alignment:AlignmentType.CENTER,children:[new TextRun({text:'LA BOUTIQUE · inventaire · page ',size:16,color:'888888'}),new TextRun({children:[PageNumber.CURRENT],size:16,color:'888888'})]})]})},
+   footers:{default:new Footer({children:[new Paragraph({alignment:AlignmentType.CENTER,children:[new TextRun({text:'LA BOUTIK · inventaire · page ',size:16,color:'888888'}),new TextRun({children:[PageNumber.CURRENT],size:16,color:'888888'})]})]})},
    children:[
-    new Paragraph({spacing:{after:60},children:[new TextRun({text:'LA BOUTIQUE — Inventaire des articles du site',bold:true,size:36})]}),
+    new Paragraph({spacing:{after:60},children:[new TextRun({text:'LA BOUTIK — Inventaire des articles du site',bold:true,size:36})]}),
     new Paragraph({spacing:{after:200},children:[new TextRun({text:`${rows.length} articles en ligne sur le site au ${new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})} · ${rows.filter(r=>r.prix!=null).length} avec prix, ${rows.filter(r=>r.prix==null).length} à fixer (case jaune). Les photos viennent de captures de sites revendeurs : à remplacer par des photos officielles avant la mise en ligne publique.`,size:20,color:'555555'})]}),
     new Table({width:{size:15438,type:WidthType.DXA},columnWidths:W,rows:[new TableRow({tableHeader:true,children:head}),...body]})
    ]}]});

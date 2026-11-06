@@ -1,6 +1,6 @@
-# LA BOUTIQUE — brief pour Claude Code
+# LA BOUTIK — brief pour Claude Code
 
-Site vitrine + catalogue de LA BOUTIQUE, à Kinshasa (RDC) : vêtements, accessoires, puis parfums et d'autres catégories au fur et à mesure.
+Site vitrine + catalogue de LA BOUTIK (anciennement LA BOUTIQUE), à Kinshasa (RDC) : vêtements, accessoires, puis parfums et d'autres catégories au fur et à mesure.
 
 **Mot d'ordre : « Des vêtements et des accessoires de qualité pour tous. »**
 
@@ -22,6 +22,7 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 ## 2. Positionnement et ton
 
 - « Au milieu » : moins cher que Kin Sport / Josk / g.j_store1 (ensembles à 80–90 $), plus soigné que l'entrée de gamme.
+- **Nom du site : LA BOUTIK** (décision RG, novembre 2026 ; l'ancien nom était LA BOUTIQUE). Le **logo** affiche « LA BOUTI(K) » : le K entre parenthèses, avec le même monogramme LB, les mêmes couleurs et les mêmes polices (Saira pour le logo). Dans la config : `nom` = « LA BOUTIK » (titres, messages WhatsApp, pied de page), `logo_texte` = « LA BOUTI(K) » (texte du logo). Les anciens fichiers de suivi gardent leur nom `LA_BOUTIQUE_*.docx` / `.xlsx`.
 - Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva : original dans `assets/img/logo-canva.png` ; le site affiche sa version « en ligne » (monogramme LB dans un cercle + nom en Saira, voir `main.js`). Pour utiliser un autre fichier, renseigner `logo` dans `data/config.json`.
 - **Identité visuelle** : définie dans l'artefact claude.ai « LA BOUTIQUE — Identité visuelle » (https://claude.ai/artifact/Vm4SuFaCyg9HLWb2Vpfs3R), reprise dans `css/variables.css`. Couleurs : noir encre `#0E0E0E`, blanc cassé `#F4F4F1`, gris pierre `#9A9A95`, accent unique olive `#5B6340` (`#A9B37E` sur fond noir). Polices (hébergées dans `assets/fonts/`) : Archivo (titres/texte), IBM Plex Mono (prix, détails), Saira (logo). Si l'artefact change, mettre à jour `variables.css`.
 - **Pas de gammes séparées** (décision RG) : tous les articles sont mélangés dans le même catalogue, sans section « premium / non premium ». Seuls les prix diffèrent. Le champ `marque` des articles reste disponible (vide par défaut).
@@ -29,7 +30,7 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 - Langue du site : français.
 - **Bandeau noir du haut** : texte dans `annonce` (`data/config.json`), à actualiser à chaque drop/nouveauté. Pour l'instant : « Pré-commandes ouvertes sur WhatsApp » (les pré-commandes sur le site viendront plus tard).
 - **Provenance** : ne jamais préciser sur le site d'où viennent les vêtements (pas de « Chine », « importé », etc.).
-- **Pied de page** : « © année LA BOUTIQUE · Site powered by © 25 Labs » (pas de mention des prix).
+- **Pied de page** : « © année LA BOUTIK · Site powered by © 25 Labs » (pas de mention des prix).
 - **Kinshasa** : affiché seulement au-dessus du titre de l'accueil et dans « Livraison partout à Kinshasa. » (à l'essai, le temps d'ajouter d'autres villes). Pas ailleurs dans les textes du site.
 
 ## 3. Prix (USD)
@@ -79,7 +80,7 @@ Photos : RG fournit ses propres photos (pas d'images reprises aux concurrents). 
 
 **Précisions de RG** : VET-050 = vieux maillot Espagne, collab Travis Scott ; VET-037 = pull Polo Ralph Lauren ; VET-039 = jogger complet On. Pas encore sur le site : VET-034 (maillots de clubs, trop vague), VET-036 (articles Ami, modèle inconnu), VET-048 (ensemble « Torom », produit d'un concurrent à 200 $).
 
-**Règles du catalogue** : uniquement des articles **sans marque** pour l'instant. Les « copies de marques » de la liste de RG (section B) ne sont pas ajoutées au site (voir §2). Articles sans prix : publiés avec « Prix à confirmer ». Couleurs « à confirmer » : champ `couleurs` vide (la fiche ne demande pas de couleur).
+**Règles du catalogue** : articles sans marque **et** articles de marque (en pré-commande, voir ci-dessus), mélangés. Pas d'articles marqués comme copies, de baskets, de photos de personnes ni de captures avec icônes d'appli. Les modèles identiques en plusieurs couleurs forment **un seul article** avec des pastilles de couleur et une photo par coloris. Articles sans prix : « Prix à confirmer » (aujourd'hui tous ont un prix). Couleurs « à confirmer » : champ `couleurs` vide (la fiche ne demande pas de couleur). État au moment de ce changement de nom : 160 articles ; 16 sans photo (affichés « Photo à venir »).
 
 ## 5. Structure du code (règle impérative de RG)
 
@@ -91,6 +92,9 @@ la-boutique/
 ├── catalogue.html        # grille produits + filtres par catégorie et type
 ├── produit.html          # fiche produit (lit ?id= dans l'URL)
 ├── a-propos.html         # comment ça marche : pré-commande, délais, livraison
+├── favoris.html          # articles aimés (cœur)
+├── panier.html           # panier : quantités, total, commande groupée WhatsApp
+├── 404.html
 ├── css/
 │   ├── variables.css     # couleurs, polices, espacements (tokens)
 │   ├── base.css          # reset + typographie
@@ -100,12 +104,17 @@ la-boutique/
 │   ├── data.js           # chargement de data/produits.json
 │   ├── catalogue.js      # affichage + filtres
 │   ├── produit.js        # fiche produit, choix taille/couleur
-│   ├── whatsapp.js       # construction du lien wa.me pré-rempli
-│   └── main.js           # menu mobile, éléments communs
+│   ├── whatsapp.js       # construction du lien wa.me pré-rempli (article seul ou panier)
+│   ├── stockage.js       # favoris et panier (localStorage)
+│   ├── favoris.js        # page favoris
+│   ├── panier.js         # page panier
+│   └── main.js           # en-tête (logo, recherche, cœur, panier), pied de page, cartes, retour à la position
 ├── data/
 │   ├── produits.json     # id, nom, catégorie (vêtements / accessoires / couvre-chef / parfums…), type, marque, prix, couleurs, tailles, photos, statut (dispo / précommande / épuisé)
 │   └── config.json       # numéro WhatsApp, nom de la boutique, liens réseaux, drop en cours, listes des catégories et types
 ├── assets/img/           # logo, photos produits (WebP compressées)
+├── outils/               # maj_inventaires.py + inventaire.js : régénère l'inventaire Word et le fichier des prix (interne/)
+├── interne/              # PRIVÉ, ignoré par git : inventaire, prix, listes à compléter, images reçues
 ├── README.md
 └── CLAUDE.md
 ```
@@ -147,7 +156,7 @@ Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton
 ## 7. Points encore ouverts (à demander à RG)
 
 - Numéro WhatsApp de la boutique et liens Instagram / TikTok.
-- Nom exact affiché sur le site (« LA BOUTIQUE » ou autre) et fichier du logo Canva.
+- Fichier du logo Canva à jour avec le nouveau nom (« LA BOUTI(K) »). Le site affiche déjà ce logo en texte.
 - Liste et prix des articles de la catégorie Accessoires.
 - Pack hoodie + jogging : 69 $ ou 72 $.
 - Frais et zones de livraison à Kinshasa.
