@@ -22,6 +22,24 @@ export function messageCommande(config, produit, taille, couleur) {
     .join('\n');
 }
 
+/** Message pour tout le panier : une ligne par article, puis le total des articles dont le prix est connu. */
+export function messagePanier(config, lignes) {
+  let total = 0;
+  let inconnus = 0;
+  const detail = lignes.map(({ produit: p, taille, couleur, qte }, i) => {
+    if (p.prix == null) inconnus += qte;
+    else total += p.prix * qte;
+    const options = [taille ? 'taille ' + taille : null, couleur || null].filter(Boolean).join(', ');
+    const prix =
+      p.prix == null
+        ? 'prix à confirmer' + (qte > 1 ? ' (x ' + qte + ')' : '')
+        : formaterPrix(p.prix) + (qte > 1 ? ' x ' + qte + ' = ' + p.prix * qte + ' $' : '');
+    return i + 1 + '. ' + p.nom + (options ? ' (' + options + ')' : '') + ' : ' + prix;
+  });
+  const suite = inconnus ? ' + ' + inconnus + ' article' + (inconnus > 1 ? 's' : '') + ' au prix à confirmer' : '';
+  return ['Bonjour ' + config.nom + ', je souhaite commander :', ...detail, 'Total : ' + total + ' $' + suite].join('\n');
+}
+
 export function lienCommande(config, produit, taille, couleur) {
   return lienWhatsApp(config, messageCommande(config, produit, taille, couleur));
 }

@@ -33,6 +33,8 @@ Puis ouvrir <http://localhost:8000>.
 **Catalogue** : recherche (nom, marque, couleur, catégorie…), filtres Catégorie / Type / Marque et tri sont mémorisés dans l'URL (`?q=` `?cat=` `?type=` `?marque=` `?tri=`) ; en revenant en arrière depuis une fiche, on retrouve la même vue à la même position (`restaurerPosition()` dans `js/main.js`).
 La marque d'un article vient du champ `marque` : « Nike × Syna World » compte pour Nike et Syna World.
 
+**Favoris et panier** : le cœur (cartes et fiches) et « Ajouter au panier » sont mémorisés dans le navigateur du visiteur (`localStorage`, module `js/stockage.js`) : pas de compte, pas de serveur. Pages `favoris.html` et `panier.html` ; le panier se commande d'un coup sur WhatsApp (`messagePanier` dans `js/whatsapp.js`). Un article retiré du catalogue disparaît tout seul des favoris et des paniers.
+
 La section « Avis clients » de l'accueil reste masquée tant que `avis` est vide : n'y mettre que de vrais avis.
 
 ## Structure

@@ -140,6 +140,10 @@ Ordre de commits suggéré :
 3. republier l'Artifact de test si le site a changé.
 Les prix saisis par RG dans l'inventaire sont la référence : ils sont déjà dans `data/produits.json` (un seul article sans prix : « Sweat col rond, poche zippée sur la manche »). Un article co-signé (« Nike × Syna World ») est classé sous sa première marque dans le fichier des prix ; l'ordre du catalogue place en tête le Polo Ralph Lauren gris, le Tech Fleece Nike, le Tech Fleece NOCTA bleu ciel et la casquette Yankees « Historic Champs ».
 
+## 6 ter. Favoris et panier (demande de RG)
+
+Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton « Ajouter au panier » sur la fiche, page `panier.html` (quantités, total, commande groupée sur WhatsApp, pas de paiement en ligne). Icônes cœur et panier avec compteur dans l'en-tête. Tout est stocké dans le navigateur (`js/stockage.js`). Ces fonctions ne changent pas le catalogue : pas de mise à jour de l'inventaire nécessaire.
+
 ## 7. Points encore ouverts (à demander à RG)
 
 - Numéro WhatsApp de la boutique et liens Instagram / TikTok.

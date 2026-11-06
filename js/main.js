@@ -1,6 +1,7 @@
 // Éléments communs : header, footer, menu mobile, remplissage depuis la config, cartes produit.
 import { chargerDonnees, formaterPrix, STATUTS, srcPhoto, fondCouleur } from './data.js';
 import { lienContact } from './whatsapp.js';
+import { EVENEMENT, estFavori, basculerFavori, favoris, nombrePanier, nettoyer } from './stockage.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
 
@@ -45,6 +46,76 @@ export function el(tag, attrs = {}, ...enfants) {
   return n;
 }
 
+// ---------- Icônes, cœur « j'aime » et compteurs de l'en-tête ----------
+const ICONES = {
+  coeur:
+    '<path d="M12 20.3s-7.6-4.6-7.6-10.3A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 7.6 2.6c0 5.7-7.6 10.3-7.6 10.3z" stroke-linejoin="round"/>',
+  panier:
+    '<path d="M5.2 7.5h13.6l-1.1 11a1.6 1.6 0 0 1-1.6 1.4H7.9a1.6 1.6 0 0 1-1.6-1.4l-1.1-11z" stroke-linejoin="round"/><path d="M9 7.5V6.4a3 3 0 0 1 6 0v1.1" stroke-linecap="round"/>',
+};
+
+export function icone(nom) {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('width', '22');
+  svg.setAttribute('height', '22');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('class', `icone icone--${nom}`);
+  svg.innerHTML = ICONES[nom];
+  return svg;
+}
+
+/** Bouton cœur : ajoute ou retire l'article des favoris (mémorisé dans le navigateur). */
+export function boutonCoeur(id, nom, classe = '') {
+  const b = el(
+    'button',
+    {
+      type: 'button',
+      class: `heart-btn ${classe}`.trim(),
+      'data-id': id,
+      'aria-label': `J'aime : ${nom}`,
+      title: "J'aime",
+      'aria-pressed': String(estFavori(id)),
+    },
+    icone('coeur')
+  );
+  b.addEventListener('click', () => basculerFavori(id));
+  return b;
+}
+
+function majInterface() {
+  const fav = new Set(favoris());
+  document.querySelectorAll('.heart-btn').forEach((b) => b.setAttribute('aria-pressed', String(fav.has(b.dataset.id))));
+  const nombres = { favoris: fav.size, panier: nombrePanier() };
+  const noms = { favoris: 'Mes favoris', panier: 'Mon panier' };
+  document.querySelectorAll('[data-compteur]').forEach((lien) => {
+    const type = lien.dataset.compteur;
+    const n = nombres[type];
+    const pastille = lien.querySelector('.header-badge');
+    pastille.textContent = String(n);
+    pastille.hidden = n === 0;
+    lien.setAttribute('aria-label', n ? `${noms[type]} (${n})` : noms[type]);
+  });
+}
+window.addEventListener(EVENEMENT, majInterface);
+window.addEventListener('storage', majInterface); // un autre onglet a changé les favoris ou le panier
+
+function lienIcone(type, href, titre) {
+  return el(
+    'a',
+    {
+      class: 'icon-link',
+      href,
+      'data-compteur': type,
+      'aria-label': titre,
+      title: titre,
+      'aria-current': document.body.dataset.page === type ? 'page' : false,
+    },
+    icone(type === 'favoris' ? 'coeur' : 'panier'),
+    el('span', { class: 'header-badge', hidden: true, 'aria-hidden': 'true' }, '0')
+  );
+}
+
 /** Pastille ronde de couleur (décorative : le nom est donné par le texte ou le title). */
 export function pastille(nom) {
   return el('span', { class: 'swatch', style: `background: ${fondCouleur(nom)}`, title: nom, 'aria-hidden': 'true' });
@@ -54,7 +125,7 @@ export function pastille(nom) {
 function pastillesCarte(produit) {
   const cs = produit.couleurs || [];
   if (cs.length < 2) return null;
-  const MAX = 5;
+  const MAX = 4;
   return el(
     'p',
     { class: 'card__swatches', 'aria-label': `${cs.length} coloris : ${cs.join(', ')}` },
@@ -100,7 +171,7 @@ export function creerCarte(produit) {
   return el(
     'li',
     {},
-    el('article', { class: 'card' }, lien, el('span', { class: `badge badge--${produit.statut}` }, STATUTS[produit.statut] || produit.statut))
+    el('article', { class: 'card' }, lien, boutonCoeur(produit.id, produit.nom), el('span', { class: `badge badge--${produit.statut}` }, STATUTS[produit.statut] || produit.statut))
   );
 }
 
@@ -186,7 +257,19 @@ function creerHeader(config) {
   return el(
     'header',
     { class: 'site-header' },
-    el('div', { class: 'container header-inner' }, marque, bouton, nav),
+    el(
+      'div',
+      { class: 'container header-inner' },
+      marque,
+      nav,
+      el(
+        'div',
+        { class: 'header-actions' },
+        lienIcone('favoris', 'favoris.html', 'Mes favoris'),
+        lienIcone('panier', 'panier.html', 'Mon panier'),
+        bouton
+      )
+    ),
     creerRecherche()
   );
 }
@@ -322,12 +405,14 @@ export async function initPage() {
   try {
     const donnees = await chargerDonnees();
     const { config } = donnees;
+    nettoyer(new Set(donnees.produits.map((p) => p.id)));
     const header = creerHeader(config);
     document.querySelector('.skip-link').after(header);
     if (config.annonce) header.before(el('div', { class: 'announce' }, el('p', { class: 'container' }, config.annonce)));
     document.body.append(creerFooter(config));
-    if (document.body.dataset.page !== 'produit') document.body.append(creerBoutonFlottant(config));
+    if (!['produit', 'panier'].includes(document.body.dataset.page)) document.body.append(creerBoutonFlottant(config));
     remplirDepuisConfig(config);
+    majInterface();
     return donnees;
   } catch (err) {
     console.error(err);

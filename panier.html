@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon panier — LA BOUTIQUE</title>
+  <meta name="description" content="Ton panier LA BOUTIQUE : commande tous tes articles d'un coup sur WhatsApp.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/archivo-100-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="panier">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <main id="contenu">
+    <div class="container section--tight">
+      <h1>Mon panier</h1>
+      <div id="panier" aria-live="polite"></div>
+      <noscript><p class="empty">Active JavaScript pour voir ton panier.</p></noscript>
+    </div>
+  </main>
+  <script type="module" src="js/panier.js"></script>
+</body>
+</html>

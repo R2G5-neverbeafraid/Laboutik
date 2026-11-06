@@ -1,5 +1,6 @@
 // Fiche produit : lit ?id=, affiche les options et construit le lien WhatsApp.
-import { initPage, creerCarte, el, pastille, restaurerPosition } from './main.js';
+import { initPage, creerCarte, el, pastille, restaurerPosition, boutonCoeur } from './main.js';
+import { ajouterAuPanier } from './stockage.js';
 import { formaterPrix, STATUTS, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
 import { lienCommande } from './whatsapp.js';
 
@@ -132,12 +133,20 @@ if (donnees) {
       { class: 'btn btn--wa btn--block', href: '#', 'aria-disabled': epuise ? 'true' : false },
       epuise ? 'Article épuisé' : 'Commander sur WhatsApp'
     );
+    const boutonPanier = el(
+      'button',
+      { class: 'btn btn--block btn--cart', type: 'button', disabled: epuise },
+      'Ajouter au panier'
+    );
+    const confirmation = el('p', { class: 'form-ok', role: 'status' });
     const form = el(
       'form',
       { novalidate: true },
       p.tailles.length ? groupeOptions('taille', 'Taille', p.tailles) : null,
       p.couleurs.length ? groupeCouleurs(p.couleurs) : null,
       erreur,
+      boutonPanier,
+      confirmation,
       bouton
     );
 
@@ -194,6 +203,20 @@ if (donnees) {
       if (e.key === 'ArrowRight' && courante < photos.length - 1) afficherPhoto(courante + 1);
       if (e.key === 'ArrowLeft' && courante > 0) afficherPhoto(courante - 1);
     });
+    form.addEventListener('change', () => (confirmation.replaceChildren(), (confirmation.hidden = true)));
+    boutonPanier.addEventListener('click', () => {
+      const c = choix();
+      const m = manque(c);
+      if (m.length) {
+        confirmation.replaceChildren();
+        erreur.textContent = `Choisis ${m.join(' et ')}.`;
+        return;
+      }
+      erreur.textContent = '';
+      ajouterAuPanier({ id: p.id, taille: c.taille || '', couleur: c.couleur || '' });
+      confirmation.hidden = false;
+      confirmation.replaceChildren('Ajouté au panier. ', el('a', { href: 'panier.html' }, 'Voir le panier'));
+    });
     form.addEventListener('submit', (e) => e.preventDefault());
     bouton.addEventListener('click', (e) => {
       if (epuise) return e.preventDefault();
@@ -208,7 +231,12 @@ if (donnees) {
     const infos = el(
       'div',
       { class: 'product__info' },
-      el('span', { class: `badge badge--${p.statut}` }, STATUTS[p.statut] || p.statut),
+      el(
+        'div',
+        { class: 'product__top' },
+        el('span', { class: `badge badge--${p.statut}` }, STATUTS[p.statut] || p.statut),
+        boutonCoeur(p.id, p.nom, 'heart-btn--inline')
+      ),
       p.marque ? el('p', { class: 'eyebrow' }, p.marque) : null,
       el('h1', {}, p.nom),
       el('p', { class: 'product__price' }, formaterPrix(p.prix)),
