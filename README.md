@@ -19,7 +19,7 @@ Puis ouvrir <http://localhost:8000>.
   (statut : `dispo`, `precommande` ou `epuise`).
 - **Numéro WhatsApp, réseaux, drop en cours, délais, livraison, avis** : `data/config.json`
   (`whatsapp` au format international sans `+`, ex. `243812345678`).
-- **Nom et logo** : `nom` (« LA BOUTIK ») sert partout (titres, messages WhatsApp, pied de page) ; `logo_texte` (« LA BOUTI(K) ») est le texte du logo en haut et en bas des pages. Pour un logo en image : déposer le fichier dans `assets/img/` et renseigner `logo`.
+- **Nom et logo** : `nom` (« LA BOUTIK ») sert partout (titres, messages WhatsApp, pied de page) ; `logo_monogramme` (« (K) ») est le texte dans le cercle du logo, en haut et en bas des pages. Pour un logo en image : déposer le fichier dans `assets/img/` et renseigner `logo`.
 - **Photos** : déposer les images dans `assets/img/produits/`, en WebP compressé (portrait 4:5, environ 800×1000, moins de 150 Ko).
   Nom conseillé : `<id-du-produit>-1.webp`, `<id-du-produit>-2.webp`… (ex. `vet-001-1.webp`).
   Puis lister les chemins dans `photos` du produit, dans `data/produits.json` :

@@ -22,8 +22,8 @@ Public : jeunes de Kinshasa (12–30 ans), consultation surtout **sur téléphon
 ## 2. Positionnement et ton
 
 - « Au milieu » : moins cher que Kin Sport / Josk / g.j_store1 (ensembles à 80–90 $), plus soigné que l'entrée de gamme.
-- **Nom du site : LA BOUTIK** (décision RG, novembre 2026 ; l'ancien nom était LA BOUTIQUE). Le **logo** affiche « LA BOUTI(K) » : le K entre parenthèses, avec le même monogramme LB, les mêmes couleurs et les mêmes polices (Saira pour le logo). Dans la config : `nom` = « LA BOUTIK » (titres, messages WhatsApp, pied de page), `logo_texte` = « LA BOUTI(K) » (texte du logo). Les anciens fichiers de suivi gardent leur nom `LA_BOUTIQUE_*.docx` / `.xlsx`.
-- Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva : original dans `assets/img/logo-canva.png` ; le site affiche sa version « en ligne » (monogramme LB dans un cercle + nom en Saira, voir `main.js`). Pour utiliser un autre fichier, renseigner `logo` dans `data/config.json`.
+- **Nom du site : LA BOUTIK** (décision RG, novembre 2026 ; l'ancien nom était LA BOUTIQUE). Le **logo** : le cercle (monogramme) affiche « (K) », le K entre parenthèses, à la place de « LB » ; le texte à côté reste « LA BOUTIK ». Mêmes couleurs et mêmes polices (Saira pour le logo). Dans la config : `nom` = « LA BOUTIK » (titres, texte du logo, messages WhatsApp, pied de page), `logo_monogramme` = « (K) » (texte du cercle ; l'icône d'onglet `favicon.svg` affiche aussi « (K) »). Les anciens fichiers de suivi gardent leur nom `LA_BOUTIQUE_*.docx` / `.xlsx`.
+- Style visuel **épuré mais classe**. Le logo officiel est celui généré sur Canva : original dans `assets/img/logo-canva.png` ; le site affiche sa version « en ligne » (monogramme (K) dans un cercle + nom en Saira, voir `main.js`). Pour utiliser un autre fichier, renseigner `logo` dans `data/config.json`.
 - **Identité visuelle** : définie dans l'artefact claude.ai « LA BOUTIQUE — Identité visuelle » (https://claude.ai/artifact/Vm4SuFaCyg9HLWb2Vpfs3R), reprise dans `css/variables.css`. Couleurs : noir encre `#0E0E0E`, blanc cassé `#F4F4F1`, gris pierre `#9A9A95`, accent unique olive `#5B6340` (`#A9B37E` sur fond noir). Polices (hébergées dans `assets/fonts/`) : Archivo (titres/texte), IBM Plex Mono (prix, détails), Saira (logo). Si l'artefact change, mettre à jour `variables.css`.
 - **Pas de gammes séparées** (décision RG) : tous les articles sont mélangés dans le même catalogue, sans section « premium / non premium ». Seuls les prix diffèrent. Le champ `marque` des articles reste disponible (vide par défaut).
 - Catégories : **Vêtements**, **Accessoires**, **Couvre-chef** (casquettes, skull caps, bonnets…), puis **Parfums** et d'autres plus tard (les skull caps sont en Couvre-chef, pas en Accessoires). Types par catégorie (filtres du catalogue) : Vêtements = jogging, hoodie, veste, haut, ensemble ; Couvre-chef = bonnet, skull cap, casquette ; Accessoires = à définir. Pas de type « enfant » ni « bonnet » dans Vêtements. Accessoires et Couvre-chef sont affichés même vides (`toujours_visible`). → le site doit permettre d'ajouter une catégorie ou un type sans toucher au code (listes dans `data/config.json`).
@@ -156,7 +156,7 @@ Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton
 ## 7. Points encore ouverts (à demander à RG)
 
 - Numéro WhatsApp de la boutique et liens Instagram / TikTok.
-- Fichier du logo Canva à jour avec le nouveau nom (« LA BOUTI(K) »). Le site affiche déjà ce logo en texte.
+- Fichier du logo Canva à jour avec le nouveau nom et le « (K) ». Le site affiche déjà ce logo en texte.
 - Liste et prix des articles de la catégorie Accessoires.
 - Pack hoodie + jogging : 69 $ ou 72 $.
 - Frais et zones de livraison à Kinshasa.
