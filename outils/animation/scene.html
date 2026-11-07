@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Scène de rendu : animation de marque</title>
+<link rel="stylesheet" href="../../css/variables.css">
+<link rel="stylesheet" href="../../css/base.css">
+<style>html,body{margin:0;background:#0e0e0e;overflow:hidden}#scene{position:relative;width:1080px;height:1920px}</style>
+</head>
+<body>
+<div id="scene"></div>
+<script type="module">
+  import { monterAnimation } from '../../js/animation-marque.js';
+  const config = await (await fetch('../../data/config.json')).json();
+  window.__ctrl = await monterAnimation(document.getElementById('scene'), 'reseaux', { config, fixe: true });
+  window.__ctrl.pause();
+  window.__pret = true;
+</script>
+</body>
+</html>

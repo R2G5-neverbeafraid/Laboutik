@@ -1,10 +1,13 @@
 // Page d'accueil : hero (image optionnelle), drop en cours, catégories, sélection, avis.
 import { initPage, creerCarte, el, restaurerPosition } from './main.js';
+import { lancerAnimationAccueil } from './hero-anim.js';
 
 const donnees = await initPage();
 
 if (donnees) {
   const { config, categories, produits } = donnees;
+
+  lancerAnimationAccueil(config); // décoratif : ne bloque pas l'affichage de la page
 
   // Image du hero : affichée seulement si config.hero_image est renseigné
   if (config.hero_image) {

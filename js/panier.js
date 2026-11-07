@@ -108,7 +108,7 @@ if (donnees) {
         inconnus
           ? el('p', { class: 'note' }, `+ ${inconnus} article${inconnus > 1 ? 's' : ''} au prix à confirmer (on te donne le prix sur WhatsApp).`)
           : null,
-        el('p', { class: 'note' }, 'Le paiement se fait sur WhatsApp, après ta commande. ', el('a', { href: 'livraison.html#paiement' }, 'Comment payer ?')),
+        el('p', { class: 'note' }, 'Le paiement se fait sur WhatsApp, après ta commande. ', el('a', { href: 'a-propos.html#paiement' }, 'Comment payer ?')),
         erreurLivraison,
         commander,
         el('button', { type: 'button', class: 'link-btn', 'data-action': 'vider' }, 'Vider le panier')

@@ -91,8 +91,7 @@ la-boutique/
 ├── index.html            # accueil : hero, drop en cours, catégories, avis, contact
 ├── catalogue.html        # grille produits + filtres par catégorie et type
 ├── produit.html          # fiche produit (lit ?id= dans l'URL)
-├── a-propos.html         # comment ça marche : pré-commande, délais, livraison
-├── livraison.html        # grille de livraison, échange/retour, paiement (page d'explications)
+├── a-propos.html         # comment ça marche : pré-commande, délais, grille de livraison, échange/retour, paiement
 ├── favoris.html          # articles aimés (cœur)
 ├── panier.html           # panier : quantités, total, commande groupée WhatsApp
 ├── 404.html
@@ -109,7 +108,6 @@ la-boutique/
 │   ├── stockage.js       # favoris et panier (localStorage)
 │   ├── favoris.js        # page favoris
 │   ├── livraison.js      # formulaire d'adresse (commune, quartier, avenue, repère, nom)
-│   ├── page-livraison.js # page livraison : grille depuis config.livraison.grille
 │   ├── panier.js         # page panier
 │   └── main.js           # en-tête (logo, recherche, cœur, panier), pied de page, cartes, retour à la position
 ├── data/
@@ -159,13 +157,19 @@ Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton
 ## 6 quater. Commande avec adresse de livraison (demande de RG, 7 novembre 2026)
 
 - **Commande directe (fiche)** et **panier** : avant d'ouvrir WhatsApp, le client choisit sa **commune** (liste de la grille de livraison) puis remplit **quartier, avenue, n° de parcelle (facultatif), point de repère (facultatif) et nom**. Commune, quartier, avenue et nom sont obligatoires. L'adresse est ajoutée au message WhatsApp avec les **frais de livraison** de la zone (en FC, à payer en plus de l'article en $). Elle est mémorisée sur l'appareil du client (`localStorage`, clé `lb-livraison`).
-- La **grille de livraison** est dans `data/config.json` → `livraison.grille` (zones, communes, frais en FC) : une seule source pour le formulaire et la page `livraison.html`. Pour ajouter une commune ou changer un tarif, modifier ce fichier seulement.
-- **Page « Livraison »** (menu et pied de page) : grille, délais, échange et retour, paiement.
+- La **grille de livraison** est dans `data/config.json` → `livraison.grille` (zones, communes, frais en FC) : une seule source pour le formulaire et la page `a-propos.html` (« Comment ça marche »). Pour ajouter une commune ou changer un tarif, modifier ce fichier seulement.
+- **Pas de page « Livraison » séparée** (décision RG, 7 novembre 2026) : la grille de livraison, l'échange et retour et le paiement sont dans la page « Comment ça marche » (`a-propos.html`, ancres `#livraison`, `#echange`, `#paiement`).
 - **Paiement (décision RG)** : pas de paiement sur le site pour l'instant. Le client paie **sur WhatsApp** après sa commande (Airtel Money : acompte pour une pré-commande, paiement total avant livraison pour un article en stock). Les **numéros de paiement ne sont pas affichés sur le site** (privés, dans `interne/infos-paiement.md`) ; RG voudra peut-être les ajouter plus tard pour payer directement depuis le site.
 
 ## 6 quinquies. Mode clair / mode sombre (demande de RG, 7 novembre 2026)
 
 Le site suit le réglage du navigateur (`prefers-color-scheme`) et le visiteur peut choisir à la main **Auto / Clair / Sombre** dans le pied de page (mémorisé sous `lb-theme`, appliqué avant l'affichage pour éviter le flash). Les couleurs claires sont celles de la charte, inchangées ; la palette sombre est dans `css/variables.css` (fond `#121210`, texte `#F4F4F1`, accent olive clair `#A9B37E`). Le bandeau du haut, le bloc « drop » et le pied de page restent foncés dans les deux thèmes (`--c-dark`). Toute nouvelle couleur doit passer par un token de `variables.css`, jamais en dur.
+
+## 6 sexies. Animation de marque (demande de RG, 8 novembre 2026)
+
+- **Sur le site** : filigrane animé derrière le titre de l'accueil (fond gris conservé), boucle de 12 s : le cercle (K) se dessine, les mots VÊTEMENTS / ACCESSOIRES / COUVRE-CHEF / PRÉ-COMMANDE / LIVRAISON À KINSHASA défilent avec des pastilles de couleur, puis LA BOUTIK. Code : `js/animation-marque.js` (variante « site »), lancée par `js/hero-anim.js`. Aucun fichier vidéo : c'est du code léger. Elle s'arrête hors écran, reste immobile si le visiteur a demandé « moins d'animations » ou active l'économiseur de données, et suit le thème clair/sombre.
+- **Vidéo pour les réseaux** (Instagram, TikTok, WhatsApp) : même animation, variante « reseaux », MP4 vertical 1080×1920, 15 s, muette, avec carte finale (WhatsApp, Instagram, TikTok lus dans `data/config.json`). Elle se régénère avec `node outils/animation/rendre.js reseaux sortie.mp4` (serveur local `python3 -m http.server 8797` lancé à la racine ; Playwright + ffmpeg). Fichiers de sortie conservés dans `interne/` (non publié).
+- Pour changer les mots ou les temps : `js/animation-marque.js`, puis régénérer la vidéo.
 
 ## 7. Informations données par RG (7 novembre 2026)
 

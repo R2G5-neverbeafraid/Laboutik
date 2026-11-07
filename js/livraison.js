@@ -84,7 +84,7 @@ export function creerFormulaireLivraison(config) {
     'fieldset',
     { class: 'delivery' },
     el('legend', {}, 'Livraison à Kinshasa'),
-    el('p', { class: 'note delivery__intro' }, "Dis-nous où te livrer : ça part dans ton message WhatsApp. ", el('a', { href: 'livraison.html' }, 'Voir la grille de livraison')),
+    el('p', { class: 'note delivery__intro' }, "Dis-nous où te livrer : ça part dans ton message WhatsApp. ", el('a', { href: 'a-propos.html#livraison' }, 'Voir la grille de livraison')),
     champCommune,
     frais,
     champs,

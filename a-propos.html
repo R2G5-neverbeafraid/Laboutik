@@ -31,16 +31,30 @@
       <table class="facts">
         <tbody>
           <tr><th scope="row">Délai d'une pré-commande</th><td data-config="pre_commande.delai">À confirmer</td></tr>
-          <tr><th scope="row">Paiement</th><td data-config="pre_commande.paiement">À confirmer</td></tr>
-          <tr><th scope="row">Zones de livraison</th><td data-config="livraison.zones">À confirmer</td></tr>
-          <tr><th scope="row">Frais de livraison</th><td data-config="livraison.frais">À confirmer</td></tr>
           <tr><th scope="row">Délai de livraison</th><td data-config="livraison.delai">À confirmer</td></tr>
-          <tr><th scope="row">Échange et retour</th><td data-config="livraison.retours">À confirmer</td></tr>
-          <tr><th scope="row">Monnaie</th><td>Tous les prix sont en dollars US ($).</td></tr>
+          <tr><th scope="row">Monnaie</th><td>Les articles sont en dollars US ($). Les frais de livraison sont en francs congolais (FC).</td></tr>
         </tbody>
       </table>
 
-      <p><a href="livraison.html">Voir la grille de livraison, l'échange et le paiement</a></p>
+      <h2 id="livraison">Grille de livraison à Kinshasa</h2>
+      <div id="grille-livraison"></div>
+      <p class="note">Les frais de livraison s'ajoutent au prix de l'article. Ta commune n'est pas dans la grille ? Écris-nous sur WhatsApp.</p>
+
+      <h2 id="echange">Échange et retour</h2>
+      <p data-config="livraison.retours"></p>
+      <ul class="plain-list">
+        <li>L'article ne doit pas avoir été utilisé ni porté.</li>
+        <li>L'étiquette doit toujours être attachée au vêtement.</li>
+      </ul>
+      <p>Pour un échange ou un retour, écris-nous sur WhatsApp.</p>
+
+      <h2 id="paiement">Paiement</h2>
+      <p data-config="pre_commande.paiement"></p>
+      <ul class="plain-list">
+        <li><strong>Pré-commande :</strong> on prend un acompte à la commande.</li>
+        <li><strong>Article en stock :</strong> tu paies la totalité avant la livraison.</li>
+        <li><strong>Où payer :</strong> sur WhatsApp. Tu commandes sur le site, le message part sur WhatsApp, et on te donne les numéros Airtel Money dans la conversation. Il n'y a pas de paiement sur le site pour l'instant.</li>
+      </ul>
 
       <h2 style="margin-top: var(--sp-6)">Une question ?</h2>
       <p>Écris-nous sur WhatsApp, on répond avec plaisir.</p>
