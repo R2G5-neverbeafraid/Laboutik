@@ -86,3 +86,15 @@ export function marquesDe(produit, toutesLesMarques) {
     : [];
   return [...new Set([...principal, ...bonus])];
 }
+
+// ---------- Livraison : grille des communes (config.livraison.grille) ----------
+/** Montant en francs congolais avec séparateur de milliers : 7000 → « 7 000 FC ». */
+export const formaterFC = (n) => `${String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0')}\u00a0FC`;
+
+/** Liste à plat des communes livrées : { nom, zone, frais } */
+export function communesLivraison(config) {
+  const grille = (config.livraison && config.livraison.grille) || [];
+  return grille.flatMap((z) => z.communes.map((nom) => ({ nom, zone: z.zone, frais: z.frais_fc })));
+}
+
+export const fraisPour = (config, commune) => communesLivraison(config).find((c) => c.nom === commune) || null;

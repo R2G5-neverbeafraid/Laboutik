@@ -3,6 +3,7 @@ import { initPage, creerCarte, el, pastille, restaurerPosition, boutonCoeur } fr
 import { ajouterAuPanier } from './stockage.js';
 import { formaterPrix, STATUTS, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
 import { lienCommande } from './whatsapp.js';
+import { creerFormulaireLivraison, listeFrancaise } from './livraison.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
 const donnees = await initPage();
@@ -139,6 +140,8 @@ if (donnees) {
       'Ajouter au panier'
     );
     const confirmation = el('p', { class: 'form-ok', role: 'status' });
+    const livraison = creerFormulaireLivraison(config);
+    const erreurLivraison = el('p', { class: 'form-error', role: 'alert' });
     const form = el(
       'form',
       { novalidate: true },
@@ -147,6 +150,8 @@ if (donnees) {
       erreur,
       boutonPanier,
       confirmation,
+      livraison.element,
+      erreurLivraison,
       bouton
     );
 
@@ -160,17 +165,6 @@ if (donnees) {
       p.couleurs.length && !couleur ? 'une couleur' : null,
     ].filter(Boolean);
 
-    function majLien() {
-      const c = choix();
-      const { taille, couleur } = c;
-      if (!manque(c).length && !epuise) {
-        bouton.href = lienCommande(config, p, taille, couleur);
-        bouton.target = '_blank';
-        bouton.rel = 'noopener';
-        erreur.textContent = '';
-      }
-    }
-    form.addEventListener('change', majLien);
     // Choisir une couleur affiche la photo de cette couleur ; glisser vers une photo d'une couleur choisit cette couleur
     const nomCouleur = form.querySelector('.option-current');
     function marquerCouleur(nom) {
@@ -195,7 +189,6 @@ if (donnees) {
         if (radio && !radio.checked) {
           radio.checked = true;
           marquerCouleur(radio.value);
-          majLien();
         }
       }, 90);
     });
@@ -218,15 +211,19 @@ if (donnees) {
       confirmation.replaceChildren('Ajouté au panier. ', el('a', { href: 'panier.html' }, 'Voir le panier'));
     });
     form.addEventListener('submit', (e) => e.preventDefault());
+    // Commande directe : taille/couleur + adresse de livraison obligatoires ; le lien WhatsApp est construit au clic
     bouton.addEventListener('click', (e) => {
       if (epuise) return e.preventDefault();
-      const m = manque(choix());
-      if (m.length) {
-        e.preventDefault();
-        erreur.textContent = `Choisis ${m.join(' et ')}.`;
-      }
+      const c = choix();
+      const m = manque(c);
+      const v = livraison.valider(!m.length);
+      erreur.textContent = m.length ? `Choisis ${m.join(' et ')}.` : '';
+      erreurLivraison.textContent = v.ok ? '' : `Pour livrer, indique ${listeFrancaise(v.manques)}.`;
+      if (m.length || !v.ok) return e.preventDefault();
+      bouton.href = lienCommande(config, p, c.taille, c.couleur, v.donnees);
+      bouton.target = '_blank';
+      bouton.rel = 'noopener';
     });
-    majLien();
 
     const infos = el(
       'div',

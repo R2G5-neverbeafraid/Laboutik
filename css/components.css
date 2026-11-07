@@ -385,3 +385,33 @@
 @media (min-width: 48rem) {
   #panier { max-width: 40rem; }
 }
+
+/* ---------- Livraison : formulaire d'adresse et page d'explications ---------- */
+.delivery { margin: 0 0 var(--sp-4); padding: var(--sp-4); border: 1px solid var(--c-line); border-radius: var(--radius); background: var(--c-surface); min-width: 0; }
+.delivery legend { padding: 0 var(--sp-2); font-weight: 700; }
+.delivery__intro { margin: 0 0 var(--sp-3); }
+.delivery__fee { margin: calc(-1 * var(--sp-2)) 0 var(--sp-3); font-weight: 600; color: var(--c-olive-dark); }
+.delivery__fee:empty { display: none; }
+.field { display: grid; gap: var(--sp-1); margin-bottom: var(--sp-3); }
+.field label { font-weight: 600; font-size: var(--fs-sm); }
+.field__req { color: var(--c-error); }
+.field__opt { font-weight: 400; color: var(--c-muted); }
+.field input, .field select {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+  font: inherit;
+  font-size: 1rem;
+  color: var(--c-text);
+}
+.field input:focus-visible, .field select:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
+.field [aria-invalid="true"] { border-color: var(--c-error); box-shadow: 0 0 0 1px var(--c-error); }
+.plain-list { margin: 0 0 var(--sp-4); padding-left: 1.2rem; display: grid; gap: var(--sp-2); }
+.delivery-grid { margin-bottom: var(--sp-3); }
+.delivery-grid thead th { background: var(--c-stone); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.delivery-grid th, .delivery-grid td { padding: var(--sp-3) var(--sp-2); overflow-wrap: anywhere; }
+.delivery-grid th[scope="row"] { width: 26%; }
+.delivery-grid__fee { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--c-olive-dark); width: 5.2rem; }

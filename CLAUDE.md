@@ -92,6 +92,7 @@ la-boutique/
 ├── catalogue.html        # grille produits + filtres par catégorie et type
 ├── produit.html          # fiche produit (lit ?id= dans l'URL)
 ├── a-propos.html         # comment ça marche : pré-commande, délais, livraison
+├── livraison.html        # grille de livraison, échange/retour, paiement (page d'explications)
 ├── favoris.html          # articles aimés (cœur)
 ├── panier.html           # panier : quantités, total, commande groupée WhatsApp
 ├── 404.html
@@ -107,6 +108,8 @@ la-boutique/
 │   ├── whatsapp.js       # construction du lien wa.me pré-rempli (article seul ou panier)
 │   ├── stockage.js       # favoris et panier (localStorage)
 │   ├── favoris.js        # page favoris
+│   ├── livraison.js      # formulaire d'adresse (commune, quartier, avenue, repère, nom)
+│   ├── page-livraison.js # page livraison : grille depuis config.livraison.grille
 │   ├── panier.js         # page panier
 │   └── main.js           # en-tête (logo, recherche, cœur, panier), pied de page, cartes, retour à la position
 ├── data/
@@ -153,10 +156,17 @@ Les prix saisis par RG dans l'inventaire sont la référence : ils sont déjà d
 
 Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton « Ajouter au panier » sur la fiche, page `panier.html` (quantités, total, commande groupée sur WhatsApp, pas de paiement en ligne). Icônes cœur et panier avec compteur dans l'en-tête. Tout est stocké dans le navigateur (`js/stockage.js`). Ces fonctions ne changent pas le catalogue : pas de mise à jour de l'inventaire nécessaire.
 
+## 6 quater. Commande avec adresse de livraison (demande de RG, 7 novembre 2026)
+
+- **Commande directe (fiche)** et **panier** : avant d'ouvrir WhatsApp, le client choisit sa **commune** (liste de la grille de livraison) puis remplit **quartier, avenue, n° de parcelle (facultatif), point de repère (facultatif) et nom**. Commune, quartier, avenue et nom sont obligatoires. L'adresse est ajoutée au message WhatsApp avec les **frais de livraison** de la zone (en FC, à payer en plus de l'article en $). Elle est mémorisée sur l'appareil du client (`localStorage`, clé `lb-livraison`).
+- La **grille de livraison** est dans `data/config.json` → `livraison.grille` (zones, communes, frais en FC) : une seule source pour le formulaire et la page `livraison.html`. Pour ajouter une commune ou changer un tarif, modifier ce fichier seulement.
+- **Page « Livraison »** (menu et pied de page) : grille, délais, échange et retour, paiement.
+- **Paiement (décision RG)** : pas de paiement sur le site pour l'instant. Le client paie **sur WhatsApp** après sa commande (Airtel Money : acompte pour une pré-commande, paiement total avant livraison pour un article en stock). Les **numéros de paiement ne sont pas affichés sur le site** (privés, dans `interne/infos-paiement.md`) ; RG voudra peut-être les ajouter plus tard pour payer directement depuis le site.
+
 ## 7. Informations données par RG (7 novembre 2026)
 
 - **WhatsApp** : 243 973094820. **Instagram** : laboutik_243. **TikTok** : @la.boutique243 (liens dans `data/config.json`, sans paramètres de suivi).
-- **Pré-commande** : délai 1 semaine et demie à 2 semaines ; acompte à la commande ; article en stock : paiement total avant la livraison ; paiement par Airtel Money (numéros **privés**, notés dans `interne/infos-paiement.md`, donnés sur WhatsApp, jamais sur le site).
+- **Pré-commande** : délai 1 semaine et demie à 2 semaines ; acompte à la commande ; article en stock : paiement total avant la livraison ; paiement par Airtel Money (numéros **privés**, notés dans `interne/infos-paiement.md`, donnés sur WhatsApp ; pas affichés sur le site pour l'instant, paiement sur le site = plus tard).
 - **Livraison à Kinshasa** : tout le district de la Lukunga (Barumbu, Gombe, Kinshasa, Kintambo, Lingwala, Mont-Ngafula, Ngaliema) + Limete, Bandal, Selembao, Lemba. Frais : 7 000 FC pour la Lukunga, 10 000 FC pour les autres communes. Délai : 3 à 4 jours après l'arrivée. Échange/retour : si l'article n'est ni utilisé ni porté et que l'étiquette est attachée.
 - **Marques confirmées** : Saint Michael (VET-082), Kailas (VET-033), Essentials (VET-055), Suvene (VET-075), Supreme (VET-091).
 - **Dépôt GitHub** : R2G5-neverbeafraid/Laboutik. Pas encore mis en ligne (voir points ouverts).

@@ -85,3 +85,26 @@ export function nettoyer(idsValides) {
   const pOk = p.filter((l) => idsValides.has(l.id));
   if (pOk.length !== p.length) ecrire(CLE_PANIER, pOk);
 }
+
+// ---------- Adresse de livraison (mémorisée sur cet appareil pour éviter de la retaper) ----------
+const CLE_LIVRAISON = 'lb-livraison';
+const CHAMPS_LIVRAISON = ['nom', 'commune', 'quartier', 'avenue', 'numero', 'repere'];
+
+export function lireLivraison() {
+  try {
+    const v = JSON.parse(localStorage.getItem(CLE_LIVRAISON) || '{}');
+    return Object.fromEntries(CHAMPS_LIVRAISON.map((k) => [k, texte(v && v[k])]));
+  } catch {
+    return Object.fromEntries(CHAMPS_LIVRAISON.map((k) => [k, texte(secours[CLE_LIVRAISON] && secours[CLE_LIVRAISON][k])]));
+  }
+}
+
+export function ecrireLivraison(donnees) {
+  const propre = Object.fromEntries(CHAMPS_LIVRAISON.map((k) => [k, texte(donnees[k])]));
+  secours[CLE_LIVRAISON] = propre;
+  try {
+    localStorage.setItem(CLE_LIVRAISON, JSON.stringify(propre));
+  } catch {
+    /* stockage indisponible */
+  }
+}

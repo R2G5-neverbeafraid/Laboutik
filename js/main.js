@@ -179,6 +179,7 @@ const LIENS = [
   ['index.html', 'Accueil', 'accueil'],
   ['catalogue.html', 'Catalogue', 'catalogue'],
   ['a-propos.html', 'Comment ça marche', 'a-propos'],
+  ['livraison.html', 'Livraison', 'livraison'],
 ];
 
 /** Logo : image de config.logo si fournie, sinon monogramme LB + nom (comme le logo retenu). */

@@ -61,7 +61,32 @@
     "zones": "Tout le district de la Lukunga (Barumbu, Gombe, Kinshasa, Kintambo, Lingwala, Mont-Ngafula, Ngaliema), ainsi que Limete, Bandal, Selembao et Lemba.",
     "frais": "7 000 FC pour la Lukunga ; 10 000 FC pour les autres communes.",
     "delai": "3 à 4 jours après l'arrivée de l'article.",
-    "retours": "Échange ou retour accepté si l'article n'a pas été utilisé ni porté et si l'étiquette est toujours attachée au vêtement."
+    "retours": "Échange ou retour accepté si l'article n'a pas été utilisé ni porté et si l'étiquette est toujours attachée au vêtement.",
+    "grille": [
+      {
+        "zone": "Lukunga",
+        "frais_fc": 7000,
+        "communes": [
+          "Barumbu",
+          "Gombe",
+          "Kinshasa",
+          "Kintambo",
+          "Lingwala",
+          "Mont-Ngafula",
+          "Ngaliema"
+        ]
+      },
+      {
+        "zone": "Autres communes",
+        "frais_fc": 10000,
+        "communes": [
+          "Limete",
+          "Bandal",
+          "Selembao",
+          "Lemba"
+        ]
+      }
+    ]
   },
   "avis": [],
   "annonce": "Pré-commandes ouvertes sur WhatsApp",
