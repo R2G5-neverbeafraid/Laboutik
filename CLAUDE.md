@@ -146,6 +146,10 @@ Ordre de commits suggéré :
 - Prix toujours affichés en **$**.
 - Lien WhatsApp : `https://wa.me/<numéro>?text=<message encodé>` ; le message reprend le nom de l'article, la taille, la couleur et le prix.
 
+## 6 ter bis. Publication sur GitHub (règle de RG, 9 novembre 2026)
+
+**Après chaque modification du site, faire un commit et un `git push origin main`**, sans redemander. Le dossier `interne/` reste exclu (`.gitignore`) : jamais de prix d'achat, de numéros de paiement ni d'infos fournisseurs sur GitHub. Dépôt : `R2G5-neverbeafraid/laboutik` (privé), GitHub Pages sert `main` depuis la racine.
+
 ## 6 bis. Suivi du catalogue : mise à jour des deux fichiers (règle impérative de RG)
 
 **Après CHAQUE modification du catalogue** (ajout, suppression, fusion, changement de prix, de nom, de photo, de coloris ou d'ordre dans `data/produits.json`), il faut :
