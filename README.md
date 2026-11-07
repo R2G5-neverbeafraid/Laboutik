@@ -35,9 +35,9 @@ La marque d'un article vient du champ `marque` : « Nike × Syna World » compte
 
 **Favoris et panier** : le cœur (cartes et fiches) et « Ajouter au panier » sont mémorisés dans le navigateur du visiteur (`localStorage`, module `js/stockage.js`) : pas de compte, pas de serveur. Pages `favoris.html` et `panier.html` ; le panier se commande d'un coup sur WhatsApp (`messagePanier` dans `js/whatsapp.js`). Un article retiré du catalogue disparaît tout seul des favoris et des paniers.
 
-**Livraison** : la grille (zones, communes, frais en FC) est dans `data/config.json` → `livraison.grille`. Elle alimente le formulaire d'adresse (commune, quartier, avenue, repère, nom) demandé avant la commande sur WhatsApp, et la page « Comment ça marche » (`a-propos.html`). Pour ajouter une commune ou changer un tarif, modifier cette liste.
+**Livraison** : la grille (zones, communes, frais en FC) est dans `data/config.json` → `livraison.grille`. Elle alimente le formulaire d'adresse (commune, quartier, avenue, repère, nom) de la fenêtre « Finaliser ta commande » (Annuler / Confirmer, avant l'ouverture de WhatsApp), et la page « Comment ça marche » (`a-propos.html`). Pour ajouter une commune ou changer un tarif, modifier cette liste.
 
-**Thème clair / sombre** : automatique selon le navigateur, avec un choix manuel Auto / Clair / Sombre dans le pied de page. Les couleurs sont dans `css/variables.css` (bloc clair, puis bloc sombre).
+**Thème clair / sombre** : automatique selon le navigateur, avec un bouton lune / soleil dans l'en-tête (logique dans `js/theme.js`, appelé dans le `<head>` de chaque page). Les couleurs sont dans `css/variables.css` (bloc clair, puis bloc sombre).
 
 **Animation de l'accueil** : `js/animation-marque.js` (code, sans vidéo). La même animation se rend en MP4 vertical pour les réseaux : `node outils/animation/rendre.js reseaux sortie.mp4` (voir `CLAUDE.md`).
 
@@ -48,7 +48,7 @@ La section « Avis clients » de l'accueil reste masquée tant que `avis` est vi
 ```
 index.html · catalogue.html · produit.html · a-propos.html · 404.html
 css/   variables, base, layout, components
-js/    data, whatsapp, main (commun), catalogue, produit, accueil, a-propos
+js/    data, whatsapp, main (commun), catalogue, produit, accueil, a-propos, commande (fenêtre), toast, etat-vide, dom, theme
 data/  produits.json, config.json
 assets/img/
 ```

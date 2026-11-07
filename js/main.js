@@ -1,7 +1,12 @@
 // Éléments communs : header, footer, menu mobile, remplissage depuis la config, cartes produit.
 import { chargerDonnees, formaterPrix, STATUTS, srcPhoto, fondCouleur } from './data.js';
 import { lienContact } from './whatsapp.js';
+import { el, icone } from './dom.js';
+import { toast } from './toast.js';
+import { etatVide } from './etat-vide.js';
 import { EVENEMENT, estFavori, basculerFavori, favoris, nombrePanier, nettoyer } from './stockage.js';
+
+export { el, icone };
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
 
@@ -31,40 +36,7 @@ export function creerLiensContact(config) {
   );
 }
 
-/** Crée un élément DOM (textContent uniquement : pas d'injection HTML). */
-export function el(tag, attrs = {}, ...enfants) {
-  const n = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (v === false || v == null) continue;
-    if (k === 'class') n.className = v;
-    else n.setAttribute(k, v === true ? '' : v);
-  }
-  for (const e of enfants.flat()) {
-    if (e == null) continue;
-    n.append(e.nodeType ? e : document.createTextNode(e));
-  }
-  return n;
-}
-
-// ---------- Icônes, cœur « j'aime » et compteurs de l'en-tête ----------
-const ICONES = {
-  coeur:
-    '<path d="M12 20.3s-7.6-4.6-7.6-10.3A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 7.6 2.6c0 5.7-7.6 10.3-7.6 10.3z" stroke-linejoin="round"/>',
-  panier:
-    '<path d="M5.2 7.5h13.6l-1.1 11a1.6 1.6 0 0 1-1.6 1.4H7.9a1.6 1.6 0 0 1-1.6-1.4l-1.1-11z" stroke-linejoin="round"/><path d="M9 7.5V6.4a3 3 0 0 1 6 0v1.1" stroke-linecap="round"/>',
-};
-
-export function icone(nom) {
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 24 24');
-  svg.setAttribute('width', '22');
-  svg.setAttribute('height', '22');
-  svg.setAttribute('aria-hidden', 'true');
-  svg.setAttribute('class', `icone icone--${nom}`);
-  svg.innerHTML = ICONES[nom];
-  return svg;
-}
-
+// ---------- Cœur « j'aime » et compteurs de l'en-tête ----------
 /** Bouton cœur : ajoute ou retire l'article des favoris (mémorisé dans le navigateur). */
 export function boutonCoeur(id, nom, classe = '') {
   const b = el(
@@ -79,7 +51,9 @@ export function boutonCoeur(id, nom, classe = '') {
     },
     icone('coeur')
   );
-  b.addEventListener('click', () => basculerFavori(id));
+  b.addEventListener('click', () => {
+    if (basculerFavori(id)) toast(`« ${nom} » ajouté aux favoris`, { action: { texte: 'Voir mes favoris', href: 'favoris.html' } });
+  });
   return b;
 }
 
@@ -189,12 +163,6 @@ function blocLogo(config) {
 
 /** Barre de recherche présente sur toutes les pages. Sur le catalogue elle filtre en direct ; ailleurs elle ouvre le catalogue. */
 function creerRecherche() {
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 24 24');
-  svg.setAttribute('width', '20');
-  svg.setAttribute('height', '20');
-  svg.setAttribute('aria-hidden', 'true');
-  svg.innerHTML = '<circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
   const champ = el('input', {
     id: 'recherche-globale',
     name: 'q',
@@ -206,10 +174,10 @@ function creerRecherche() {
   });
   const form = el(
     'form',
-    { class: 'container header-search', role: 'search', action: 'catalogue.html', method: 'get' },
+    { class: 'header-search', role: 'search', action: 'catalogue.html', method: 'get' },
     el('label', { class: 'sr-only', for: 'recherche-globale' }, 'Rechercher un article'),
     champ,
-    el('button', { type: 'submit', class: 'header-search__btn', 'aria-label': 'Rechercher' }, svg)
+    el('button', { type: 'submit', class: 'header-search__btn', 'aria-label': 'Rechercher' }, icone('recherche', 20))
   );
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -217,7 +185,7 @@ function creerRecherche() {
     const q = champ.value.trim();
     location.href = q ? `catalogue.html?q=${encodeURIComponent(q)}` : 'catalogue.html';
   });
-  return form;
+  return el('div', { class: 'container header-bar2' }, form, boutonTheme());
 }
 
 function creerHeader(config) {
@@ -274,41 +242,22 @@ function creerHeader(config) {
   );
 }
 
-// ---------- Thème : automatique (réglage du navigateur) ou choisi à la main ----------
-const CLE_THEME = 'lb-theme';
-const THEMES = [
-  ['auto', 'Auto'],
-  ['light', 'Clair'],
-  ['dark', 'Sombre'],
-];
-function themeChoisi() {
-  try {
-    const t = localStorage.getItem(CLE_THEME);
-    return t === 'light' || t === 'dark' ? t : 'auto';
-  } catch {
-    return 'auto';
-  }
-}
-function appliquerTheme(t) {
-  const racine = document.documentElement;
-  if (t === 'auto') racine.removeAttribute('data-theme');
-  else racine.setAttribute('data-theme', t);
-  try {
-    if (t === 'auto') localStorage.removeItem(CLE_THEME);
-    else localStorage.setItem(CLE_THEME, t);
-  } catch {
-    /* stockage indisponible : le choix vaut pour cette visite */
-  }
-  document.querySelectorAll('.theme-switch button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === t)));
-}
-function creerSelecteurTheme() {
-  const actuel = themeChoisi();
-  const boutons = THEMES.map(([id, nom]) => {
-    const b = el('button', { type: 'button', 'data-theme': id, 'aria-pressed': String(id === actuel) }, nom);
-    b.addEventListener('click', () => appliquerTheme(id));
-    return b;
-  });
-  return el('div', { class: 'theme-switch', role: 'group', 'aria-label': "Apparence du site" }, el('span', { class: 'theme-switch__label' }, 'Apparence'), boutons);
+// ---------- Thème : bouton lune / soleil dans l'en-tête (la logique est dans theme.js) ----------
+function boutonTheme() {
+  const T = window.LBTheme;
+  if (!T) return null;
+  const b = el('button', { type: 'button', class: 'theme-btn' });
+  const maj = () => {
+    const sombre = T.actuel() === 'dark';
+    b.replaceChildren(icone(sombre ? 'soleil' : 'lune', 22));
+    const libelle = sombre ? 'Passer en mode clair' : 'Passer en mode sombre';
+    b.setAttribute('aria-label', libelle);
+    b.title = libelle;
+  };
+  b.addEventListener('click', () => T.basculer());
+  document.addEventListener('lb-theme', maj);
+  maj();
+  return b;
 }
 
 function creerFooter(config) {
@@ -345,10 +294,9 @@ function creerFooter(config) {
             )
           )
         )
-      ),
-      creerSelecteurTheme(),
-      el('p', { class: 'footer-note' }, `© ${new Date().getFullYear()} ${config.nom} · Site powered by © 25 Labs`)
-    )
+      )
+    ),
+    el('div', { class: 'footer-bottom' }, el('div', { class: 'container' }, el('p', {}, `© ${new Date().getFullYear()} ${config.nom} · Site powered by © 25 Labs`)))
   );
 }
 
@@ -458,9 +406,14 @@ export async function initPage() {
     if (main) {
       main.prepend(
         el(
-          'p',
-          { class: 'empty', role: 'alert' },
-          'Le catalogue ne peut pas se charger pour le moment. Vérifie ta connexion et recharge la page.'
+          'div',
+          { class: 'container', role: 'alert' },
+          etatVide({
+            icone: 'alerte',
+            titre: 'Impossible de charger le site',
+            texte: 'Vérifie ta connexion internet, puis recharge la page.',
+            actions: [{ texte: 'Recharger', onClick: () => location.reload() }],
+          })
         )
       );
     }

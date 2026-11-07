@@ -108,6 +108,12 @@ la-boutique/
 │   ├── stockage.js       # favoris et panier (localStorage)
 │   ├── favoris.js        # page favoris
 │   ├── livraison.js      # formulaire d'adresse (commune, quartier, avenue, repère, nom)
+│   ├── commande.js       # fenêtre « Finaliser ta commande » (récap + adresse + Annuler / Confirmer)
+│   ├── toast.js          # notifications (toasts) : toast(message, { action, duree, type })
+│   ├── etat-vide.js      # composant « état vide » (icône, titre, texte, boutons)
+│   ├── dom.js            # el() (création d'éléments) et icone() (icônes SVG)
+│   ├── theme.js          # thème clair/sombre, chargé dans le <head> de CHAQUE page (pas de script en ligne)
+│   ├── page-404.js       # page 404 (en-tête et pied de page seulement)
 │   ├── panier.js         # page panier
 │   └── main.js           # en-tête (logo, recherche, cœur, panier), pied de page, cartes, retour à la position
 ├── data/
@@ -156,14 +162,21 @@ Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton
 
 ## 6 quater. Commande avec adresse de livraison (demande de RG, 7 novembre 2026)
 
-- **Commande directe (fiche)** et **panier** : avant d'ouvrir WhatsApp, le client choisit sa **commune** (liste de la grille de livraison) puis remplit **quartier, avenue, n° de parcelle (facultatif), point de repère (facultatif) et nom**. Commune, quartier, avenue et nom sont obligatoires. L'adresse est ajoutée au message WhatsApp avec les **frais de livraison** de la zone (en FC, à payer en plus de l'article en $). Elle est mémorisée sur l'appareil du client (`localStorage`, clé `lb-livraison`).
+- **Commande directe (fiche)** et **panier** : le bouton « Commander » ouvre une **fenêtre (modal) « Finaliser ta commande »** (`js/commande.js`) avec le récapitulatif, le total, l'adresse de livraison et deux boutons **Annuler** / **Confirmer** (Échap, croix et clic sur le fond annulent aussi ; le focus revient sur le bouton). Rien n'est affiché en ligne sur la fiche ni sur le panier (demande de RG, 9 novembre 2026). **Confirmer** vérifie l'adresse, ferme la fenêtre, ouvre WhatsApp avec le message complet et affiche un toast. Dans la fenêtre, le client choisit sa **commune** (liste de la grille de livraison) puis remplit **quartier, avenue, n° de parcelle (facultatif), point de repère (facultatif) et nom**. Commune, quartier, avenue et nom sont obligatoires. L'adresse est ajoutée au message WhatsApp avec les **frais de livraison** de la zone (en FC, à payer en plus de l'article en $). Elle est mémorisée sur l'appareil du client (`localStorage`, clé `lb-livraison`).
 - La **grille de livraison** est dans `data/config.json` → `livraison.grille` (zones, communes, frais en FC) : une seule source pour le formulaire et la page `a-propos.html` (« Comment ça marche »). Pour ajouter une commune ou changer un tarif, modifier ce fichier seulement.
 - **Pas de page « Livraison » séparée** (décision RG, 7 novembre 2026) : la grille de livraison, l'échange et retour et le paiement sont dans la page « Comment ça marche » (`a-propos.html`, ancres `#livraison`, `#echange`, `#paiement`).
 - **Paiement (décision RG)** : pas de paiement sur le site pour l'instant. Le client paie **sur WhatsApp** après sa commande (Airtel Money : acompte pour une pré-commande, paiement total avant livraison pour un article en stock). Les **numéros de paiement ne sont pas affichés sur le site** (privés, dans `interne/infos-paiement.md`) ; RG voudra peut-être les ajouter plus tard pour payer directement depuis le site.
 
 ## 6 quinquies. Mode clair / mode sombre (demande de RG, 7 novembre 2026)
 
-Le site suit le réglage du navigateur (`prefers-color-scheme`) et le visiteur peut choisir à la main **Auto / Clair / Sombre** dans le pied de page (mémorisé sous `lb-theme`, appliqué avant l'affichage pour éviter le flash). Les couleurs claires sont celles de la charte, inchangées ; la palette sombre est dans `css/variables.css` (fond `#121210`, texte `#F4F4F1`, accent olive clair `#A9B37E`). Le bandeau du haut, le bloc « drop » et le pied de page restent foncés dans les deux thèmes (`--c-dark`). Toute nouvelle couleur doit passer par un token de `variables.css`, jamais en dur.
+Le site suit le réglage du navigateur (`prefers-color-scheme`) tant que le visiteur n'a pas choisi ; un **bouton rond lune / soleil dans l'en-tête**, à droite de la barre de recherche, bascule clair ↔ sombre (choix mémorisé sous `lb-theme`). Le sélecteur du pied de page a été supprimé (mauvais design, jamais découvert). La logique est dans **`js/theme.js`**, un fichier unique appelé par `<script src="js/theme.js"></script>` dans le `<head>` de toutes les pages (appliqué avant l'affichage, donc sans flash) : plus aucun script de thème en ligne. Les couleurs claires sont celles de la charte, inchangées ; la palette sombre est dans `css/variables.css` (fond `#121210`, texte `#F4F4F1`, accent olive clair `#A9B37E`). Le bandeau du haut, le bloc « drop » et le pied de page restent foncés dans les deux thèmes (`--c-dark`). Toute nouvelle couleur doit passer par un token de `variables.css`, jamais en dur.
+
+## 6 quinquies bis. Toasts, états vides, pied de page (demande de RG, 9 novembre 2026)
+
+- **Toasts** (`js/toast.js`) : un message d'ajout (panier, favoris) n'est plus écrit dans la page mais affiché en notification flottante en bas de l'écran, **6 s** par défaut (8 s après la confirmation WhatsApp), avec un lien d'action (« Voir le panier », « Voir mes favoris »), une croix, et une pause au survol/focus. Maximum 3 à la fois ; zone `aria-live` pour les lecteurs d'écran.
+- **États vides** (`js/etat-vide.js`) : un seul composant (icône ronde, titre, texte, boutons) pour tous les cas : panier vide, aucun favori, recherche sans résultat (bouton « Tout afficher » qui réinitialise filtres et recherche), catalogue vide, article introuvable, erreur de chargement (bouton « Recharger »), et la page 404. Pour un nouvel écran vide, réutiliser ce composant, ne pas écrire de HTML à part.
+- **Pied de page** : le contenu, puis une **ligne de séparation** et dessous le copyright « © année LA BOUTIK · Site powered by © 25 Labs ».
+- Tests faits : Playwright à 320 / 360 / 1100 px, clair et sombre, 160 fiches, aucune erreur console.
 
 ## 6 sexies. Animation de marque (demande de RG, 8 novembre 2026)
 

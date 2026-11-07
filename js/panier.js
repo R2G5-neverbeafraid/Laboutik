@@ -2,8 +2,8 @@
 // Le paiement et la livraison se règlent ensuite sur WhatsApp : il n'y a pas de paiement en ligne.
 import { initPage, el } from './main.js';
 import { formaterPrix, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
-import { lienWhatsApp, messagePanier } from './whatsapp.js';
-import { creerFormulaireLivraison, listeFrancaise } from './livraison.js';
+import { ouvrirCommande } from './commande.js';
+import { etatVide } from './etat-vide.js';
 import { EVENEMENT, panier, cleLigne, changerQuantite, retirerDuPanier, viderPanier } from './stockage.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
@@ -65,12 +65,15 @@ if (donnees) {
 
     if (!lignes.length) {
       zone.replaceChildren(
-        el(
-          'div',
-          { class: 'empty' },
-          el('p', {}, 'Ton panier est vide.'),
-          el('a', { class: 'btn', href: 'catalogue.html' }, 'Voir le catalogue')
-        )
+        etatVide({
+          icone: 'panier',
+          titre: 'Ton panier est vide',
+          texte: 'Ajoute des articles depuis le catalogue : tu pourras les commander tous en une fois sur WhatsApp.',
+          actions: [
+            { texte: 'Voir le catalogue', href: 'catalogue.html' },
+            { texte: 'Mes favoris', href: 'favoris.html', secondaire: true },
+          ],
+        })
       );
       return;
     }
@@ -84,23 +87,13 @@ if (donnees) {
     const nb = lignes.reduce((n, l) => n + l.qte, 0);
 
     const donneesLignes = lignes.map((l) => ({ produit: l.produit, taille: l.taille, couleur: l.couleur, qte: l.qte }));
-    const livraison = creerFormulaireLivraison(config);
-    const erreurLivraison = el('p', { class: 'form-error', role: 'alert' });
-    const commander = el('a', { class: 'btn btn--wa btn--block', href: '#' }, 'Commander sur WhatsApp');
-    // L'adresse est obligatoire ; le lien WhatsApp (articles + adresse) est construit au clic
-    commander.addEventListener('click', (e) => {
-      const v = livraison.valider();
-      erreurLivraison.textContent = v.ok ? '' : `Pour livrer, indique ${listeFrancaise(v.manques)}.`;
-      if (!v.ok) return e.preventDefault();
-      commander.href = lienWhatsApp(config, messagePanier(config, donneesLignes, v.donnees));
-      commander.target = '_blank';
-      commander.rel = 'noopener';
-    });
+    const commander = el('button', { type: 'button', class: 'btn btn--wa btn--block' }, 'Commander');
+    // « Commander » ouvre la fenêtre de commande : adresse de livraison, puis Annuler / Confirmer
+    commander.addEventListener('click', () => ouvrirCommande(config, donneesLignes, commander));
 
     zone.replaceChildren(
       el('p', { class: 'note' }, `${nb} article${nb > 1 ? 's' : ''}`),
       el('ul', { class: 'cart-list' }, lignes.map((l) => ligne(l, l.produit))),
-      livraison.element,
       el(
         'section',
         { class: 'cart-summary', 'aria-label': 'Récapitulatif' },
@@ -109,7 +102,6 @@ if (donnees) {
           ? el('p', { class: 'note' }, `+ ${inconnus} article${inconnus > 1 ? 's' : ''} au prix à confirmer (on te donne le prix sur WhatsApp).`)
           : null,
         el('p', { class: 'note' }, 'Le paiement se fait sur WhatsApp, après ta commande. ', el('a', { href: 'a-propos.html#paiement' }, 'Comment payer ?')),
-        erreurLivraison,
         commander,
         el('button', { type: 'button', class: 'link-btn', 'data-action': 'vider' }, 'Vider le panier')
       )

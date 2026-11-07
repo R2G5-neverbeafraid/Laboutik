@@ -34,11 +34,12 @@
   min-height: var(--header-h);
 }
 /* Barre de recherche du header (toutes les pages) */
-.header-search { position: relative; padding-bottom: var(--sp-3); }
+.header-bar2 { display: flex; align-items: flex-start; gap: var(--sp-2); padding-bottom: var(--sp-3); }
+.header-search { position: relative; flex: 1; min-width: 0; }
 .header-search input {
   width: 100%;
   min-height: 46px;
-  padding: var(--sp-2) calc(var(--sp-4) + 40px) var(--sp-2) var(--sp-4);
+  padding: var(--sp-2) 52px var(--sp-2) var(--sp-4);
   border: 1px solid var(--c-line);
   border-radius: var(--radius-pill);
   background: var(--c-surface);
@@ -49,7 +50,7 @@
 .header-search input:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
 .header-search__btn {
   position: absolute;
-  right: calc(var(--sp-4) + 4px);
+  right: 4px;
   top: 0;
   width: 46px;
   height: 46px;
@@ -137,17 +138,23 @@
   background: var(--c-dark);
   color: var(--c-on-dark);
   border-top: 1px solid var(--c-line);
-  padding-block: var(--sp-6) var(--sp-5);
+  padding-top: var(--sp-6);
   margin-top: var(--sp-6);
-  padding-bottom: 6rem; /* place pour le bouton WhatsApp flottant */
   font-size: var(--fs-sm);
 }
+/* Ligne de séparation puis copyright, sous le pied de page */
+.footer-bottom {
+  margin-top: var(--sp-5);
+  border-top: 1px solid rgba(244, 244, 241, 0.2);
+  padding-block: var(--sp-4) 6rem; /* place pour le bouton WhatsApp flottant */
+  opacity: 0.8;
+}
+.footer-bottom p { margin: 0; }
 .site-footer a { color: inherit; }
 .footer-grid { display: grid; gap: var(--sp-5); }
 .footer-grid h2 { font-size: var(--fs-base); }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; }
 .footer-grid li { margin-bottom: var(--sp-2); }
-.footer-note { margin-top: var(--sp-5); opacity: 0.75; }
 @media (min-width: 720px) {
   .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
 }
@@ -196,20 +203,3 @@
 @media (min-width: 720px) {
   .product { grid-template-columns: 1fr 1fr; gap: var(--sp-6); align-items: start; }
 }
-
-/* Sélecteur de thème (pied de page) */
-.theme-switch { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-5); }
-.theme-switch__label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.75; margin-right: var(--sp-2); }
-.theme-switch button {
-  min-height: 40px;
-  padding: var(--sp-1) var(--sp-4);
-  border: 1px solid rgba(244, 244, 241, 0.35);
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: var(--c-on-dark);
-  font: inherit;
-  font-size: var(--fs-sm);
-  cursor: pointer;
-}
-.theme-switch button[aria-pressed="true"] { background: var(--c-on-dark); color: var(--c-dark); border-color: var(--c-on-dark); }
-.theme-switch button:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }

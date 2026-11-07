@@ -1,6 +1,6 @@
 // Formulaire « Livraison à Kinshasa » : commune, quartier, avenue, numéro, point de repère, nom.
 // Utilisé sur la fiche article (commande directe) et sur la page panier. Les infos partent dans le message WhatsApp.
-import { el } from './main.js';
+import { el } from './dom.js';
 import { communesLivraison, formaterFC, fraisPour } from './data.js';
 import { lireLivraison, ecrireLivraison } from './stockage.js';
 

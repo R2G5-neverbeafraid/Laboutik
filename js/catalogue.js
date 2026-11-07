@@ -3,6 +3,7 @@
 // - Catégories : celles marquées « toujours_visible » dans config.json, plus celles qui contiennent des articles.
 // - Types : proposés seulement quand une catégorie est choisie, et uniquement ceux de cette catégorie.
 import { initPage, creerCarte, el, restaurerPosition } from './main.js';
+import { etatVide } from './etat-vide.js';
 import { norm, marquesDe } from './data.js';
 
 const donnees = await initPage();
@@ -122,6 +123,20 @@ if (donnees) {
     conteneurType.replaceChildren(...(options.length ? [groupe('type', options)] : []));
   }
 
+  /** Efface la recherche, la marque, le tri et les filtres, puis réaffiche tout le catalogue. */
+  function reinitialiser() {
+    etat.categorie = 'tous';
+    etat.type = 'tous';
+    marque = '';
+    requete = '';
+    tri = '';
+    champRecherche.value = '';
+    selectMarque.value = '';
+    selectTri.value = '';
+    majGroupeType();
+    afficher();
+  }
+
   function afficher() {
     const mots = norm(requete).split(/\s+/).filter(Boolean);
     const liste = produits.filter(
@@ -138,10 +153,20 @@ if (donnees) {
         : [
             el(
               'li',
-              { class: 'empty' },
+              { class: 'grid-products__vide' },
               requete || marque || etat.categorie !== 'tous'
-                ? 'Aucun article ne correspond. Essaie un autre mot ou retire un filtre.'
-                : "Aucun article pour l'instant. Reviens bientôt."
+                ? etatVide({
+                    icone: 'recherche',
+                    titre: 'Aucun article ne correspond',
+                    texte: 'Essaie un autre mot, ou retire un filtre.',
+                    actions: [{ texte: 'Tout afficher', onClick: reinitialiser }],
+                  })
+                : etatVide({
+                    icone: 'introuvable',
+                    titre: "Pas encore d'articles",
+                    texte: 'Reviens bientôt : de nouveaux articles arrivent avec le prochain drop.',
+                    actions: [{ texte: "Retour à l'accueil", href: 'index.html' }],
+                  })
             ),
           ])
     );

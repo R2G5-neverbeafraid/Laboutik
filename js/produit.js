@@ -2,8 +2,9 @@
 import { initPage, creerCarte, el, pastille, restaurerPosition, boutonCoeur } from './main.js';
 import { ajouterAuPanier } from './stockage.js';
 import { formaterPrix, STATUTS, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
-import { lienCommande } from './whatsapp.js';
-import { creerFormulaireLivraison, listeFrancaise } from './livraison.js';
+import { ouvrirCommande } from './commande.js';
+import { toast } from './toast.js';
+import { etatVide } from './etat-vide.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
 const donnees = await initPage();
@@ -13,9 +14,13 @@ function introuvable() {
   conteneur.replaceChildren(
     el(
       'div',
-      { class: 'empty' },
-      el('p', {}, 'Cet article est introuvable.'),
-      el('a', { class: 'btn', href: 'catalogue.html' }, 'Voir le catalogue')
+      { class: 'container' },
+      etatVide({
+        icone: 'introuvable',
+        titre: 'Article introuvable',
+        texte: "Cet article n'existe plus, ou le lien est incorrect.",
+        actions: [{ texte: 'Voir le catalogue', href: 'catalogue.html' }],
+      })
     )
   );
 }
@@ -129,30 +134,15 @@ if (donnees) {
     const cat = categories.find((c) => c.id === p.categorie);
     const epuise = p.statut === 'epuise';
     const erreur = el('p', { class: 'form-error', role: 'alert' });
-    const bouton = el(
-      'a',
-      { class: 'btn btn--wa btn--block', href: '#', 'aria-disabled': epuise ? 'true' : false },
-      epuise ? 'Article épuisé' : 'Commander sur WhatsApp'
-    );
-    const boutonPanier = el(
-      'button',
-      { class: 'btn btn--block btn--cart', type: 'button', disabled: epuise },
-      'Ajouter au panier'
-    );
-    const confirmation = el('p', { class: 'form-ok', role: 'status' });
-    const livraison = creerFormulaireLivraison(config);
-    const erreurLivraison = el('p', { class: 'form-error', role: 'alert' });
+    const boutonPanier = el('button', { class: 'btn btn--block btn--cart', type: 'button', disabled: epuise }, 'Ajouter au panier');
+    const commander = el('button', { class: 'btn btn--wa btn--block', type: 'button', disabled: epuise }, epuise ? 'Article épuisé' : 'Commander');
     const form = el(
       'form',
       { novalidate: true },
       p.tailles.length ? groupeOptions('taille', 'Taille', p.tailles) : null,
       p.couleurs.length ? groupeCouleurs(p.couleurs) : null,
       erreur,
-      boutonPanier,
-      confirmation,
-      livraison.element,
-      erreurLivraison,
-      bouton
+      el('div', { class: 'product__actions' }, boutonPanier, commander)
     );
 
     // Taille / couleur : obligatoires seulement si l'article en propose
@@ -196,33 +186,31 @@ if (donnees) {
       if (e.key === 'ArrowRight' && courante < photos.length - 1) afficherPhoto(courante + 1);
       if (e.key === 'ArrowLeft' && courante > 0) afficherPhoto(courante - 1);
     });
-    form.addEventListener('change', () => (confirmation.replaceChildren(), (confirmation.hidden = true)));
+    form.addEventListener('submit', (e) => e.preventDefault());
+    form.addEventListener('change', () => {
+      erreur.textContent = '';
+    });
     boutonPanier.addEventListener('click', () => {
       const c = choix();
       const m = manque(c);
       if (m.length) {
-        confirmation.replaceChildren();
         erreur.textContent = `Choisis ${m.join(' et ')}.`;
         return;
       }
       erreur.textContent = '';
       ajouterAuPanier({ id: p.id, taille: c.taille || '', couleur: c.couleur || '' });
-      confirmation.hidden = false;
-      confirmation.replaceChildren('Ajouté au panier. ', el('a', { href: 'panier.html' }, 'Voir le panier'));
+      toast(`« ${p.nom} » ajouté au panier`, { action: { texte: 'Voir le panier', href: 'panier.html' } });
     });
-    form.addEventListener('submit', (e) => e.preventDefault());
-    // Commande directe : taille/couleur + adresse de livraison obligatoires ; le lien WhatsApp est construit au clic
-    bouton.addEventListener('click', (e) => {
-      if (epuise) return e.preventDefault();
+    // « Commander » : taille et couleur d'abord, puis une fenêtre pour l'adresse et la confirmation (Annuler / Confirmer)
+    commander.addEventListener('click', () => {
       const c = choix();
       const m = manque(c);
-      const v = livraison.valider(!m.length);
-      erreur.textContent = m.length ? `Choisis ${m.join(' et ')}.` : '';
-      erreurLivraison.textContent = v.ok ? '' : `Pour livrer, indique ${listeFrancaise(v.manques)}.`;
-      if (m.length || !v.ok) return e.preventDefault();
-      bouton.href = lienCommande(config, p, c.taille, c.couleur, v.donnees);
-      bouton.target = '_blank';
-      bouton.rel = 'noopener';
+      if (m.length) {
+        erreur.textContent = `Choisis ${m.join(' et ')}.`;
+        return;
+      }
+      erreur.textContent = '';
+      ouvrirCommande(config, [{ produit: p, taille: c.taille || '', couleur: c.couleur || '', qte: 1 }], commander);
     });
 
     const infos = el(

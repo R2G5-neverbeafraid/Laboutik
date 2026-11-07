@@ -1,5 +1,6 @@
 // Page « Mes favoris » : les articles marqués d'un cœur (mémorisés dans ce navigateur).
 import { initPage, creerCarte, el, restaurerPosition } from './main.js';
+import { etatVide } from './etat-vide.js';
 import { EVENEMENT, favoris } from './stockage.js';
 
 const donnees = await initPage();
@@ -19,9 +20,13 @@ if (donnees) {
         : [
             el(
               'li',
-              { class: 'empty' },
-              el('p', {}, "Tu n'as pas encore de favori. Touche le cœur sur un article pour le retrouver ici."),
-              el('a', { class: 'btn', href: 'catalogue.html' }, 'Voir le catalogue')
+              { class: 'grid-products__vide' },
+              etatVide({
+                icone: 'coeur',
+                titre: "Aucun favori pour l'instant",
+                texte: 'Touche le cœur sur un article pour le retrouver ici.',
+                actions: [{ texte: 'Voir le catalogue', href: 'catalogue.html' }],
+              })
             ),
           ])
     );

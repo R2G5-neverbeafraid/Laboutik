@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page introuvable — LA BOUTIK</title>
-  <script>try{var t=localStorage.getItem('lb-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <script src="js/theme.js"></script>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
@@ -14,16 +14,19 @@
 <body data-page="404">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <main id="contenu">
-    <div class="container section">
-      <p class="eyebrow">Erreur 404</p>
-      <h1>Page introuvable</h1>
-      <p>Cette page n'existe pas ou a été déplacée.</p>
-      <div class="hero__actions">
-        <a class="btn" href="index.html">Retour à l'accueil</a>
-        <a class="btn btn--ghost" href="catalogue.html">Voir le catalogue</a>
+    <div class="container">
+      <div class="empty-state">
+        <span class="empty-state__icone"><svg class="icone" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5z" stroke-linejoin="round"/></svg></span>
+        <p class="eyebrow">Erreur 404</p>
+        <h1 class="empty-state__titre">Page introuvable</h1>
+        <p class="empty-state__texte">Cette page n'existe pas ou a été déplacée.</p>
+        <div class="empty-state__actions">
+          <a class="btn" href="index.html">Retour à l'accueil</a>
+          <a class="btn btn--ghost" href="catalogue.html">Voir le catalogue</a>
+        </div>
       </div>
     </div>
   </main>
-  <script type="module" src="js/a-propos.js"></script>
+  <script type="module" src="js/page-404.js"></script>
 </body>
 </html>
