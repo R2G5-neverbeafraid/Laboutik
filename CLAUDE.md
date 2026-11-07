@@ -163,6 +163,10 @@ Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton
 - **Page « Livraison »** (menu et pied de page) : grille, délais, échange et retour, paiement.
 - **Paiement (décision RG)** : pas de paiement sur le site pour l'instant. Le client paie **sur WhatsApp** après sa commande (Airtel Money : acompte pour une pré-commande, paiement total avant livraison pour un article en stock). Les **numéros de paiement ne sont pas affichés sur le site** (privés, dans `interne/infos-paiement.md`) ; RG voudra peut-être les ajouter plus tard pour payer directement depuis le site.
 
+## 6 quinquies. Mode clair / mode sombre (demande de RG, 7 novembre 2026)
+
+Le site suit le réglage du navigateur (`prefers-color-scheme`) et le visiteur peut choisir à la main **Auto / Clair / Sombre** dans le pied de page (mémorisé sous `lb-theme`, appliqué avant l'affichage pour éviter le flash). Les couleurs claires sont celles de la charte, inchangées ; la palette sombre est dans `css/variables.css` (fond `#121210`, texte `#F4F4F1`, accent olive clair `#A9B37E`). Le bandeau du haut, le bloc « drop » et le pied de page restent foncés dans les deux thèmes (`--c-dark`). Toute nouvelle couleur doit passer par un token de `variables.css`, jamais en dur.
+
 ## 7. Informations données par RG (7 novembre 2026)
 
 - **WhatsApp** : 243 973094820. **Instagram** : laboutik_243. **TikTok** : @la.boutique243 (liens dans `data/config.json`, sans paramètres de suivi).

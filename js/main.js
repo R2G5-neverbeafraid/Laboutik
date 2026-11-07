@@ -275,6 +275,43 @@ function creerHeader(config) {
   );
 }
 
+// ---------- Thème : automatique (réglage du navigateur) ou choisi à la main ----------
+const CLE_THEME = 'lb-theme';
+const THEMES = [
+  ['auto', 'Auto'],
+  ['light', 'Clair'],
+  ['dark', 'Sombre'],
+];
+function themeChoisi() {
+  try {
+    const t = localStorage.getItem(CLE_THEME);
+    return t === 'light' || t === 'dark' ? t : 'auto';
+  } catch {
+    return 'auto';
+  }
+}
+function appliquerTheme(t) {
+  const racine = document.documentElement;
+  if (t === 'auto') racine.removeAttribute('data-theme');
+  else racine.setAttribute('data-theme', t);
+  try {
+    if (t === 'auto') localStorage.removeItem(CLE_THEME);
+    else localStorage.setItem(CLE_THEME, t);
+  } catch {
+    /* stockage indisponible : le choix vaut pour cette visite */
+  }
+  document.querySelectorAll('.theme-switch button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === t)));
+}
+function creerSelecteurTheme() {
+  const actuel = themeChoisi();
+  const boutons = THEMES.map(([id, nom]) => {
+    const b = el('button', { type: 'button', 'data-theme': id, 'aria-pressed': String(id === actuel) }, nom);
+    b.addEventListener('click', () => appliquerTheme(id));
+    return b;
+  });
+  return el('div', { class: 'theme-switch', role: 'group', 'aria-label': "Apparence du site" }, el('span', { class: 'theme-switch__label' }, 'Apparence'), boutons);
+}
+
 function creerFooter(config) {
   const reseaux = [
     ['Instagram', config.instagram],
@@ -310,6 +347,7 @@ function creerFooter(config) {
           )
         )
       ),
+      creerSelecteurTheme(),
       el('p', { class: 'footer-note' }, `© ${new Date().getFullYear()} ${config.nom} · Site powered by © 25 Labs`)
     )
   );

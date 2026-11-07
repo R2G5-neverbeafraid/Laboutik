@@ -37,6 +37,8 @@ La marque d'un article vient du champ `marque` : « Nike × Syna World » compte
 
 **Livraison** : la grille (zones, communes, frais en FC) est dans `data/config.json` → `livraison.grille`. Elle alimente le formulaire d'adresse (commune, quartier, avenue, repère, nom) demandé avant la commande sur WhatsApp, et la page `livraison.html`. Pour ajouter une commune ou changer un tarif, modifier cette liste.
 
+**Thème clair / sombre** : automatique selon le navigateur, avec un choix manuel Auto / Clair / Sombre dans le pied de page. Les couleurs sont dans `css/variables.css` (bloc clair, puis bloc sombre).
+
 La section « Avis clients » de l'accueil reste masquée tant que `avis` est vide : n'y mettre que de vrais avis.
 
 ## Structure

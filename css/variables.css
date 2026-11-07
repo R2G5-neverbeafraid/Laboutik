@@ -24,6 +24,14 @@
   --c-badge-off-bg: #ececea;
   --c-error: #b3261e;
   --c-focus: #1a5fd0;
+  --c-accent-hover: #333333;
+  --c-heart: #c0272d;
+  --c-on-olive: #ffffff;
+  --c-swatch-ring: rgba(14, 14, 14, 0.3);
+  /* Blocs toujours foncés (bandeau, drop, pied de page), dans les deux thèmes */
+  --c-dark: #0e0e0e;
+  --c-on-dark: #f4f4f1;
+  color-scheme: light dark;
 
   /* Typographie : Archivo (titres, texte), IBM Plex Mono (prix, détails), Saira (logo) */
   --font-body: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -51,3 +59,64 @@
   --container: 1100px;
   --header-h: 60px;
 }
+
+/* Thème sombre : automatique selon le navigateur (prefers-color-scheme), sauf choix manuel « Clair » */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-bg: #121210;
+    --c-surface: #1b1b19;
+    --c-text: #f4f4f1;
+    --c-muted: #b5b5b0;
+    --c-line: #33332f;
+    --c-stone: #242422;
+    --c-stone-dark: #9a9a95;
+    --c-accent: #f4f4f1;
+    --c-accent-text: #0e0e0e;
+    --c-accent-hover: #d9d9d4;
+    --c-olive: #a9b37e;
+    --c-olive-dark: #c3cc9c;
+    --c-wa: #5b6340;
+    --c-wa-hover: #6d7750;
+    --c-badge-pre: #f4f4f1;
+    --c-badge-pre-bg: #2c2c29;
+    --c-badge-ok: #c3cc9c;
+    --c-badge-ok-bg: #2b2f20;
+    --c-badge-off: #b5b5b0;
+    --c-badge-off-bg: #262624;
+    --c-error: #ff8a80;
+    --c-focus: #7ab0ff;
+    --c-heart: #ff6b70;
+    --c-on-olive: #0e0e0e;
+    --c-swatch-ring: rgba(244, 244, 241, 0.35);
+  }
+}
+/* Choix manuel « Sombre » (pied de page) */
+:root[data-theme="dark"] {
+  --c-bg: #121210;
+  --c-surface: #1b1b19;
+  --c-text: #f4f4f1;
+  --c-muted: #b5b5b0;
+  --c-line: #33332f;
+  --c-stone: #242422;
+  --c-stone-dark: #9a9a95;
+  --c-accent: #f4f4f1;
+  --c-accent-text: #0e0e0e;
+  --c-accent-hover: #d9d9d4;
+  --c-olive: #a9b37e;
+  --c-olive-dark: #c3cc9c;
+  --c-wa: #5b6340;
+  --c-wa-hover: #6d7750;
+  --c-badge-pre: #f4f4f1;
+  --c-badge-pre-bg: #2c2c29;
+  --c-badge-ok: #c3cc9c;
+  --c-badge-ok-bg: #2b2f20;
+  --c-badge-off: #b5b5b0;
+  --c-badge-off-bg: #262624;
+  --c-error: #ff8a80;
+  --c-focus: #7ab0ff;
+  --c-heart: #ff6b70;
+  --c-on-olive: #0e0e0e;
+  --c-swatch-ring: rgba(244, 244, 241, 0.35);
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
