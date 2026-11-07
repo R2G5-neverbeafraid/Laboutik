@@ -153,12 +153,20 @@ Les prix saisis par RG dans l'inventaire sont la référence : ils sont déjà d
 
 Cœur « j'aime » sur chaque carte et chaque fiche, page `favoris.html`; bouton « Ajouter au panier » sur la fiche, page `panier.html` (quantités, total, commande groupée sur WhatsApp, pas de paiement en ligne). Icônes cœur et panier avec compteur dans l'en-tête. Tout est stocké dans le navigateur (`js/stockage.js`). Ces fonctions ne changent pas le catalogue : pas de mise à jour de l'inventaire nécessaire.
 
-## 7. Points encore ouverts (à demander à RG)
+## 7. Informations données par RG (7 novembre 2026)
 
-- Numéro WhatsApp de la boutique et liens Instagram / TikTok.
-- Fichier du logo Canva à jour avec le nouveau nom et le « (K) ». Le site affiche déjà ce logo en texte.
-- Liste et prix des articles de la catégorie Accessoires.
-- Pack hoodie + jogging : 69 $ ou 72 $.
-- Frais et zones de livraison à Kinshasa.
-- Délai annoncé pour les pré-commandes (dépend du transitaire, coûts encore à confirmer par devis).
-- Nom du dépôt GitHub.
+- **WhatsApp** : 243 973094820. **Instagram** : laboutik_243. **TikTok** : @la.boutique243 (liens dans `data/config.json`, sans paramètres de suivi).
+- **Pré-commande** : délai 1 semaine et demie à 2 semaines ; acompte à la commande ; article en stock : paiement total avant la livraison ; paiement par Airtel Money (numéros **privés**, notés dans `interne/infos-paiement.md`, donnés sur WhatsApp, jamais sur le site).
+- **Livraison à Kinshasa** : tout le district de la Lukunga (Barumbu, Gombe, Kinshasa, Kintambo, Lingwala, Mont-Ngafula, Ngaliema) + Limete, Bandal, Selembao, Lemba. Frais : 7 000 FC pour la Lukunga, 10 000 FC pour les autres communes. Délai : 3 à 4 jours après l'arrivée. Échange/retour : si l'article n'est ni utilisé ni porté et que l'étiquette est attachée.
+- **Marques confirmées** : Saint Michael (VET-082), Kailas (VET-033), Essentials (VET-055), Suvene (VET-075), Supreme (VET-091).
+- **Dépôt GitHub** : R2G5-neverbeafraid/Laboutik. Pas encore mis en ligne (voir points ouverts).
+
+## 8. Points encore ouverts (à demander à RG)
+
+- Mise en ligne GitHub Pages : confirmer (dépôt public ou privé ? photos de vendeurs tiers à remplacer avant une mise en ligne publique ; la connexion GitHub de cet environnement n'est pas autorisée, il faudra un accès).
+- Dates de clôture et d'arrivée du drop en cours ; texte du bandeau noir ; description du drop.
+- Coloris des 18 articles sans coloris ; pointures des casquettes Yankees ; tailles des articles enfant et des chaussettes.
+- Marque de VET-066 et VET-067 (Lululemon ?) ; formulation « acheté auprès d'un revendeur officiel » ; catégorie Parfums ; catégorie Femme.
+- Photos des 16 articles sans photo ; photo d'accueil ; photos officielles.
+- Fichier Canva du logo à jour avec le « (K) » (le fichier design claude.ai l'est déjà).
+- Autres villes à ajouter plus tard ; retrait en main propre ; nom de domaine.

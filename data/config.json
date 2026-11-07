@@ -3,9 +3,9 @@
   "logo_monogramme": "(K)",
   "slogan": "Des vêtements et des accessoires de qualité pour tous.",
   "logo": "",
-  "whatsapp": "243000000000",
-  "instagram": "",
-  "tiktok": "",
+  "whatsapp": "243973094820",
+  "instagram": "https://www.instagram.com/laboutik_243",
+  "tiktok": "https://www.tiktok.com/@la.boutique243",
   "ville": "Kinshasa",
   "categories": [
     {
@@ -54,12 +54,14 @@
     "arrivee": "À confirmer"
   },
   "pre_commande": {
-    "delai": "À confirmer",
-    "paiement": "À confirmer"
+    "delai": "1 semaine et demie à 2 semaines",
+    "paiement": "Par Airtel Money. Pour une pré-commande, on prend un acompte ; pour un article en stock, le paiement se fait en totalité avant la livraison. Les numéros de paiement te sont donnés sur WhatsApp."
   },
   "livraison": {
-    "zones": "À confirmer",
-    "frais": "À confirmer"
+    "zones": "Tout le district de la Lukunga (Barumbu, Gombe, Kinshasa, Kintambo, Lingwala, Mont-Ngafula, Ngaliema), ainsi que Limete, Bandal, Selembao et Lemba.",
+    "frais": "7 000 FC pour la Lukunga ; 10 000 FC pour les autres communes.",
+    "delai": "3 à 4 jours après l'arrivée de l'article.",
+    "retours": "Échange ou retour accepté si l'article n'a pas été utilisé ni porté et si l'étiquette est toujours attachée au vêtement."
   },
   "avis": [],
   "annonce": "Pré-commandes ouvertes sur WhatsApp",
