@@ -200,10 +200,13 @@ Le site suit le réglage du navigateur (`prefers-color-scheme`) tant que le visi
 - **WhatsApp** : 243 973094820. **Instagram** : laboutik_243. **TikTok** : @la.boutique243 (liens dans `data/config.json`, sans paramètres de suivi).
 - **Pré-commande** : délai 1 semaine et demie à 2 semaines ; acompte à la commande ; article en stock : paiement total avant la livraison ; paiement par Airtel Money (numéros **privés**, notés dans `interne/infos-paiement.md`, donnés sur WhatsApp ; pas affichés sur le site pour l'instant, paiement sur le site = plus tard).
 - **Livraison à Kinshasa** : tout le district de la Lukunga (Barumbu, Gombe, Kinshasa, Kintambo, Lingwala, Mont-Ngafula, Ngaliema) + Limete, Bandal, Selembao, Lemba. Frais : 7 000 FC pour la Lukunga, 10 000 FC pour les autres communes. Délai : 3 à 4 jours après l'arrivée. Échange/retour : si l'article n'est ni utilisé ni porté et que l'étiquette est attachée.
+- **Acompte et horaires (RG, 11 novembre 2026)** : l'acompte d'une pré-commande est de **50 %** du montant, le reste à la livraison. **Commandes reçues sur WhatsApp : 9h – 20h. Livraisons : 9h – 19h.** Réglages WhatsApp Business (profil, message de bienvenue, message d'absence, réponses rapides, étiquettes) : `interne/LA-BOUTIK_reglages-whatsapp-business.docx` (non publié, contient les numéros de paiement). Ces horaires et l'acompte ne sont pas encore affichés sur le site (voir §8).
 - **Marques confirmées** : Saint Michael (VET-082), Kailas (VET-033), Essentials (VET-055), Suvene (VET-075), Supreme (VET-091).
 - **Dépôt GitHub** : R2G5-neverbeafraid/Laboutik. Pas encore mis en ligne (voir points ouverts).
 
 ## 8. Points encore ouverts (à demander à RG)
+
+- Afficher l'acompte de 50 % et les horaires (commandes 9h – 20h, livraisons 9h – 19h) sur le site, dans « Comment ça marche » et `data/config.json` ? Jours d'ouverture à préciser.
 
 - Mise en ligne GitHub Pages : confirmer (dépôt public ou privé ? photos de vendeurs tiers à remplacer avant une mise en ligne publique ; la connexion GitHub de cet environnement n'est pas autorisée, il faudra un accès).
 - Dates de clôture et d'arrivée du drop en cours ; texte du bandeau noir ; description du drop.
