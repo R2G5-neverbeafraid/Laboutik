@@ -32,7 +32,7 @@
 /* Reset + typographie */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 8.5rem; } /* l'en-tête collant (≈ 120 px) ne doit pas cacher ce vers quoi on défile : ancres, focus clavier */
 
 body {
   margin: 0;

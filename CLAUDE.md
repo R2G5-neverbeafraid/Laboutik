@@ -182,6 +182,13 @@ Le site suit le réglage du navigateur (`prefers-color-scheme`) tant que le visi
 - **Pied de page** : le contenu, puis une **ligne de séparation** et dessous le copyright « © année LA BOUTIK · Site powered by © 25 Labs ».
 - Tests faits : Playwright à 320 / 360 / 1100 px, clair et sombre, 160 fiches, aucune erreur console.
 
+## 6 quinquies ter. Quantité et sélection multiple sur la fiche (demande de RG, 10 novembre 2026)
+
+- La fiche produit a un sélecteur de **quantité** (− / +, de 1 à 99) qui s'applique à la taille et à la couleur choisies. « Ajouter au panier » ajoute cette quantité (`ajouterAuPanier({ id, taille, couleur, qte })`), affiche un toast détaillé (« 3 × « nom » (taille M, couleur) ajoutés au panier ») puis remet la quantité à 1. « Commander » commande directement le choix courant × la quantité.
+- **Plusieurs couleurs ou tailles du même article** : on choisit la première, on ajoute, puis on change de pastille et on ajoute encore. Chaque combinaison est une ligne distincte du panier (`cleLigne` = id|taille|couleur).
+- Sous les boutons, un bloc **« Ta sélection pour cet article »** liste les lignes déjà au panier pour cet article, avec − / + et « Retirer », et un bouton **« Commander ces N articles »** qui ouvre la fenêtre de commande avec toutes ces lignes (un seul message WhatsApp, une ligne par couleur/taille avec son sous-total). Il se met à jour tout seul (événement `lb-change`).
+- Correctifs faits au passage : (1) cliquer une pastille de couleur puis « Ajouter » tout de suite pouvait ajouter l'ancienne couleur, car le défilement de la photo rebasculait la pastille ; le gestionnaire est maintenant ignoré 1,2 s après un défilement déclenché par un clic. (2) L'en-tête collant (≈ 120 px) cachait les éléments atteints par ancre ou au clavier : `scroll-padding-top: 8.5rem` sur `html` (`css/base.css`), qui remplace l'ancien `scroll-margin-top` des titres.
+
 ## 6 sexies. Animation de marque (demande de RG, 8 novembre 2026)
 
 - **Sur le site** : filigrane animé derrière le titre de l'accueil (fond gris conservé), boucle de 12 s : le cercle (K) se dessine, les mots VÊTEMENTS / ACCESSOIRES / COUVRE-CHEF / PRÉ-COMMANDE / LIVRAISON À KINSHASA défilent avec des pastilles de couleur, puis LA BOUTIK. Code : `js/animation-marque.js` (variante « site »), lancée par `js/hero-anim.js`. Aucun fichier vidéo : c'est du code léger. Elle s'arrête hors écran, reste immobile si le visiteur a demandé « moins d'animations » ou active l'économiseur de données, et suit le thème clair/sombre.

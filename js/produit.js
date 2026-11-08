@@ -1,6 +1,6 @@
 // Fiche produit : lit ?id=, affiche les options et construit le lien WhatsApp.
 import { initPage, creerCarte, el, pastille, restaurerPosition, boutonCoeur } from './main.js';
-import { ajouterAuPanier } from './stockage.js';
+import { EVENEMENT, panier, cleLigne, ajouterAuPanier, changerQuantite, retirerDuPanier } from './stockage.js';
 import { formaterPrix, STATUTS, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
 import { ouvrirCommande } from './commande.js';
 import { toast } from './toast.js';
@@ -112,8 +112,10 @@ if (donnees) {
     let vignettes = [];
     let courante = 0;
     const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let defilementAuto = 0; // heure du dernier défilement déclenché par un clic (pastille, vignette, flèches)
     function afficherPhoto(i, defiler = true) {
       courante = i;
+      if (defiler) defilementAuto = Date.now();
       vignettes.forEach((v, j) => v.setAttribute('aria-current', String(j === i)));
       if (defiler) piste.scrollTo({ left: i * piste.clientWidth, behavior: reduit ? 'auto' : 'smooth' });
     }
@@ -136,13 +138,37 @@ if (donnees) {
     const erreur = el('p', { class: 'form-error', role: 'alert' });
     const boutonPanier = el('button', { class: 'btn btn--block btn--cart', type: 'button', disabled: epuise }, 'Ajouter au panier');
     const commander = el('button', { class: 'btn btn--wa btn--block', type: 'button', disabled: epuise }, epuise ? 'Article épuisé' : 'Commander');
+    // Quantité : s'applique à la taille et la couleur choisies ; pour une autre couleur, on change la pastille et on ajoute encore
+    let quantite = 1;
+    const QTE_MAX = 99; // même plafond que le panier
+    const affQte = el('span', { class: 'qty__n', 'aria-live': 'polite' }, '1');
+    const moins = el('button', { type: 'button', class: 'qty-btn', 'aria-label': 'Une de moins', disabled: true }, '−');
+    const plus = el('button', { type: 'button', class: 'qty-btn', 'aria-label': 'Une de plus' }, '+');
+    const majQte = (n) => {
+      quantite = Math.min(QTE_MAX, Math.max(1, n));
+      affQte.textContent = String(quantite);
+      moins.disabled = quantite <= 1;
+      plus.disabled = quantite >= QTE_MAX;
+    };
+    moins.addEventListener('click', () => majQte(quantite - 1));
+    plus.addEventListener('click', () => majQte(quantite + 1));
+    const blocQuantite = el(
+      'fieldset',
+      { class: 'option-group option-group--qte' },
+      el('legend', {}, 'Quantité'),
+      el('div', { class: 'qty', role: 'group', 'aria-label': 'Quantité' }, moins, affQte, plus),
+      el('p', { class: 'note' }, 'Plusieurs couleurs ou tailles ? Choisis la première, ajoute-la, puis change de couleur et ajoute encore.')
+    );
+    const selection = el('section', { class: 'selection', 'aria-label': 'Ta sélection pour cet article', hidden: true });
     const form = el(
       'form',
       { novalidate: true },
       p.tailles.length ? groupeOptions('taille', 'Taille', p.tailles) : null,
       p.couleurs.length ? groupeCouleurs(p.couleurs) : null,
+      blocQuantite,
       erreur,
-      el('div', { class: 'product__actions' }, boutonPanier, commander)
+      el('div', { class: 'product__actions' }, boutonPanier, commander),
+      selection
     );
 
     // Taille / couleur : obligatoires seulement si l'article en propose
@@ -170,6 +196,8 @@ if (donnees) {
     piste.addEventListener('scroll', () => {
       clearTimeout(minuteur);
       minuteur = setTimeout(() => {
+        // pendant un défilement lancé par un clic, la couleur déjà choisie prime sur la photo qui passe
+        if (Date.now() - defilementAuto < 1200) return;
         const i = Math.round(piste.scrollLeft / piste.clientWidth);
         if (i === courante || i < 0 || i >= photos.length) return;
         afficherPhoto(i, false);
@@ -198,8 +226,12 @@ if (donnees) {
         return;
       }
       erreur.textContent = '';
-      ajouterAuPanier({ id: p.id, taille: c.taille || '', couleur: c.couleur || '' });
-      toast(`« ${p.nom} » ajouté au panier`, { action: { texte: 'Voir le panier', href: 'panier.html' } });
+      ajouterAuPanier({ id: p.id, taille: c.taille || '', couleur: c.couleur || '', qte: quantite });
+      const detail = [c.taille ? `taille ${c.taille}` : null, c.couleur || null].filter(Boolean).join(', ');
+      toast(`${quantite > 1 ? `${quantite} × ` : ''}« ${p.nom} »${detail ? ` (${detail})` : ''} ajouté${quantite > 1 ? 's' : ''} au panier`, {
+        action: { texte: 'Voir le panier', href: 'panier.html' },
+      });
+      majQte(1);
     });
     // « Commander » : taille et couleur d'abord, puis une fenêtre pour l'adresse et la confirmation (Annuler / Confirmer)
     commander.addEventListener('click', () => {
@@ -210,8 +242,62 @@ if (donnees) {
         return;
       }
       erreur.textContent = '';
-      ouvrirCommande(config, [{ produit: p, taille: c.taille || '', couleur: c.couleur || '', qte: 1 }], commander);
+      ouvrirCommande(config, [{ produit: p, taille: c.taille || '', couleur: c.couleur || '', qte: quantite }], commander);
     });
+
+    // « Ta sélection » : ce qui est déjà dans le panier pour cet article, avec quantités modifiables et commande groupée
+    function afficherSelection() {
+      const lignes = panier().filter((l) => l.id === p.id);
+      selection.hidden = !lignes.length;
+      if (!lignes.length) {
+        selection.replaceChildren();
+        return;
+      }
+      const nb = lignes.reduce((n, l) => n + l.qte, 0);
+      const bouton = (action, cle, texte, label) =>
+        el('button', { type: 'button', class: 'qty-btn', 'data-action': action, 'data-cle': cle, 'aria-label': label }, texte);
+      selection.replaceChildren(
+        el('h2', { class: 'selection__titre' }, 'Ta sélection pour cet article'),
+        el(
+          'ul',
+          { class: 'selection__liste' },
+          lignes.map((l) => {
+            const cle = cleLigne(l);
+            const libelle = [l.couleur || null, l.taille ? `Taille ${l.taille}` : null].filter(Boolean).join(' · ') || 'Sans option';
+            return el(
+              'li',
+              { class: 'selection__ligne' },
+              el('span', { class: 'selection__nom' }, libelle),
+              el(
+                'span',
+                { class: 'qty qty--petit', role: 'group', 'aria-label': `Quantité : ${libelle}` },
+                bouton('moins', cle, '−', `Une de moins : ${libelle}`),
+                el('span', { class: 'qty__n' }, String(l.qte)),
+                bouton('plus', cle, '+', `Une de plus : ${libelle}`)
+              ),
+              el('button', { type: 'button', class: 'link-btn', 'data-action': 'retirer', 'data-cle': cle, 'aria-label': `Retirer : ${libelle}` }, 'Retirer')
+            );
+          })
+        ),
+        (() => {
+          const tout = el('button', { type: 'button', class: 'btn btn--wa btn--block' }, `Commander ces ${nb} article${nb > 1 ? 's' : ''}`);
+          tout.addEventListener('click', () =>
+            ouvrirCommande(config, lignes.map((l) => ({ produit: p, taille: l.taille, couleur: l.couleur, qte: l.qte })), tout)
+          );
+          return tout;
+        })()
+      );
+    }
+    selection.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-action]');
+      if (!b) return;
+      const { action, cle } = b.dataset;
+      if (action === 'plus') changerQuantite(cle, 1);
+      else if (action === 'moins') changerQuantite(cle, -1);
+      else if (action === 'retirer') retirerDuPanier(cle);
+    });
+    afficherSelection();
+    window.addEventListener(EVENEMENT, afficherSelection);
 
     const infos = el(
       'div',

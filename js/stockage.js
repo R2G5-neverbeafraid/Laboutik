@@ -57,11 +57,12 @@ export function panier() {
 
 export const nombrePanier = () => panier().reduce((n, l) => n + l.qte, 0);
 
-export function ajouterAuPanier({ id, taille = '', couleur = '' }) {
+export function ajouterAuPanier({ id, taille = '', couleur = '', qte = 1 }) {
+  const n = Math.min(QTE_MAX, Math.max(1, parseInt(qte, 10) || 1));
   const lignes = panier();
-  const nouvelle = { id, taille: texte(taille), couleur: texte(couleur), qte: 1 };
+  const nouvelle = { id, taille: texte(taille), couleur: texte(couleur), qte: n };
   const existante = lignes.find((l) => cleLigne(l) === cleLigne(nouvelle));
-  if (existante) existante.qte = Math.min(QTE_MAX, existante.qte + 1);
+  if (existante) existante.qte = Math.min(QTE_MAX, existante.qte + n);
   else lignes.push(nouvelle);
   ecrire(CLE_PANIER, lignes);
 }

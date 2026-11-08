@@ -33,6 +33,8 @@ Puis ouvrir <http://localhost:8000>.
 **Catalogue** : recherche (nom, marque, couleur, catégorie…), filtres Catégorie / Type / Marque et tri sont mémorisés dans l'URL (`?q=` `?cat=` `?type=` `?marque=` `?tri=`) ; en revenant en arrière depuis une fiche, on retrouve la même vue à la même position (`restaurerPosition()` dans `js/main.js`).
 La marque d'un article vient du champ `marque` : « Nike × Syna World » compte pour Nike et Syna World.
 
+**Quantité** : la fiche permet de choisir la quantité et d'ajouter plusieurs couleurs ou tailles du même article (récapitulatif « Ta sélection pour cet article », commande groupée en une fois).
+
 **Favoris et panier** : le cœur (cartes et fiches) et « Ajouter au panier » sont mémorisés dans le navigateur du visiteur (`localStorage`, module `js/stockage.js`) : pas de compte, pas de serveur. Pages `favoris.html` et `panier.html` ; le panier se commande d'un coup sur WhatsApp (`messagePanier` dans `js/whatsapp.js`). Un article retiré du catalogue disparaît tout seul des favoris et des paniers.
 
 **Livraison** : la grille (zones, communes, frais en FC) est dans `data/config.json` → `livraison.grille`. Elle alimente le formulaire d'adresse (commune, quartier, avenue, repère, nom) de la fenêtre « Finaliser ta commande » (Annuler / Confirmer, avant l'ouverture de WhatsApp), et la page « Comment ça marche » (`a-propos.html`). Pour ajouter une commune ou changer un tarif, modifier cette liste.
