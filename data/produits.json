@@ -7,7 +7,7 @@
       "type": "hoodie",
       "marque": "Polo Ralph Lauren",
       "prix": 40,
-      "description": "",
+      "description": "Hoodie zippé à manches longues Polo Ralph Lauren, avec le petit cavalier brodé sur la poitrine.",
       "couleurs": [
         "Noir",
         "Gris chiné",
@@ -54,7 +54,7 @@
       "type": "hoodie",
       "marque": "Nike",
       "prix": 40,
-      "description": "",
+      "description": "Hoodie zippé Nike Tech Fleece Windrunner : molleton technique léger et chaud, empiècement en chevron sur la poitrine.",
       "couleurs": [
         "Noir",
         "Marine",
@@ -90,7 +90,7 @@
       "type": "hoodie",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 75,
-      "description": "",
+      "description": "Hoodie zippé Tech Fleece de la ligne NOCTA (Nike x Drake), en molleton technique léger.",
       "couleurs": [
         "Noir",
         "Bleu ciel",
@@ -696,7 +696,7 @@
       "type": "ensemble",
       "marque": "Nike",
       "prix": 80,
-      "description": "",
+      "description": "Ensemble Nike Tech Fleece : veste zippée à capuche + pantalon jogging, en molleton technique léger et chaud.",
       "couleurs": [
         "Gris chiné",
         "Gris clair",
@@ -737,7 +737,7 @@
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 20,
-      "description": "",
+      "description": "T-shirt NOCTA (Nike x Drake) avec le graphisme « Freehold ».",
       "couleurs": [
         "Noir",
         "Gris",
@@ -762,7 +762,7 @@
       "type": "veste",
       "marque": "Corteiz",
       "prix": 35,
-      "description": "",
+      "description": "Veste zippée Corteiz bicolore, avec le logo de la marque.",
       "couleurs": [
         "Noir / blanc",
         "Gris / blanc"
@@ -793,7 +793,7 @@
       "type": "veste",
       "marque": "Nike",
       "prix": 25,
-      "description": "",
+      "description": "Veste Nike rétro aux couleurs du FC Barcelone, bleu marine et grenat.",
       "couleurs": [
         "Bleu marine / grenat"
       ],
@@ -816,7 +816,7 @@
       "type": "veste",
       "marque": "Kailas",
       "prix": 25,
-      "description": "",
+      "description": "Veste imperméable à capuche Kailas, pensée pour la pluie et l'extérieur.",
       "couleurs": [
         "Violet",
         "Noir",
@@ -852,7 +852,7 @@
       "type": "haut",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Haut à manches longues Chrome Hearts, coupe raglan avec manches contrastées.",
       "couleurs": [
         "Blanc / noir",
         "Blanc / bleu"
@@ -883,7 +883,7 @@
       "type": "haut",
       "marque": "Travis Scott / Cactus Jack",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Cactus Jack de Travis Scott, effet délavé, visuel de l'album Utopia.",
       "couleurs": [],
       "tailles": [
         "S",
@@ -904,7 +904,7 @@
       "type": "veste",
       "marque": "Nike",
       "prix": 25,
-      "description": "",
+      "description": "Veste coupe-pluie Nike aux couleurs du Brésil, légère, à capuche.",
       "couleurs": [
         "Noir",
         "Vert d'eau",
@@ -934,7 +934,7 @@
       "type": "jogging",
       "marque": "Nike",
       "prix": 20,
-      "description": "",
+      "description": "Jogging Nike Tech Fleece : molleton technique léger, coupe fuselée.",
       "couleurs": [
         "Noir",
         "Gris"
@@ -958,7 +958,7 @@
       "type": "veste",
       "marque": "Under Armour",
       "prix": 25,
-      "description": "",
+      "description": "Veste softshell à capuche Under Armour, coupe-vent pour la mi-saison.",
       "couleurs": [
         "Gris",
         "Noir"
@@ -989,7 +989,7 @@
       "type": "haut",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Haut à manches longues Chrome Hearts noir, avec des motifs dorés.",
       "couleurs": [
         "Noir"
       ],
@@ -1012,7 +1012,7 @@
       "type": "maillot",
       "marque": "Nike",
       "prix": 25,
-      "description": "",
+      "description": "Maillot rétro de l'Espagne, version collaboration Nike x Travis Scott.",
       "couleurs": [],
       "tailles": [
         "S",
@@ -1033,7 +1033,7 @@
       "type": "haut",
       "marque": "Polo Ralph Lauren",
       "prix": 35,
-      "description": "",
+      "description": "Sweat zippé à col montant Polo Ralph Lauren, avec le cavalier brodé.",
       "couleurs": [],
       "tailles": [
         "S",
@@ -1054,7 +1054,7 @@
       "type": "haut",
       "marque": "Mercedes-AMG F1",
       "prix": 20,
-      "description": "",
+      "description": "T-shirt blanc de l'écurie de Formule 1 Mercedes-AMG, avec les logos de l'équipe.",
       "couleurs": [
         "Blanc"
       ],
@@ -1080,7 +1080,7 @@
       "type": "jogging",
       "marque": "Nike",
       "prix": 20,
-      "description": "",
+      "description": "Pantalon de jogging Nike en molleton, confortable au quotidien.",
       "couleurs": [],
       "tailles": [
         "S",
@@ -1101,7 +1101,7 @@
       "type": "ensemble",
       "marque": "Essentials (Fear of God)",
       "prix": 45,
-      "description": "",
+      "description": "Ensemble Essentials (Fear of God) : hoodie + jogging gris, avec le marquage « 1977 ».",
       "couleurs": [
         "Gris"
       ],
@@ -1124,7 +1124,7 @@
       "type": "hoodie",
       "marque": "Supreme",
       "prix": 40,
-      "description": "",
+      "description": "Hoodie Supreme avec le logo brodé sur la capuche.",
       "couleurs": [
         "Noir",
         "Gris chiné",
@@ -1167,7 +1167,7 @@
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt NOCTA (Nike x Drake) noir, avec un graphisme de coureur.",
       "couleurs": [
         "Noir"
       ],
@@ -1190,7 +1190,7 @@
       "type": "hoodie",
       "marque": "Supreme",
       "prix": 45,
-      "description": "",
+      "description": "Hoodie Supreme gris chiné, avec le motif Multi S Logo.",
       "couleurs": [
         "Gris chiné"
       ],
@@ -1215,7 +1215,7 @@
       "type": "haut",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Chrome Hearts noir à poche poitrine, avec le logo de la marque.",
       "couleurs": [
         "Noir"
       ],
@@ -1238,7 +1238,7 @@
       "type": "hoodie",
       "marque": "Chrome Hearts",
       "prix": 30,
-      "description": "",
+      "description": "Hoodie zippé Chrome Hearts noir, avec les motifs de la marque.",
       "couleurs": [
         "Noir"
       ],
@@ -1261,7 +1261,7 @@
       "type": "hoodie",
       "marque": "Chrome Hearts",
       "prix": 35,
-      "description": "",
+      "description": "Hoodie zippé Chrome Hearts blanc, avec les motifs de la marque.",
       "couleurs": [
         "Blanc"
       ],
@@ -1284,7 +1284,7 @@
       "type": "haut",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Haut à manches longues Chrome Hearts noir, à poche poitrine.",
       "couleurs": [
         "Noir"
       ],
@@ -1307,7 +1307,7 @@
       "type": "veste",
       "marque": "On",
       "prix": 50,
-      "description": "",
+      "description": "Veste track On, édition « Year of the Horse », coloris kaki.",
       "couleurs": [
         "Kaki"
       ],
@@ -1331,7 +1331,7 @@
       "type": "ensemble",
       "marque": "On",
       "prix": 40,
-      "description": "",
+      "description": "Ensemble On : veste à capuche + pantalon, noir et gris.",
       "couleurs": [
         "Noir / gris"
       ],
@@ -1354,7 +1354,7 @@
       "type": "ensemble",
       "marque": "On",
       "prix": 40,
-      "description": "",
+      "description": "Ensemble On : veste zippée + pantalon, gris bicolore.",
       "couleurs": [
         "Gris"
       ],
@@ -1377,7 +1377,7 @@
       "type": "ensemble",
       "marque": "Lululemon",
       "prix": 30,
-      "description": "",
+      "description": "Ensemble femme Lululemon : haut demi-zip + pantalon large, coloris crème.",
       "couleurs": [
         "Crème"
       ],
@@ -1400,7 +1400,7 @@
       "type": "veste",
       "marque": "Lululemon",
       "prix": 30,
-      "description": "",
+      "description": "Veste zippée Lululemon Define pour femme : coupe ajustée près du corps, col montant.",
       "couleurs": [
         "Lavande",
         "Noir",
@@ -1468,7 +1468,7 @@
       "type": "ensemble",
       "marque": "Alo",
       "prix": 35,
-      "description": "",
+      "description": "Ensemble femme Alo : brassière + legging avec liseré contrasté.",
       "couleurs": [
         "Noir",
         "Blanc"
@@ -1500,7 +1500,7 @@
       "type": "ensemble",
       "marque": "Alo",
       "prix": 35,
-      "description": "",
+      "description": "Ensemble femme Alo : débardeur + legging évasé, noir.",
       "couleurs": [
         "Noir"
       ],
@@ -1523,7 +1523,7 @@
       "type": "ensemble",
       "marque": "Alo",
       "prix": 40,
-      "description": "",
+      "description": "Ensemble femme Alo : T-shirt + pantalon large.",
       "couleurs": [
         "Noir",
         "Kaki"
@@ -1554,7 +1554,7 @@
       "type": "ensemble",
       "marque": "Nike",
       "prix": 45,
-      "description": "",
+      "description": "Ensemble Nike noir : hoodie + pantalon large.",
       "couleurs": [
         "Noir"
       ],
@@ -1577,7 +1577,7 @@
       "type": "ensemble",
       "marque": "Nike",
       "prix": 45,
-      "description": "",
+      "description": "Ensemble Nike Club noir : hoodie + jogging en molleton.",
       "couleurs": [
         "Noir"
       ],
@@ -1600,7 +1600,7 @@
       "type": "ensemble",
       "marque": "Torom",
       "prix": 55,
-      "description": "",
+      "description": "Ensemble Torom Signature : hoodie + pantalon assortis.",
       "couleurs": [
         "Beige sable",
         "Bleu nuit",
@@ -1645,7 +1645,7 @@
       "type": "ensemble",
       "marque": "Torom",
       "prix": 60,
-      "description": "",
+      "description": "Ensemble Torom : zip hoodie + pantalon, avec le trèfle brodé.",
       "couleurs": [
         "Noir",
         "Beige"
@@ -1676,7 +1676,7 @@
       "type": "ensemble",
       "marque": "Suvene",
       "prix": 50,
-      "description": "",
+      "description": "Ensemble Suvene : zip hoodie + pantalon, avec le logo SU.",
       "couleurs": [
         "Bleu marine",
         "Gris chiné"
@@ -1708,7 +1708,7 @@
       "type": "hoodie",
       "marque": "Suvene",
       "prix": 40,
-      "description": "",
+      "description": "Zip hoodie Suvene avec le logo SU.",
       "couleurs": [
         "Bleu marine",
         "Anthracite",
@@ -1745,7 +1745,7 @@
       "type": "jogging",
       "marque": "Suvene",
       "prix": 20,
-      "description": "",
+      "description": "Pantalon large Suvene avec le logo SU.",
       "couleurs": [
         "Noir",
         "Bleu marine"
@@ -1777,7 +1777,7 @@
       "type": "hoodie",
       "marque": "Suvene",
       "prix": 35,
-      "description": "",
+      "description": "Hoodie à capuche Suvene avec le logo SU.",
       "couleurs": [
         "Gris chiné",
         "Bleu marine",
@@ -1818,7 +1818,7 @@
       "type": "ensemble",
       "marque": "Suvene",
       "prix": 40,
-      "description": "",
+      "description": "Ensemble Suvene noir : T-shirt + short, avec le logo SU.",
       "couleurs": [
         "Noir"
       ],
@@ -1841,7 +1841,7 @@
       "type": "jogging",
       "marque": "Suvene",
       "prix": 25,
-      "description": "",
+      "description": "Pantalon Suvene à boutons-pression sur le côté des jambes, avec le logo SU.",
       "couleurs": [
         "Noir",
         "Bleu marine",
@@ -1871,7 +1871,7 @@
       "type": "haut",
       "marque": "Suvene",
       "prix": 15,
-      "description": "",
+      "description": "T-shirt Suvene blanc avec le grand logo SU.",
       "couleurs": [
         "Blanc"
       ],
@@ -1894,7 +1894,7 @@
       "type": "haut",
       "marque": "Saint Michael",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Saint Michael noir avec le visuel « Born Saint ».",
       "couleurs": [
         "Noir"
       ],
@@ -1917,7 +1917,7 @@
       "type": "hoodie",
       "marque": "Corteiz",
       "prix": 35,
-      "description": "",
+      "description": "Hoodie zippé Corteiz noir avec le logo Alcatraz.",
       "couleurs": [
         "Noir"
       ],
@@ -1941,7 +1941,7 @@
       "type": "hoodie",
       "marque": "Corteiz",
       "prix": 35,
-      "description": "",
+      "description": "Hoodie zippé Corteiz noir, logos de la marque imprimés sur toute la pièce.",
       "couleurs": [
         "Noir"
       ],
@@ -1964,7 +1964,7 @@
       "type": "haut",
       "marque": "Corteiz",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Corteiz noir avec le slogan « Can't Rush Greatness ».",
       "couleurs": [
         "Noir"
       ],
@@ -1987,7 +1987,7 @@
       "type": "haut",
       "marque": "Corteiz",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Corteiz blanc avec le logo en bloc.",
       "couleurs": [
         "Blanc"
       ],
@@ -2010,7 +2010,7 @@
       "type": "haut",
       "marque": "Corteiz",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Corteiz avec le slogan « Rules the World ».",
       "couleurs": [
         "Noir / blanc",
         "Noir / jaune"
@@ -2041,7 +2041,7 @@
       "type": "veste",
       "marque": "Corteiz",
       "prix": 60,
-      "description": "",
+      "description": "Veste Corteiz Elitework, de la collaboration avec Gabriel Moses, coloris « Columbia ».",
       "couleurs": [],
       "tailles": [
         "S",
@@ -2063,7 +2063,7 @@
       "type": "maillot",
       "marque": "Corteiz",
       "prix": 25,
-      "description": "",
+      "description": "Maillot de football Corteiz Carni Stellations, coloris jaune.",
       "couleurs": [
         "Jaune"
       ],
@@ -2087,7 +2087,7 @@
       "type": "maillot",
       "marque": "Supreme",
       "prix": 25,
-      "description": "",
+      "description": "Maillot de football Supreme noir délavé, floqué du numéro 06.",
       "couleurs": [
         "Noir délavé"
       ],
@@ -2110,7 +2110,7 @@
       "type": "ensemble",
       "marque": "Corteiz",
       "prix": 45,
-      "description": "",
+      "description": "Ensemble Corteiz Alcatraz : zip hoodie + jogging assortis.",
       "couleurs": [
         "Bleu ciel",
         "Bleu roi",
@@ -2146,7 +2146,7 @@
       "type": "ensemble",
       "marque": "Corteiz",
       "prix": 35,
-      "description": "",
+      "description": "Ensemble Corteiz bleu ciel : zip hoodie + jogging, logo sur la jambe.",
       "couleurs": [
         "Bleu ciel"
       ],
@@ -2169,7 +2169,7 @@
       "type": "hoodie",
       "marque": "Corteiz",
       "prix": 35,
-      "description": "",
+      "description": "Zip hoodie Corteiz gris chiné, avec le logo de la marque.",
       "couleurs": [
         "Gris chiné"
       ],
@@ -2192,7 +2192,7 @@
       "type": "haut",
       "marque": "Supreme × Corteiz",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt noir de la collaboration Supreme × Corteiz, slogan « Rules the World ».",
       "couleurs": [
         "Noir"
       ],
@@ -2215,7 +2215,7 @@
       "type": "haut",
       "marque": "Corteiz",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Corteiz bleu marine, grand logo jaune dans le dos.",
       "couleurs": [
         "Bleu marine"
       ],
@@ -2238,7 +2238,7 @@
       "type": "veste",
       "marque": "Nike × Corteiz",
       "prix": 55,
-      "description": "",
+      "description": "Veste à capuche beige de la collaboration Nike × Corteiz.",
       "couleurs": [
         "Beige"
       ],
@@ -2261,7 +2261,7 @@
       "type": "ensemble",
       "marque": "Corteiz",
       "prix": 45,
-      "description": "",
+      "description": "Ensemble track Corteiz : veste + pantalon, noir et rouge.",
       "couleurs": [
         "Noir / rouge"
       ],
@@ -2284,7 +2284,7 @@
       "type": "ensemble",
       "marque": "Syna World",
       "prix": 40,
-      "description": "",
+      "description": "Ensemble Syna World : hoodie + jogging, marron et crème.",
       "couleurs": [
         "Marron / crème"
       ],
@@ -2354,7 +2354,7 @@
       "type": "haut",
       "marque": "Syna World",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt Syna World noir, coupe façon maillot.",
       "couleurs": [
         "Noir"
       ],
@@ -2377,7 +2377,7 @@
       "type": "ensemble",
       "marque": "Syna World",
       "prix": 45,
-      "description": "",
+      "description": "Ensemble Syna World beige : hoodie + jogging.",
       "couleurs": [
         "Beige"
       ],
@@ -2400,7 +2400,7 @@
       "type": "hoodie",
       "marque": "Syna World",
       "prix": 30,
-      "description": "",
+      "description": "Hoodie Syna World noir avec un graffiti turquoise.",
       "couleurs": [
         "Noir"
       ],
@@ -2423,7 +2423,7 @@
       "type": "hoodie",
       "marque": "Nike × Syna World",
       "prix": 45,
-      "description": "",
+      "description": "Hoodie zippé Tech Fleece de la collaboration Nike × Syna World, noir et gris.",
       "couleurs": [
         "Noir / gris"
       ],
@@ -2446,7 +2446,7 @@
       "type": "hoodie",
       "marque": "Nike × Syna World",
       "prix": 35,
-      "description": "",
+      "description": "Zip hoodie de la collaboration Nike × Syna World, gris et noir.",
       "couleurs": [
         "Gris / noir"
       ],
@@ -2469,7 +2469,7 @@
       "type": "ensemble",
       "marque": "Nike",
       "prix": 45,
-      "description": "",
+      "description": "Ensemble Nike Tech Fleece bleu aux couleurs de l'Angleterre : veste zippée à capuche + jogging.",
       "couleurs": [
         "Bleu"
       ],
@@ -2492,7 +2492,7 @@
       "type": "ensemble",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 90,
-      "description": "",
+      "description": "Ensemble Tech Fleece Nike x NOCTA : hoodie + jogging en molleton technique.",
       "couleurs": [
         "Pêche",
         "Lavande",
@@ -2535,7 +2535,7 @@
       "type": "hoodie",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 60,
-      "description": "",
+      "description": "Hoodie zippé Tech Fleece NOCTA (Nike x Drake), noir et gris.",
       "couleurs": [
         "Noir / gris"
       ],
@@ -2558,7 +2558,7 @@
       "type": "hoodie",
       "marque": "Nike",
       "prix": 40,
-      "description": "",
+      "description": "Hoodie zippé Nike Tech Fleece, noir et anthracite, en molleton technique léger.",
       "couleurs": [
         "Noir / anthracite"
       ],
@@ -2581,7 +2581,7 @@
       "type": "jogging",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 15,
-      "description": "",
+      "description": "Pantalon de survêtement tissé (Woven Track) NOCTA × NikeLab, noir.",
       "couleurs": [
         "Noir"
       ],
@@ -2604,7 +2604,7 @@
       "type": "jogging",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 15,
-      "description": "",
+      "description": "Pantalon en molleton NRG Fleece NOCTA (Nike x Drake), noir.",
       "couleurs": [
         "Noir"
       ],
@@ -2627,7 +2627,7 @@
       "type": "ensemble",
       "marque": "Polo Ralph Lauren",
       "prix": 50,
-      "description": "",
+      "description": "Ensemble Polo Ralph Lauren gris foncé : zip hoodie + pantalon, cavalier brodé.",
       "couleurs": [
         "Gris foncé"
       ],
@@ -2650,7 +2650,7 @@
       "type": "divers",
       "marque": "Polo Ralph Lauren",
       "prix": 10,
-      "description": "",
+      "description": "Lot de 6 paires de chaussettes Polo Ralph Lauren, avec le cavalier brodé.",
       "couleurs": [],
       "tailles": [
         "Taille unique"
@@ -2665,7 +2665,7 @@
       "type": "divers",
       "marque": "Nike",
       "prix": 20,
-      "description": "",
+      "description": "Gourde isotherme Nike de 800 ml : garde tes boissons au frais ou au chaud.",
       "couleurs": [],
       "tailles": [
         "Taille unique"
@@ -2682,7 +2682,7 @@
       "type": "lunettes",
       "marque": "Chrome Hearts",
       "prix": 20,
-      "description": "",
+      "description": "Lunettes Chrome Hearts, avec les détails de la marque sur les branches.",
       "couleurs": [
         "Transparent",
         "Noir"
@@ -2741,7 +2741,7 @@
       "type": "skull-cap",
       "marque": "Nike",
       "prix": 15,
-      "description": "",
+      "description": "Skull cap Nike : bonnet fin et près de la tête.",
       "couleurs": [],
       "tailles": [
         "Taille unique"
@@ -2758,7 +2758,7 @@
       "type": "casquette",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Casquette Chrome Hearts bordeaux avec le logo « CH ».",
       "couleurs": [
         "Bordeaux"
       ],
@@ -2777,7 +2777,7 @@
       "type": "casquette",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Casquette trucker Chrome Hearts noire, avec des patchs en forme de croix.",
       "couleurs": [
         "Noir"
       ],
@@ -2796,7 +2796,7 @@
       "type": "casquette",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Casquette Chrome Hearts noire avec le motif dague.",
       "couleurs": [
         "Noir"
       ],
@@ -2815,7 +2815,7 @@
       "type": "casquette",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Casquette trucker Chrome Hearts « Hollywood », arrière en filet.",
       "couleurs": [
         "Noir",
         "Rose",
@@ -2847,7 +2847,7 @@
       "type": "casquette",
       "marque": "Chrome Hearts",
       "prix": 20,
-      "description": "",
+      "description": "Casquette trucker Chrome Hearts en couleurs vives, arrière en filet.",
       "couleurs": [
         "Noir",
         "Orange",
@@ -2869,7 +2869,7 @@
       "type": "casquette",
       "marque": "Chrome Hearts",
       "prix": 20,
-      "description": "",
+      "description": "Casquette trucker Chrome Hearts noire, avec des patchs croix blancs.",
       "couleurs": [
         "Noir"
       ],
@@ -2888,7 +2888,7 @@
       "type": "casquette",
       "marque": "Corteiz",
       "prix": 20,
-      "description": "",
+      "description": "Casquette trucker Corteiz marron, avec l'aile rouge.",
       "couleurs": [
         "Marron"
       ],
@@ -2907,7 +2907,7 @@
       "type": "casquette",
       "marque": "Corteiz",
       "prix": 15,
-      "description": "",
+      "description": "Casquette trucker Corteiz noire, avec des étoiles.",
       "couleurs": [
         "Noir"
       ],
@@ -2926,7 +2926,7 @@
       "type": "bonnet",
       "marque": "Syna World",
       "prix": 10,
-      "description": "",
+      "description": "Bonnet Syna World, avec le logo de la marque.",
       "couleurs": [
         "Gris",
         "Noir"
@@ -2946,7 +2946,7 @@
       "type": "veste",
       "marque": "Nike",
       "prix": 25,
-      "description": "",
+      "description": "Coupe-vent Nike Windrunner color-block : léger, à capuche, avec le chevron sur la poitrine.",
       "couleurs": [
         "Turquoise / noir",
         "Menthe / noir",
@@ -3009,7 +3009,7 @@
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt NOCTA « Do Road », de la collaboration avec L'Art de l'Automobile.",
       "couleurs": [
         "Noir"
       ],
@@ -3033,7 +3033,7 @@
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt NOCTA noir, logo CS dans le dos.",
       "couleurs": [
         "Noir"
       ],
@@ -3056,7 +3056,7 @@
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt NOCTA Basketball noir.",
       "couleurs": [
         "Noir"
       ],
@@ -3079,7 +3079,7 @@
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt NOCTA avec le visuel « Cricket Association ».",
       "couleurs": [
         "Noir",
         "Crème"
@@ -3110,7 +3110,7 @@
       "type": "veste",
       "marque": "Polo Ralph Lauren",
       "prix": 40,
-      "description": "",
+      "description": "Veste track Polo Sport (Polo Ralph Lauren), grise et marine.",
       "couleurs": [
         "Gris / marine"
       ],
@@ -3134,7 +3134,7 @@
       "type": "veste",
       "marque": "Polo Ralph Lauren",
       "prix": 30,
-      "description": "",
+      "description": "Blouson Harrington Polo Ralph Lauren marine : coupe courte, col montant.",
       "couleurs": [
         "Marine"
       ],
@@ -3157,7 +3157,7 @@
       "type": "hoodie",
       "marque": "Chrome Hearts",
       "prix": 30,
-      "description": "",
+      "description": "Hoodie Chrome Hearts noir, logo vertical.",
       "couleurs": [
         "Noir"
       ],
@@ -3180,7 +3180,7 @@
       "type": "hoodie",
       "marque": "Chrome Hearts",
       "prix": 40,
-      "description": "",
+      "description": "Hoodie zippé Chrome Hearts blanc, avec les motifs croix.",
       "couleurs": [
         "Blanc"
       ],
@@ -3206,7 +3206,7 @@
       "type": "haut",
       "marque": "BAPE × Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "T-shirt noir de la collaboration BAPE x Chrome Hearts.",
       "couleurs": [
         "Noir"
       ],
@@ -3229,7 +3229,7 @@
       "type": "hoodie",
       "marque": "Supreme",
       "prix": 35,
-      "description": "",
+      "description": "Hoodie zippé Supreme Arc noir, doublure thermique gaufrée.",
       "couleurs": [
         "Noir"
       ],
@@ -3252,7 +3252,7 @@
       "type": "bonnet",
       "marque": "Chrome Hearts",
       "prix": 25,
-      "description": "",
+      "description": "Bonnet Chrome Hearts noir, avec le logo de la marque.",
       "couleurs": [
         "Noir"
       ],
@@ -3271,7 +3271,7 @@
       "type": "haut",
       "marque": "Corteiz",
       "prix": 25,
-      "description": "",
+      "description": "Haut à manches longues Corteiz Allstarz, coupe raglan blanc et kaki.",
       "couleurs": [
         "Blanc / kaki"
       ],
@@ -3349,7 +3349,7 @@
       "type": "hoodie",
       "marque": "BAPE",
       "prix": 38,
-      "description": "",
+      "description": "Hoodie zippé BAPE Shark, camouflage coloré violet : le zip monte jusqu'en haut de la capuche, avec la tête de requin.",
       "couleurs": [
         "Violet"
       ],
@@ -3379,7 +3379,7 @@
       "type": "hoodie",
       "marque": "BAPE",
       "prix": 35,
-      "description": "",
+      "description": "Hoodie zippé BAPE Shark, camouflage ABC rose : le zip monte jusqu'en haut de la capuche, avec la tête de requin.",
       "couleurs": [
         "Rose"
       ],
@@ -3402,7 +3402,7 @@
       "type": "hoodie",
       "marque": "BAPE",
       "prix": 35,
-      "description": "",
+      "description": "Hoodie zippé BAPE Shark, camouflage Space : le zip monte jusqu'en haut de la capuche, avec la tête de requin.",
       "couleurs": [
         "Blanc",
         "Noir"
@@ -3433,7 +3433,7 @@
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": 30,
-      "description": "",
+      "description": "Hoodie Sp5der OG Web, avec les toiles d'araignée et le logo de la marque.",
       "couleurs": [
         "Violet",
         "Bleu ciel",
@@ -3474,7 +3474,7 @@
       "type": "ensemble",
       "marque": "Sp5der",
       "prix": 43,
-      "description": "",
+      "description": "Ensemble Sp5der Web : hoodie + pantalon de jogging, motifs toile d'araignée.",
       "couleurs": [
         "Bleu ciel",
         "Bleu poudré"
@@ -3505,7 +3505,7 @@
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": 30,
-      "description": "",
+      "description": "Hoodie zippé Sp5der OG Web V2 « Phantom », noir.",
       "couleurs": [
         "Noir"
       ],
@@ -3528,7 +3528,7 @@
       "type": "ensemble",
       "marque": "Sp5der",
       "prix": 38,
-      "description": "",
+      "description": "Ensemble Sp5der Beluga : hoodie + pantalon de jogging, bleu et jaune.",
       "couleurs": [
         "Bleu / jaune"
       ],
@@ -3551,7 +3551,7 @@
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": 28,
-      "description": "",
+      "description": "Hoodie zippé Sp5der Atlanta.",
       "couleurs": [
         "Rouge",
         "Gris chiné"
@@ -3575,7 +3575,7 @@
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": 28,
-      "description": "",
+      "description": "Hoodie Sp5der Atlanta.",
       "couleurs": [
         "Marine",
         "Rose",
@@ -3619,7 +3619,7 @@
       "type": "jogging",
       "marque": "Sp5der",
       "prix": 23,
-      "description": "",
+      "description": "Pantalon de jogging Sp5der Worldwide.",
       "couleurs": [
         "Noir",
         "Bleu ciel"
@@ -3650,7 +3650,7 @@
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": 28,
-      "description": "",
+      "description": "Hoodie Sp5der P*NK noir.",
       "couleurs": [
         "Noir"
       ],
@@ -3673,7 +3673,7 @@
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": 30,
-      "description": "",
+      "description": "Hoodie Sp5der Beluga, bicolore.",
       "couleurs": [
         "Noir / jaune",
         "Marine / rouge"
@@ -3704,7 +3704,7 @@
       "type": "jogging",
       "marque": "Sp5der",
       "prix": 23,
-      "description": "",
+      "description": "Pantalon de jogging Sp5der Beluga, assorti au hoodie Beluga.",
       "couleurs": [
         "Noir / jaune",
         "Marine / rouge"
@@ -3735,7 +3735,7 @@
       "type": "hoodie",
       "marque": "Sp5der",
       "prix": 28,
-      "description": "",
+      "description": "Hoodie Sp5der Arachnophobia.",
       "couleurs": [
         "Marine",
         "Gris chiné"
@@ -3766,7 +3766,7 @@
       "type": "jogging",
       "marque": "Sp5der",
       "prix": 23,
-      "description": "",
+      "description": "Pantalon de jogging Sp5der Arachnophobia, assorti au hoodie.",
       "couleurs": [
         "Marine",
         "Gris chiné"
@@ -3797,7 +3797,7 @@
       "type": "jogging",
       "marque": "Sp5der",
       "prix": 23,
-      "description": "",
+      "description": "Pantalon de jogging Sp5der Atlanta noir, assorti au hoodie Atlanta.",
       "couleurs": [
         "Noir"
       ],
@@ -3820,7 +3820,7 @@
       "type": "veste",
       "marque": "Adidas",
       "prix": 25,
-      "description": "",
+      "description": "Veste Adidas Originals aux couleurs de l'Espagne, blanc cassé et bordeaux.",
       "couleurs": [
         "Blanc cassé / bordeaux"
       ],
@@ -3843,7 +3843,7 @@
       "type": "veste",
       "marque": "Nike",
       "prix": 25,
-      "description": "",
+      "description": "Veste Nike rétro du FC Barcelone, rouge satiné, à capuche.",
       "couleurs": [
         "Rouge"
       ],
@@ -3866,7 +3866,7 @@
       "type": "ensemble",
       "marque": "Nike",
       "prix": 28,
-      "description": "",
+      "description": "Ensemble Nike Running bleu : coupe-vent + short.",
       "couleurs": [
         "Bleu / marine"
       ],
@@ -3889,7 +3889,7 @@
       "type": "ensemble",
       "marque": "Nike",
       "prix": 38,
-      "description": "",
+      "description": "Ensemble track Nike en nylon gris anthracite : veste + pantalon.",
       "couleurs": [
         "Gris anthracite"
       ],
@@ -3912,7 +3912,7 @@
       "type": "haut",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 23,
-      "description": "",
+      "description": "Haut à manches longues NOCTA, imprimé façon caméra thermique.",
       "couleurs": [
         "Multicolore"
       ],
@@ -3935,7 +3935,7 @@
       "type": "veste",
       "marque": "Nike",
       "prix": 28,
-      "description": "",
+      "description": "Veste Nike T90 rétro, noir, gris et jaune.",
       "couleurs": [
         "Noir / gris"
       ],
@@ -3958,7 +3958,7 @@
       "type": "hoodie",
       "marque": "",
       "prix": 28,
-      "description": "",
+      "description": "Hoodie zippé noir, coupe oversize.",
       "couleurs": [
         "Noir"
       ],
@@ -3981,7 +3981,7 @@
       "type": "veste",
       "marque": "Nike",
       "prix": 25,
-      "description": "",
+      "description": "Coupe-vent Nike Windrunner blanc : léger, à capuche.",
       "couleurs": [
         "Blanc"
       ],
@@ -4004,7 +4004,7 @@
       "type": "ensemble",
       "marque": "Nike",
       "prix": 37,
-      "description": "",
+      "description": "Ensemble Nike Running bleu marine : coupe-vent + pantalon.",
       "couleurs": [
         "Bleu marine"
       ],
@@ -4027,7 +4027,7 @@
       "type": "hoodie",
       "marque": "NOCTA (Nike x Drake)",
       "prix": 30,
-      "description": "",
+      "description": "Hoodie NOCTA (Nike x Drake), coloris Oil Green (vert olive).",
       "couleurs": [
         "Vert olive"
       ],
@@ -4050,7 +4050,7 @@
       "type": "ensemble",
       "marque": "Supreme",
       "prix": 42,
-      "description": "",
+      "description": "Ensemble Supreme noir : veste demi-zip + short.",
       "couleurs": [
         "Noir"
       ],
@@ -4073,7 +4073,7 @@
       "type": "ensemble",
       "marque": "Drama",
       "prix": 37,
-      "description": "",
+      "description": "Ensemble Drama vert olive : coupe-vent + short.",
       "couleurs": [
         "Vert olive"
       ],
@@ -4096,7 +4096,7 @@
       "type": "ensemble",
       "marque": "",
       "prix": 30,
-      "description": "",
+      "description": "Ensemble femme bleu : veste zippée + short.",
       "couleurs": [
         "Bleu"
       ],
@@ -4119,7 +4119,7 @@
       "type": "ensemble",
       "marque": "Alo",
       "prix": 35,
-      "description": "",
+      "description": "Ensemble femme Alo marine : veste zippée + short.",
       "couleurs": [
         "Marine"
       ],
