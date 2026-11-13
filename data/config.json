@@ -53,6 +53,11 @@
     "cloture": "À confirmer",
     "arrivee": "À confirmer"
   },
+  "statistiques": {
+    "site_id": "",
+    "domaines": "",
+    "script": "https://cloud.umami.is/script.js"
+  },
   "horaires": {
     "commandes": "9h à 20h",
     "livraisons": "9h à 19h"

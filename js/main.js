@@ -4,6 +4,7 @@ import { lienContact } from './whatsapp.js';
 import { el, icone } from './dom.js';
 import { toast } from './toast.js';
 import { etatVide } from './etat-vide.js';
+import { initStats, vuePage, suivre } from './stats.js';
 import { EVENEMENT, estFavori, basculerFavori, favoris, nombrePanier, nettoyer } from './stockage.js';
 
 export { el, icone };
@@ -52,7 +53,9 @@ export function boutonCoeur(id, nom, classe = '') {
     icone('coeur')
   );
   b.addEventListener('click', () => {
-    if (basculerFavori(id)) toast(`« ${nom} » ajouté aux favoris`, { action: { texte: 'Voir mes favoris', href: 'favoris.html' } });
+    const ajoute = basculerFavori(id);
+    if (ajoute) suivre('favori', { article: id, nom });
+    if (ajoute) toast(`« ${nom} » ajouté aux favoris`, { action: { texte: 'Voir mes favoris', href: 'favoris.html' } });
   });
   return b;
 }
@@ -399,6 +402,14 @@ export async function initPage() {
     if (!['produit', 'panier'].includes(document.body.dataset.page)) document.body.append(creerBoutonFlottant(config));
     remplirDepuisConfig(config);
     majInterface();
+    // Statistiques : une vue par page ; la fiche produit envoie la sienne (une ligne par article)
+    initStats(config);
+    const page = document.body.dataset.page;
+    if (page === 'catalogue') {
+      const q = new URLSearchParams(location.search);
+      vuePage(q.get('cat') ? `/catalogue/${q.get('cat')}` : '/catalogue');
+      if (q.get('q')) suivre('recherche', { mots: q.get('q').slice(0, 60) });
+    } else if (page !== 'produit') vuePage(`/${page === 'accueil' ? '' : page}`);
     return donnees;
   } catch (err) {
     console.error(err);

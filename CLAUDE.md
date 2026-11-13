@@ -112,6 +112,7 @@ la-boutique/
 │   ├── toast.js          # notifications (toasts) : toast(message, { action, duree, type })
 │   ├── etat-vide.js      # composant « état vide » (icône, titre, texte, boutons)
 │   ├── dom.js            # el() (création d'éléments) et icone() (icônes SVG)
+│   ├── stats.js          # statistiques de visites et de commandes (Umami), inactif si statistiques.site_id est vide
 │   ├── theme.js          # thème clair/sombre, chargé dans le <head> de CHAQUE page (pas de script en ligne)
 │   ├── page-404.js       # page 404 (en-tête et pied de page seulement)
 │   ├── panier.js         # page panier
@@ -199,6 +200,15 @@ Les 160 articles ont maintenant une **description** (champ `description` de `dat
 - **Zones tactiles** : 44 px minimum au toucher (icônes de l'en-tête, bouton Menu, liens du pied de page, fil d'Ariane, boutons de quantité). Sur petit écran les icônes restent dessinées en 38 px, la zone de clic est élargie par un `::after`.
 - **Aperçu de partage** : balises Open Graph sur les 7 pages (titre, description, image `assets/img/partage.jpg` 1200×630). L'adresse de l'image est absolue et suppose le site à `https://r2g5-neverbeafraid.github.io/Laboutik/` : **à corriger dans le `<head>` des 7 pages si l'adresse change** (nom de domaine). Les fiches étant générées en JavaScript, un lien de fiche partagé montre l'aperçu général, pas la photo de l'article. `favoris`, `panier` et `404` sont en `noindex`.
 - **Fichiers internes non publiés** : `_config.yml` (Jekyll de GitHub Pages) exclut `CLAUDE.md`, `README.md`, `outils/`, `interne/`, les bannières et `logo-canva.png`. Le site reste à la racine : pas de dossier `docs/`, aucun réglage Pages à changer. Ne pas ajouter de fichier `.nojekyll`, il annulerait ces exclusions.
+
+## 6 quinquies sexies. Statistiques de visites et de commandes (demande de RG, 13 novembre 2026)
+
+- **Principe** : le site est statique, il ne peut rien enregistrer lui-même. `js/stats.js` envoie les visites et les événements à un service extérieur, **Umami** (anonyme, sans cookies). Le tableau de bord (par heure, jour, semaine, mois) est celui d'Umami, pas une page du site. Le compte administrateur sur le site est remis à plus tard (décision RG).
+- **Activation** : `data/config.json` → `statistiques.site_id` (identifiant du site dans Umami). **Vide = rien n'est chargé ni envoyé.** `statistiques.domaines` (facultatif) limite le comptage au vrai domaine, pour ne pas compter les tests.
+- **Ce qui est compté** : une vue par page (`/`, `/catalogue`, `/catalogue/<catégorie>`, `/panier`…), **une ligne par article** (`/produit/<id>`, titre « Marque · Nom »), et les événements `recherche`, `favori`, `ajout-panier`, `commande-ouverte`, `commande-confirmee` (nombre d'articles, total en $, références, commune).
+- **Limites à connaître** : `commande-confirmee` = le client a cliqué « Confirmer » et WhatsApp s'est ouvert ; ce n'est pas un paiement. Les commandes passées directement sur WhatsApp ne sont pas comptées. Les visiteurs avec bloqueur de publicité peuvent ne pas être comptés.
+- **Vie privée** : jamais de nom, d'adresse ni de numéro dans les envois (testé). Mention ajoutée en bas de « Comment ça marche ».
+- Pour compter un nouvel événement : `import { suivre } from './stats.js'` puis `suivre('nom', { ... })`.
 
 ## 6 sexies. Animation de marque (demande de RG, 8 novembre 2026)
 

@@ -5,6 +5,7 @@ import { formaterPrix, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
 import { lienWhatsApp, messageCommande, messagePanier } from './whatsapp.js';
 import { creerFormulaireLivraison, listeFrancaise } from './livraison.js';
 import { toast } from './toast.js';
+import { suivre } from './stats.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
 
@@ -108,6 +109,13 @@ export function ouvrirCommande(config, lignes, declencheur) {
       ? messageCommande(config, lignes[0].produit, lignes[0].taille, lignes[0].couleur, v.donnees)
       : messagePanier(config, lignes, v.donnees);
     const lien = el('a', { href: lienWhatsApp(config, message), target: '_blank', rel: 'noopener' });
+    // Statistiques : une commande confirmée = WhatsApp ouvert avec le message (pas encore un paiement)
+    suivre('commande-confirmee', {
+      articles: lignes.reduce((n, l) => n + l.qte, 0),
+      total: total,
+      references: lignes.map((l) => l.produit.id).join(', ').slice(0, 200),
+      commune: v.donnees?.commune || '',
+    });
     document.body.append(lien);
     lien.click();
     lien.remove();
@@ -115,6 +123,7 @@ export function ouvrirCommande(config, lignes, declencheur) {
     toast("WhatsApp s'ouvre : envoie le message pour valider ta commande.", { duree: 8000, type: 'info' });
   });
 
+  suivre('commande-ouverte', { articles: lignes.reduce((n, l) => n + l.qte, 0) });
   document.body.append(dialogue);
   racine.classList.add('modal-open');
   dialogue.showModal();

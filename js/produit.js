@@ -4,6 +4,7 @@ import { EVENEMENT, panier, cleLigne, ajouterAuPanier, changerQuantite, retirerD
 import { formaterPrix, STATUTS, srcPhoto, couleursPhoto, memeCouleur } from './data.js';
 import { ouvrirCommande } from './commande.js';
 import { toast } from './toast.js';
+import { vuePage, suivre } from './stats.js';
 import { etatVide } from './etat-vide.js';
 
 const PLACEHOLDER = 'assets/img/placeholder.svg';
@@ -76,9 +77,11 @@ if (donnees) {
 
   if (!p) {
     document.title = `Article introuvable — ${config.nom}`;
+    vuePage('/produit/introuvable');
     introuvable();
   } else {
     document.title = `${p.nom} — ${config.nom}`;
+    vuePage(`/produit/${p.id}`, `${p.marque ? `${p.marque} · ` : ''}${p.nom}`);
     const brutes = p.photos && p.photos.length ? p.photos : [PLACEHOLDER];
     const photos = brutes.map((ph) => ({ src: srcPhoto(ph), couleurs: couleursPhoto(ph) }));
     const sansPhoto = !(p.photos && p.photos.length);
@@ -227,6 +230,7 @@ if (donnees) {
       }
       erreur.textContent = '';
       ajouterAuPanier({ id: p.id, taille: c.taille || '', couleur: c.couleur || '', qte: quantite });
+      suivre('ajout-panier', { article: p.id, nom: p.nom, quantite });
       const detail = [c.taille ? `taille ${c.taille}` : null, c.couleur || null].filter(Boolean).join(', ');
       toast(`${quantite > 1 ? `${quantite} × ` : ''}« ${p.nom} »${detail ? ` (${detail})` : ''} ajouté${quantite > 1 ? 's' : ''} au panier`, {
         action: { texte: 'Voir le panier', href: 'panier.html' },
