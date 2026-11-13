@@ -1,0 +1,8 @@
+# GitHub Pages : ne pas publier les fichiers de travail (le site reste à la racine).
+exclude:
+  - CLAUDE.md
+  - README.md
+  - outils
+  - interne
+  - assets/img/bannieres
+  - assets/img/logo-canva.png

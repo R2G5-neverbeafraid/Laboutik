@@ -58,3 +58,5 @@ assets/img/
 ## Mise en ligne (GitHub Pages)
 
 Pousser sur GitHub, puis Settings → Pages → Deploy from a branch → `main` / racine.
+
+**Publication** : GitHub Pages sert la racine de `main`. `_config.yml` exclut les fichiers de travail (`CLAUDE.md`, `README.md`, `outils/`) du site publié.

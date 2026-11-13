@@ -30,6 +30,7 @@ export function ouvrirCommande(config, lignes, declencheur) {
     else total += l.produit.prix * l.qte;
   }
 
+  const precommande = lignes.some((l) => l.produit.statut === 'precommande');
   const dialogue = el('dialog', { class: 'modal', 'aria-labelledby': 'cmd-titre' });
   const fermer = el('button', { type: 'button', class: 'modal__close', 'aria-label': 'Fermer la fenêtre' }, icone('fermer', 22));
   const livraison = creerFormulaireLivraison(config);
@@ -73,6 +74,12 @@ export function ouvrirCommande(config, lignes, declencheur) {
       inconnus ? el('p', { class: 'note cmd-note' }, `+ ${inconnus} article${inconnus > 1 ? 's' : ''} au prix à confirmer (on te donne le prix sur WhatsApp).`) : null,
       livraison.element,
       el('p', { class: 'note cmd-note' }, "Confirmer ouvre WhatsApp avec ta commande. Le paiement se fait ensuite là-bas : rien n'est débité sur le site."),
+      precommande && config.pre_commande?.acompte
+        ? el('p', { class: 'note cmd-note' }, `Pré-commande : acompte de ${config.pre_commande.acompte} à la commande, le reste à la livraison.`)
+        : null,
+      config.horaires?.commandes
+        ? el('p', { class: 'note cmd-note' }, `On répond sur WhatsApp de ${config.horaires.commandes}.`)
+        : null,
       erreur
     ),
     el('div', { class: 'modal__foot' }, annuler, confirmer)

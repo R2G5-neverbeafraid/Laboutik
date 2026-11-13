@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Comment ça marche — LA BOUTIK</title>
   <meta name="description" content="Pré-commande, délais d'arrivage et livraison : tout ce qu'il faut savoir avant de commander chez LA BOUTIK.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LA BOUTIK">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Comment ça marche — LA BOUTIK">
+  <meta property="og:description" content="Pré-commande, délais d'arrivage et livraison : tout ce qu'il faut savoir avant de commander chez LA BOUTIK.">
+  <meta property="og:image" content="https://r2g5-neverbeafraid.github.io/Laboutik/assets/img/partage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0E0E0E">
   <script src="js/theme.js"></script>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/archivo-100-900.woff2" as="font" type="font/woff2" crossorigin>
@@ -40,6 +50,12 @@
       <div id="grille-livraison"></div>
       <p class="note">Les frais de livraison s'ajoutent au prix de l'article. Ta commune n'est pas dans la grille ? Écris-nous sur WhatsApp.</p>
 
+      <h2 id="horaires">Horaires</h2>
+      <ul class="plain-list">
+        <li><strong>Commandes sur WhatsApp :</strong> de <span data-config="horaires.commandes"></span>. Tu peux commander sur le site à toute heure : on te répond à l'ouverture.</li>
+        <li><strong>Livraisons :</strong> de <span data-config="horaires.livraisons"></span>.</li>
+      </ul>
+
       <h2 id="echange">Échange et retour</h2>
       <p data-config="livraison.retours"></p>
       <ul class="plain-list">
@@ -51,7 +67,7 @@
       <h2 id="paiement">Paiement</h2>
       <p data-config="pre_commande.paiement"></p>
       <ul class="plain-list">
-        <li><strong>Pré-commande :</strong> on prend un acompte à la commande.</li>
+        <li><strong>Pré-commande :</strong> tu paies un acompte de <span data-config="pre_commande.acompte"></span> à la commande, et le reste à la livraison.</li>
         <li><strong>Article en stock :</strong> tu paies la totalité avant la livraison.</li>
         <li><strong>Où payer :</strong> sur WhatsApp. Tu commandes sur le site, le message part sur WhatsApp, et on te donne les numéros Airtel Money et Orange Money dans la conversation. Il n'y a pas de paiement sur le site pour l'instant.</li>
       </ul>

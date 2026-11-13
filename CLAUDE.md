@@ -193,6 +193,13 @@ Le site suit le réglage du navigateur (`prefers-color-scheme`) tant que le visi
 
 Les 160 articles ont maintenant une **description** (champ `description` de `data/produits.json`, affichée sur la fiche). Les 130 manquantes ont été rédigées puis validées par RG : une ou deux phrases factuelles (ce qu'est la pièce, ce qui est inclus dans un ensemble), sans matière ni coupe non garanties par le nom ou la gamme, sans mention de provenance. Tout nouvel article doit avoir une description dans ce style. RG peut les enrichir (matière, coupe) à tout moment.
 
+## 6 quinquies quinquies. Suites de l'étude du 13 novembre 2026
+
+- **Acompte et horaires sur le site** : `data/config.json` → `pre_commande.acompte` (« 50 % ») et `horaires.commandes` / `horaires.livraisons`. Affichés dans « Comment ça marche » (section `#horaires` et `#paiement`) et dans la fenêtre de commande (note « acompte » seulement si la commande contient une pré-commande). Pour changer l'acompte ou les horaires : modifier la config seulement.
+- **Zones tactiles** : 44 px minimum au toucher (icônes de l'en-tête, bouton Menu, liens du pied de page, fil d'Ariane, boutons de quantité). Sur petit écran les icônes restent dessinées en 38 px, la zone de clic est élargie par un `::after`.
+- **Aperçu de partage** : balises Open Graph sur les 7 pages (titre, description, image `assets/img/partage.jpg` 1200×630). L'adresse de l'image est absolue et suppose le site à `https://r2g5-neverbeafraid.github.io/Laboutik/` : **à corriger dans le `<head>` des 7 pages si l'adresse change** (nom de domaine). Les fiches étant générées en JavaScript, un lien de fiche partagé montre l'aperçu général, pas la photo de l'article. `favoris`, `panier` et `404` sont en `noindex`.
+- **Fichiers internes non publiés** : `_config.yml` (Jekyll de GitHub Pages) exclut `CLAUDE.md`, `README.md`, `outils/`, `interne/`, les bannières et `logo-canva.png`. Le site reste à la racine : pas de dossier `docs/`, aucun réglage Pages à changer. Ne pas ajouter de fichier `.nojekyll`, il annulerait ces exclusions.
+
 ## 6 sexies. Animation de marque (demande de RG, 8 novembre 2026)
 
 - **Sur le site** : filigrane animé derrière le titre de l'accueil (fond gris conservé), boucle de 12 s : le cercle (K) se dessine, les mots VÊTEMENTS / ACCESSOIRES / COUVRE-CHEF / PRÉ-COMMANDE / LIVRAISON À KINSHASA défilent avec des pastilles de couleur, puis LA BOUTIK. Code : `js/animation-marque.js` (variante « site »), lancée par `js/hero-anim.js`. Aucun fichier vidéo : c'est du code léger. Elle s'arrête hors écran, reste immobile si le visiteur a demandé « moins d'animations » ou active l'économiseur de données, et suit le thème clair/sombre.
